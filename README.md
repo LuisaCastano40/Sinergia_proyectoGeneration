@@ -1,0 +1,1 @@
+# Sinergia_proyectoGeneration

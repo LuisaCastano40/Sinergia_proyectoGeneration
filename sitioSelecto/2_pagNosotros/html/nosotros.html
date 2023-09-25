@@ -1,165 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Nosotros</title>
 
-    <!-- Links a los estilos de la página -->
-    <link
-      rel="stylesheet"
-      href="/sitioSelecto/2_pagNosotros/css/nosotros.css"
-    />
-    <!-- Links a los scripts de la página -->
-    <script
-      type="text/javascript"
-      src="/sitioSelecto/2_pagNosotros/javascript/nosotros.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Nosotros</title>
 
-    <!-- Links a páginas de íconos -->
-    <!-- Enlace a la hoja de estilos externa de Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Enlace a la hoja de estilos externa de Font awesome-->
-    <script
-      src="https://kit.fontawesome.com/9af4a257dc.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- Links a los estilos de la página -->
+  <link rel="stylesheet" href="/sitioSelecto/2_pagNosotros/css/nosotros.css" />
+  <!-- Links a los scripts de la página -->
+  <script type="text/javascript" src="/sitioSelecto/2_pagNosotros/javascript/nosotros.js"></script>
 
-  <body>
-    <!-- Inicio header de la página  -->
-    <header class="header">
-      <!-- seccion menú navegacion -->
-      <section class="menu-navegacion">
-        <nav>
-          <ul class="nav-links">
+  <!-- Links a páginas de íconos -->
+  <!-- Enlace a la hoja de estilos externa de Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Enlace a la hoja de estilos externa de Font awesome-->
+  <script src="https://kit.fontawesome.com/9af4a257dc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Inicio header de la página  -->
+  <header class="header">
+    <!-- seccion menú navegacion -->
+    <section class="menu-navegacion">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+        <div class="logo">
+          <img src="img/logo_selecto.png" alt="Logo de marca" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Regístrate</a></li>
+          <li>
+            <a class="btn" href="#">AGENDA AHORA</a>
+          </li>
+          <li>
+            <img class="shoppingBag" src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg"
+              alt="shoppingBag">
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Responsive menu -->
+    <div class="menu-responsive">
+      <a onclick="openNav()" href="#"><button>≡</button></a>
+      <div class="overlay" id="responsive-menu">
+        <a onclick="closeNav()" href="#" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Contáctanos</a>
+          <a href="#">Servicios</a>
+          <a href="#">Regístrate</a>
+          <a href="#">Agenda ahora</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner principal -->
+    <section class="banner" id="banner">
+      <div class="contenido-banner">
+        <h3>
+          Somos más que una <br />
+          barbería; somos un símbolo de<br /><span class="resaltar">distinción y confianza</span>
+        </h3>
+        <div class="flecha__icon">
+          <a href="#">
+            <i class="fa-solid fa-arrow-down-long fa-beat"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- Fin header de la página -->
+
+  <!-- Inicio del contenido de la página -->
+  <main>
+    <!-- Slider de imágenes -->
+    <section class="slider-frame">
+      <ul>
+        <li class="slide active">
+          <img src="img/barberos.jpg" alt="Barberos" />
+        </li>
+        <li class="slide">
+          <img src="img/manada-lobos.jpg" alt="Manada de Lobos" />
+        </li>
+      </ul>
+    </section>
+
+    <!--seccion los mejores en lo que hacemos-->
+    <section id="seccion-mejores">
+      <div class="los-mejores">
+        <h3>
+          Los mejores en <br />
+          lo que hacemos
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur <br />
+          Nulla facilisi. VestibulumNulla facilisi. <br />
+          Nulla facilisi. Vestibulum <br />
+          Lorem ipsum dolor sit amet, consectetur <br />
+          Nulla facilisi. Vestibulum.<br />
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="img/barberos.jpg" alt="Imagen barberos" class="imagen-cuadrada" />
+      </div>
+    </section>
+
+    <!--seccion únete al grupo selecto-->
+    <section class="unete-banner" id="unete-banner">
+      <div class="texto-banner">
+        <h3>
+          únete al grupo selecto que elige lo mejor,<br />
+          descubre una experiencia excepcional y<br />
+          conviértete en la mejor versión de ti mismo.
+        </h3>
+        <a class="button-agenda" href="#"><button>AGENDA AHORA</button></a>
+      </div>
+    </section>
+
+    <!--seccion conoce al team-->
+    <section id="conoce-team">
+      <div>
+        <img src="img/Miguel.png" />
+      </div>
+      <h3>¡Conoce al team!</h3>
+    </section>
+
+    <!-- sección lider de la manada -->
+    <section>
+      <!-- Aquí dentro editas la parte de Andrés -->
+    </section>
+  </main>
+  <!-- Fin del contenido de la página -->
+
+  <!-- Inicio del pie de página -->
+  <footer>
+    <section class="container-footer">
+      <article class="socialMedia">
+        <h3>¡HABLEMOS!</h3>
+        <div class="redes">
+          <a href="#">whats</a>
+          <a href="#">inst</a>
+          <a href="#">inst</a>
+        </div>
+      </article>
+      <article class="logo">
+        <a href="#">logo</a>
+        <a class="btn" href="#">AGENDA AHORA</a>
+      </article>
+      <article class="map">
+        <h3>¡VISÍTANOS!</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.51822666078849!2d-74.1106697!3d4.7193227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85798ec29299%3A0x30afc4a2a8ec4944!2sSelecto%20Barber%20Shop!5e0!3m2!1ses-419!2sco!4v1695652551410!5m2!1ses-419!2sco"
+          width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Cl. 86 #103D 22, Engativá, Bogotá, Cundinamarca</p>
+      </article>
+      <article class="navegation">
+          <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Contáctanos</a></li>
             <li><a href="#">Servicios</a></li>
-          </ul>
-          <div class="logo">
-            <img src="img/logo_selecto.png" alt="Logo de marca" />
-          </div>
-          <ul class="nav-links">
             <li><a href="#">Regístrate</a></li>
-            <li>
-              <a class="btn" href="#"><button>AGENDA AHORA</button></a>
-            </li>
-            <li>
-                <img class="shoppingBag" src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg" alt="shoppingBag">
-            </li>
           </ul>
-        </nav>
-      </section>
+      </article>
+    </section>
+    <section class="copyright">
+      <p>© POWERED BY SINERGIA</p>
+    </section>
+  </footer>
+  <!-- Fin del pie de página -->
+</body>
 
-      <!-- Responsive menu -->
-      <div class="menu-responsive">
-        <a onclick="openNav()" href="#"><button>≡</button></a>
-        <div class="overlay" id="responsive-menu">
-          <a onclick="closeNav()" href="#" class="close">&times;</a>
-          <div class="overlay-content">
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Contáctanos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Regístrate</a>
-            <a href="#">Agenda ahora</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Banner principal -->
-      <section class="banner" id="banner">
-        <div class="contenido-banner">
-          <h3>
-            Somos más que una <br />
-            barbería; somos un símbolo de<br /><span class="resaltar"
-              >distinción y confianza</span
-            >
-          </h3>
-          <div class="flecha__icon">
-            <a href="#">
-              <i class="fa-solid fa-arrow-down-long fa-beat"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    </header>
-    <!-- Fin header de la página -->
-
-    <!-- Inicio del contenido de la página -->
-    <main>
-      <!-- Slider de imágenes -->
-      <section class="slider-frame">
-        <ul>
-          <li class="slide active">
-            <img src="img/barberos.jpg" alt="Barberos" />
-          </li>
-          <li class="slide">
-            <img src="img/manada-lobos.jpg" alt="Manada de Lobos" />
-          </li>
-        </ul>
-      </section>
-
-      <!--seccion los mejores en lo que hacemos-->
-      <section id="seccion-mejores">
-        <div class="los-mejores">
-          <h3>
-            Los mejores en <br />
-            lo que hacemos
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur <br />
-            Nulla facilisi. VestibulumNulla facilisi. <br />
-            Nulla facilisi. Vestibulum <br />
-            Lorem ipsum dolor sit amet, consectetur <br />
-            Nulla facilisi. Vestibulum.<br />
-          </p>
-        </div>
-        <div class="imagen">
-          <img
-            src="img/barberos.jpg"
-            alt="Imagen barberos"
-            class="imagen-cuadrada"
-          />
-        </div>
-      </section>
-
-      <!--seccion únete al grupo selecto-->
-      <section class="unete-banner" id="unete-banner">
-        <div class="texto-banner">
-          <h3>
-            únete al grupo selecto que elige lo mejor,<br />
-            descubre una experiencia excepcional y<br />
-            conviértete en la mejor versión de ti mismo.
-          </h3>
-          <a class="button-agenda" href="#"><button>AGENDA AHORA</button></a>
-        </div>
-      </section>
-
-      <!--seccion conoce al team-->
-      <section id="conoce-team">
-        <div>
-          <img src="img/Miguel.png" />
-        </div>
-        <h3>¡Conoce al team!</h3>
-      </section>
-
-      <!-- sección lider de la manada -->
-      <section>
-        <!-- Aquí dentro editas la parte de Andrés -->
-      </section>
-    </main>
-    <!-- Fin del contenido de la página -->
-
-    <!-- Inicio del pie de página -->
-    <footer>
-      <!-- Parte luisa -->
-    </footer>
-    <!-- Fin del pie de página -->
-  </body>
 </html>

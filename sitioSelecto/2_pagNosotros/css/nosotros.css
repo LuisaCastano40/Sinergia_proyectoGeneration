@@ -1,0 +1,384 @@
+/* Estilos generales */
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'avenir', sans-serif;
+}
+
+body {
+    background-color: rgb(218, 216, 216);
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: rgba(0, 0, 0, 0.989);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5%; 
+}
+
+/* Estilos de la barra de navegación */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del logotipo */
+.logo {
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    transition: all;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos del botón navbar */
+.btn button {
+    background-color: #f5f5f5;
+    color: rgb(52, 5, 5);
+    font-size: 14px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.btn a {
+    color: #521705;
+}
+
+.btn button:hover,
+.header .menu-responsive button {
+    background-color: rgb(58, 6, 6);
+    color: #fbe7e1;
+    text-decoration: underline;
+}
+
+/* Icono compras */
+.material-symbols-outlined {
+    color: #eceff1;
+}
+
+.material-symbols-outlined:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la lista de navegación */
+header .nav-links a {
+    font-size: 18px;
+    color: rgb(218, 216, 216);
+}
+
+/* Menú responsive */
+.menu-responsive {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Estilos para el botón de menú responsive */
+.header .menu-responsive button {
+    font-weight: lighter;
+    font-size: 20px;
+    color: rgb(253, 253, 253);
+    padding: 9px 25px;
+    background-color: #521705;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-responsive .open {
+    display: block;
+}
+
+.menu-responsive button:hover {
+    background-color: rgb(255, 250, 250);
+    color: #020101;
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media screen and (max-width: 680px) {
+    .nav-links,
+    .btn {
+        display: none;
+    }
+    .menu-responsive {
+        display: block;
+    }
+
+    .header .nav-links {
+        display: none;
+    }
+
+    /* Estilos para pantallas pequeñas */
+    .header {
+        padding: 3px 5%;
+    }
+
+    .nav-links {
+        justify-content: center; 
+    }
+}
+
+/* Menú responsive desplegado */
+.header .overlay {
+    height: 100%;
+    width: -100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay.open {
+    width: 100%;
+}
+
+.header .overlay .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a {
+    padding: 19px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+    color: #644904;
+}
+
+/* Estilos para el botón de cierre del menú responsive */
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+/* Banner */
+#banner {
+    padding: 0 5%; 
+    background-image: url(./img/banner-nosotros.jpg);
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%);
+}
+
+.contenido-banner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para el texto h3 del banner principal */
+.contenido-banner h3 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    padding: 20px 0px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para el texto resaltado del banner principal */
+.resaltar {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+
+.flecha__icon {
+    color: #ffffff;
+    font-size: 20px; 
+    display: block;
+    text-decoration: none;
+    margin-top: -10px; 
+}
+
+.flecha__icon a{
+    color: #ffffff;
+    font-size: 20px; 
+}
+
+/* Slider de imágenes */
+.slider-frame {
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-frame ul {
+    width: 200%;
+    display: flex;
+    animation: slide 5s infinite;
+    list-style: none;
+}
+
+.slider-frame li {
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slider-frame img {
+    width: 100%;
+}
+
+/* Keyframes para la transición del carrusel */
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-50%);
+    }
+}
+
+/* clase "active" img barberos */
+.slide.active {
+    transform: translateX(0);
+}
+
+/*sección "Únete" */
+#unete-banner {
+    padding: 0 5%; 
+    background-image: url(./img/fondoNosotros.svg);
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%);
+}
+
+.texto-banner {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+}
+
+.texto-banner h3 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 10px 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.button-agenda button {
+    background-color: #f5f5f5;
+    color: rgb(52, 5, 5);
+    font-size: 14px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.button-agenda a {
+    color: #521705;
+}
+
+.button-agenda button:hover,
+.header .menu-responsive button {
+    background-color: rgb(58, 6, 6);
+    color: #fbe7e1;
+    text-decoration: underline;
+}
+
+/*sección "Los mejores en lo que hacemos" */
+#seccion-mejores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.los-mejores {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 38px;
+    margin-bottom: 10px; 
+    color: #521705;
+}
+
+p {
+    font-size: 16px;
+    text-align: left;
+}
+
+.imagen {
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.imagen img {
+    display: block;
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+}

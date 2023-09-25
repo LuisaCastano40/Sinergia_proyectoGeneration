@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Nosotros</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="navbar.js"></script>
+    <!-- Enlace a la hoja de estilos externa de Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Enlace a la hoja de estilos externa de google icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Enlace a la hoja de estilos externa CDN fonts-->
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos externa de Font awesome-->
+    <script src="https://kit.fontawesome.com/9af4a257dc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="img/logo_selecto.png" alt="Logo de marca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Regístrate</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="#"><button>AGENDA AHORA</button></a>
+        <li><a href="#"><span class="material-symbols-outlined">
+            shopping_bag
+            </span></a></li>
+
+        <!-- Responsive menu -->
+        <div class="menu-responsive">
+            <a onclick="openNav()" href="#"><button> ≡ </button></a>
+            <div class="overlay" id="responsive-menu">
+                <a onclick="closeNav()" href="#" class="close">&times;</a>
+                <div class="overlay-content">
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Contáctanos</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Regístrate</a>
+                    <a href="#">Agenda ahora</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner principal -->
+    <section id="banner">
+        <div class="contenido-banner">
+            <h3>Somos más que una <br> barbería; somos un símbolo de<br><span class="resaltar">distinción y confianza</span></h3>
+            <div class="flecha__icon">
+                <a href="#">
+                    <i class="fa-solid fa-arrow-down-long fa-beat"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider de imágenes -->
+    <div class="slider-frame">
+        <ul>
+            <li class="slide active"><img src="img/barberos.jpg" alt="Barberos"></li>
+            <li class="slide"><img src="img/manada-lobos.jpg" alt="Manada de Lobos"></li>
+            
+        </ul>
+    </div>
+
+    <!--seccion únete al grupo selecto-->
+    <section id="unete-banner">
+        <div class="texto-banner">
+            <h3>únete al grupo selecto que elige lo mejor,<br>  descubre una experiencia excepcional y<br> conviértete en la mejor versión de ti mismo.</h3>
+            <a class="button-agenda" href="#"><button>AGENDA AHORA</button></a>
+        </div>
+    </section>
+
+    <!--seccion los mejores en lo que hacemos-->
+    <section id="seccion-mejores">
+        <div class="los-mejores">
+            <h3>Los mejores en <br> lo que hacemos</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur <br> Nulla facilisi. VestibulumNulla facilisi. <br> Nulla facilisi. Vestibulum <br> Lorem ipsum dolor sit amet, consectetur <br> Nulla facilisi. Vestibulum.<br></p>
+        </div>
+        <div class="imagen">
+            <img src="img/barberos.jpg" alt="Imagen barberos" class="imagen-cuadrada">
+        </div>
+    </section>
+
+    <!--seccion conoce al team-->
+    <section id="conoce-team">
+        <div>
+            <img src="img/Miguel.png">
+        </div>
+            <h3>¡Conoce al team!</h3>
+
+
+</body>
+</html>

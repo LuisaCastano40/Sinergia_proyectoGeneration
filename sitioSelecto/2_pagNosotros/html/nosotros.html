@@ -9,12 +9,12 @@
     <!-- Links a los estilos de la página -->
     <link
       rel="stylesheet"
-      href="/sitioSelecto/2_pagNosotros/css/nosotros.css"
+      href="/css/nosotros.css"
     />
     <!-- Links a los scripts de la página -->
     <script
       async
-      src="/sitioSelecto/2_pagNosotros/javascript/nosotros.js"
+      src="/javascript/nosotros.js"
     ></script>
 
   <!-- Links a páginas de íconos -->
@@ -28,7 +28,7 @@
     <!-- Inicio header de la página  -->
     <header class="header">
       <!-- seccion menú navegacion -->
-      <section class="menu-navegacion" id="navbar">
+      <section class="menu-navegacion" id="navBar">
           <nav>
             <ul class="nav-links">
               <li><a class="active" href="#">Inicio</a></li>
@@ -38,7 +38,7 @@
             </ul>
             <div class="logoNav">
               <img
-                src="/sitioSelecto/2_pagNosotros/assets/icons/selecto-Logo 3.svg"
+                src="/assets/icons/selecto-Logo 3.svg"
                 alt="Logo de marca"
               />
             </div>
@@ -50,7 +50,7 @@
               <li>
                 <div class="shoppingBag">
                   <img
-                    src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg"
+                    src="/assets/icons/shoppingBag_Icon.svg"
                     alt="shoppingBag"
                   />
                   <span>0</span>
@@ -66,12 +66,15 @@
           <div class="overlay d-none" id="responsive-menu">
             <button onclick="closeNav()" class="close">&times;</button>
             <div class="overlay-content" id="overlay-content">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Contáctanos</a></li>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Regístrate</a></li>
-              <li><a href="#">Agenda ahora</a></li>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Regístrate</a></li>
+                <li><a class="btnAgenda" href="#">AGENDA AHORA</a></li>
+              </ul>
+      
             </div>
           </div>
         </div>
@@ -85,7 +88,7 @@
           barbería; somos un símbolo de<br> distinción y confianza</span>
         </h2>
         <div class="flecha__icon">
-          <a href="#">
+          <a href="#slider-frame">
             <i class="fa-solid fa-arrow-down-long fa-beat"></i>
           </a>
         </div>
@@ -97,15 +100,8 @@
   <!-- Inicio del contenido de la página -->
   <main>
     <!-- Slider de imágenes -->
-    <section class="slider-frame">
-      <ul>
-        <li class="slide active">
-          <img class="barberosImg" src="/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg" alt="Barberos" />
-        </li>
-        <li class="slide">
-          <img src="/sitioSelecto/2_pagNosotros/assets/img/manada-lobos.jpg" alt="Manada de Lobos" />
-        </li>
-      </ul>
+    <section class="slider-frame" id="slider-frame">
+      
     </section>
 
     <!--seccion los mejores en lo que hacemos-->
@@ -116,16 +112,11 @@
           lo que hacemos
         </h4>
         <p class="p-los-mejores">
-          Lorem ipsum dolor sit amet, consectetur <br />
-          Nulla facilisi. VestibulumNulla facilisi. <br />
-          Nulla facilisi. Vestibulum <br />
-          Lorem ipsum dolor sit amet, consectetur <br />
-          Nulla facilisi. Vestibulum.<br />
-          Nulla facilisi. Vestibulum.<br />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, nulla assumenda odit eius exercitationem dicta eaque debitis sint ullam. Similique ut doloremque, voluptatibus ex quaerat recusandae autem exercitationem deleniti hic?
         </p>
       </div>
       <div class="imagen-los-mejores">
-        <img src="/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg" alt="Imagen barberos" class="imagen-cuadrada" />
+        <img src="/assets/img/barberos.jpg" alt="Imagen barberos" class="imagen-cuadrada" />
       </div>
     </section>
 
@@ -133,8 +124,8 @@
     <section class="unete-banner" id="unete-banner">
       <div class="texto-banner">
         <h3>
-          Únete al grupo selecto que elige lo mejor,<br />
-          descubre una experiencia excepcional y<br />
+          Únete al grupo selecto que elige lo mejor,
+          descubre una experiencia excepcional y
           conviértete en la mejor versión de ti mismo.
         </h3>
         <a class="button-agenda" href="#"><button>AGENDA AHORA</button></a>
@@ -146,33 +137,33 @@
       <h3>¡Conoce al team!</h3>
 
       <div class="team-barber">
-        <img src="/sitioSelecto/2_pagNosotros/assets/img/Miguel.png" alt="Miguel" />
+        <img src="/assets/img/Miguel.png" alt="Miguel" />
         <h4>Miguel</h4>
-        <a href="https://www.instagram.com/caos_barber/"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram Miguel" /></a>
-    
+        <a href="#"><img class="instagramIcon" src="/assets/icons/instagram_Icon.svg" alt="Instagram" /></a>
+      </div>
 
       <div class="team-barber">
-        <img src="/sitioSelecto/2_pagNosotros/assets/img/Valeria.png" alt="Valeria" />
+        <img src="/assets/img/Valeria.png" alt="Valeria" />
         <h4>Valeria</h4>
-        <a href="https://www.instagram.com/valeee_abril/"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram Valeria" /></a>
+        <a href="#"><img class="instagramIcon" src="/assets/icons/instagram_Icon.svg" alt="Instagram" /></a>
       </div>
 
       <div class="team-barber">
-        <img src="/sitioSelecto/2_pagNosotros/assets/img/wallas.png" alt="Wallas" />
+        <img src="/assets/img/wallas.png" alt="Wallas" />
         <h4>Wallas</h4>
-        <a href="https://www.instagram.com/walas_hair_study/"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram Wallas" /></a>
+        <a href="#"><img class="instagramIcon" src="/assets/icons/instagram_Icon.svg" alt="Instagram" /></a>
       </div>
 
       <div class="team-barber">
-        <img src="/sitioSelecto/2_pagNosotros/assets/img/Kevin.png" alt="Kevin" />
+        <img src="/assets/img/Kevin.png" alt="Kevin" />
         <h4>Kevin</h4>
-        <a href="https://www.instagram.com/k.stephen.03/"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img class="instagramIcon" src="/assets/icons/instagram_Icon.svg" alt="Instagram" /></a>
       </div>
 
       <div class="team-barber">
-        <img src="/sitioSelecto/2_pagNosotros/assets/img/Christian.png" alt="Christian" />
+        <img src="/assets/img/Christian.png" alt="Christian" />
         <h4>Christian</h4>
-        <a href="https://www.instagram.com/soycrismorales/"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram Christian" /></a>
+        <a href="#"><img class="instagramIcon" src="/assets/icons/instagram_Icon.svg" alt="Instagram" /></a>
       </div>
     </section>
 
@@ -180,7 +171,7 @@
     <section class="lider-manada">
       <div class="contenido-andres">
         <div class="img-andres">
-          <img src="/sitioSelecto/2_pagNosotros/assets/img/Andrés-liderManada.jpg" alt="Imagen barberos"
+          <img src="/assets/img/Andrés-liderManada.jpg" alt="Imagen barberos"
             class="imagen-cuadrada" />
         </div>
         <div class="contenedor-titulos">
@@ -189,12 +180,7 @@
           </h4>
           <h5 class="subt-lider">Líder de la manada</h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur <br />
-            Nulla facilisi. VestibulumNulla facilisi. <br />
-            Nulla facilisi. Vestibulum <br />
-            Lorem ipsum dolor sit amet, consectetur <br />
-            Nulla facilisi. Vestibulum.<br />
-            Nulla facilisi. Vestibulum.<br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, ratione explicabo. Voluptas laborum molestias accusantium quaerat, harum voluptates odit explicabo libero labore asperiores dignissimos nulla ipsa dolorem nisi, fuga sapiente!
           </p>
         </div>
       </div>
@@ -211,17 +197,17 @@
           <div class="redes">
             <a href="#"
               ><img
-                src="/sitioSelecto/2_pagNosotros/assets/icons/whatsapp_Icon.svg"
+                src="/assets/icons/whatsapp_Icon.svg"
                 alt="whatsapp-icon"
             /></a>
             <a href="#"
               ><img
-                src="/sitioSelecto/2_pagNosotros/assets/icons/instagram_Icon.svg"
+                src="/assets/icons/instagram_Icon.svg"
                 alt="instagram-icon"
             /></a>
             <a href="#"
               ><img
-                src="/sitioSelecto/2_pagNosotros/assets/icons/mail_Icon.svg"
+                src="/assets/icons/mail_Icon.svg"
                 alt="email-icon"
             /></a>
           </div>
@@ -229,7 +215,7 @@
         <article class="logo">
           <a href="#"
             ><img
-              src="/sitioSelecto/2_pagNosotros/assets/icons/selecto-Logo 3.svg"
+              src="/assets/icons/selecto-Logo 3.svg"
               alt="logo"
           /></a>
           <a class="btn" href="#">AGENDA AHORA</a>

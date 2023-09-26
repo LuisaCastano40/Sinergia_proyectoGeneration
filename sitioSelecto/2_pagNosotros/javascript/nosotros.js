@@ -12,7 +12,7 @@ function changeNavbarColor() {
     if (window.scrollY >= scrollDistance) {
         navbar.style.backgroundColor = 'black';
     } else {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
     }
 }
 

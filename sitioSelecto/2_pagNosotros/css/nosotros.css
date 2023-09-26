@@ -1,17 +1,27 @@
 /* Importamos la fuente a utilizar */
 @import url('https://fonts.cdnfonts.com/css/avenir');
 
+/* variables */
+:root {
+    --text: 'avenir', sans-serif;
+    --colorFondo: #dad8d8;
+    --colorCafe: #521705;
+    --colorTextoBlanco: #dad8d8;
+    --colorNegro: #020101;
+    --colorFondoNav: #000000b3;
+}
+
 /* Estilos generales */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'avenir', sans-serif;
+    font-family: var(--text);
 }
 
 body {
     width: 100%;
-    background-color: rgb(218, 216, 216);
+    background-color: var(--colorFondo);
     overflow-x: hidden;
 }
 
@@ -19,13 +29,16 @@ body {
 ::-webkit-scrollbar {
     background-color: #f5f5f5;
     width: 10px;
-  }
+}
+
 ::-webkit-scrollbar-thumb {
     background-color: #888;
-  }
+}
+
 ::-webkit-scrollbar-track {
     background-color: #f5f5f5;
-  }
+}
+
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
@@ -51,7 +64,6 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu-navegacion nav {
@@ -76,22 +88,25 @@ body {
     text-decoration: none;
     font-size: 25px;
 }
-.active{
-    color: rgb(218, 216, 216);
+
+.active {
+    color: var(--colorTextoBlanco);
     cursor: pointer;
     position: relative;
     padding: 5px 0;
 }
-.active::before{
+
+.active::before {
     content: "";
     position: absolute;
     left: 0;
     right: 100%;
     bottom: 0;
-    background-color: white;
+    background-color: var(--colorTextoBlanco);
     height: 2px;
     transition: right 0.3s ease-in-out;
 }
+
 .active:hover::before {
     right: 0;
 }
@@ -102,19 +117,21 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
 .logoNav img {
     height: 100px;
     width: auto;
     transition: all;
 }
+
 .logoNav img:hover {
     transform: scale(1.05);
 }
 
 /* Estilos del botón navbar */
 .nav-links .btn {
-    background-color: #f5f5f5;
-    color: #521705;
+    background-color: var(--colorTextoBlanco);
+    color: var(--colorCafe);
     font-size: 18px;
     border: none;
     padding: 10px 20px;
@@ -123,13 +140,15 @@ body {
     transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
 }
+
 .btn:hover,
 .header .menu-responsive button {
-    background-color: rgb(58, 6, 6);
-    color: #fbe7e1;
+    background-color: var(--colorCafe);
+    color: var(--colorTextoBlanco);
 }
-.shoppingBag span{
-    background-color: white;
+
+.shoppingBag span {
+    background-color: var(--colorTextoBlanco);
     font-size: 20px;
     padding: 1px 5px;
     border-radius: 50%;
@@ -145,21 +164,22 @@ body {
     margin-left: 80px;
     display: none;
 }
+
 /* botones del menú responsive */
 .menu-responsive button {
     font-weight: lighter;
     font-size: 50px;
-    color: rgb(253, 253, 253);
+    color: var(--colorTextoBlanco);
     padding: 5px 20px;
-    background-color: #521705;
+    background-color: var(--colorCafe);
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .menu-responsive button:hover {
-    background-color: rgb(255, 250, 250);
-    color: #020101;
+    background-color: var(--colorTextoBlanco);
+    color: var(--colorNegro);
 }
 
 /* Menú responsive desplegado */
@@ -170,28 +190,50 @@ body {
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--colorFondoNav);
     transition: all 0.3s ease 0s;
 }
-.d-none{
+
+.d-none {
     display: none;
 }
+
 .overlay-content {
-    display: flex;
+    width: 100%;
     height: 100%;
+}
+
+.overlay-content ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    list-style: none;
+    gap: 70px;
 }
+
 .overlay-content a {
-    border: solid white;
     padding: 19px;
     font-size: 30px;
-    display: block;
     transition: all 0.3s ease 0s;
     font-weight: 700;
     color: #eceff1;
     text-decoration: none;
+}
+
+.overlay-content .btnAgenda {
+    background-color: var(--colorTextoBlanco);
+    color: var(--colorCafe);
+}
+
+.btnAgenda {
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Estilos para el botón de cierre del menú responsive */
@@ -204,10 +246,9 @@ body {
 
 /* Banner */
 .banner {
-    border: solid red;
     width: 100%;
     height: 100%;
-    padding: 0 5%; 
+    padding: 0 5%;
     background-image: url(/sitioSelecto/2_pagNosotros/assets/img/banner-nosotros.jpg);
     background-size: cover;
     background-position: center;
@@ -221,37 +262,22 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 50px;
 }
 
 /* Estilos para el texto h3 del banner principal */
-.contenido-banner h3 {
+.contenido-banner h2 {
     color: #ffffff;
-    font-size: 60px;
-    font-weight: 200;
+    font-size: 80px;
+    font-weight: 500;
     padding: 20px 0px;
     position: relative;
     z-index: 1;
 }
 
-/* Estilos para el texto resaltado del banner principal */
-.resaltar {
+.flecha__icon i {
     color: #ffffff;
     font-size: 60px;
-    font-weight: 800;
-    padding: 10px 0px;
-}
-
-.flecha__icon {
-    color: #ffffff;
-    font-size: 20px;
-    display: block;
-    text-decoration: none;
-    margin-top: -10px;
-}
-
-.flecha__icon a {
-    color: #ffffff;
-    font-size: 20px;
 }
 
 /* -----------------MAIN----------------- */
@@ -262,13 +288,8 @@ body {
     height: 500px;
     overflow: hidden;
     position: relative;
-}
-
-.slider-frame ul {
-    width: 200%;
     display: flex;
-    animation: slide 5s infinite;
-    list-style: none;
+    animation: slide 10s infinite;
 }
 
 /* Keyframes para la transición del carrusel */
@@ -276,83 +297,62 @@ body {
 
     0%,
     100% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(0);
+        background-image: url('/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg');
+        background-position: center;
+        background-size: cover;
     }
 
     50% {
-        transform: translateX(-50%);
+        background-image: url('/sitioSelecto/2_pagNosotros/assets/img/manada-lobos.jpg');
+        background-position: center;
+        background-size: cover;
     }
 
-    75% {
-        transform: translateX(-50%);
-    }
-}
-
-.slider-frame li {
-    width: 100%;
-    transition: transform 1s ease-in-out;
-}
-
-.slider-frame img {
-    width: 100%;
-}
-
-.barberosImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* clase "active" img barberos */
-.active {
-    transform: translateX(0);
 }
 
 /*sección "Los mejores en lo que hacemos" */
 .seccion-mejores {
+    width: 80%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 100px 0;
 }
 
 .los-mejores {
-    text-align: right;
+    width: 50%;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .titulo-mejores {
     text-align: right;
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 20px;
-    margin-left: -80px;
-    color: #75210e;
-
+    color: var(--colorCafe);
 }
 
 .p-los-mejores {
-    font-size: 20px;
+    font-size: 30px;
     text-align: right;
     margin-bottom: 5px;
-    margin-left: -80px;
+    width: 60%;
 }
 
 .imagen-los-mejores {
-    border-radius: 20px;
+    width: 50%;
     overflow: hidden;
-    margin-left: 50px;
+    margin: 50px;
 }
 
 .imagen-los-mejores img {
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 60%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 /*sección Únete */
@@ -366,53 +366,50 @@ body {
 }
 
 .texto-banner {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 100px;
 }
-
 .texto-banner h3 {
-    color: #ffffff;
-    font-size: 40px;
+    color: var(--colorTextoBlanco);
+    font-size: 60px;
     font-weight: 400;
     padding: 10px 0px;
-    position: relative;
     z-index: 1;
 }
 
 .button-agenda button {
     background-color: #f5f5f5;
     color: rgb(52, 5, 5);
-    font-size: 14px;
+    font-size: 20px;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 50px;
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
 }
-
 .button-agenda a {
-    color: #521705;
+    color: var(--colorCafe);
 }
-
 .button-agenda button:hover {
-    background-color: rgb(58, 6, 6);
-    color: #fbe7e1;
+    background-color: var(--colorCafe);
+    color: var(--colorTextoBlanco);
 }
 
 /*Seccion conoce al team*/
 .conoce-team {
     text-align: center;
     padding: 20px;
-    background-color: #020101;
+    background-color: var(--colorNegro);
 }
 
-h2 {
-    font-size: 40px;
+h3 {
+    font-size: 60px;
     margin-bottom: 20px;
     color: #ffffff;
 }
@@ -499,7 +496,7 @@ p {
 }
 
 /* ----------------FOOTER----------------- */
-.container-footer{
+.container-footer {
     border: solid red;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -507,14 +504,17 @@ p {
     background-color: #521705;
     color: white;
 }
-.container-footer h3{
+
+.container-footer h3 {
     color: white;
 }
-.container-footer a{
+
+.container-footer a {
     color: white;
     text-decoration: none;
 }
-.socialMedia{
+
+.socialMedia {
     border: solid white;
     grid-column: 1/2;
     display: flex;
@@ -523,16 +523,19 @@ p {
     flex-direction: column;
     gap: 20px;
 }
-.socialMedia h3{
+
+.socialMedia h3 {
     font-size: 25px;
 }
+
 .redes {
     display: flex;
     gap: 30px;
     justify-content: center;
     align-items: center;
 }
-.logo{
+
+.logo {
     border: solid white;
     grid-column: 2/3;
     display: flex;
@@ -541,11 +544,13 @@ p {
     flex-direction: column;
     gap: 30px;
 }
-.logo img{
+
+.logo img {
     width: 150px;
     height: 140px;
 }
-.logo .btn{
+
+.logo .btn {
     background-color: #f5f5f5;
     color: #521705;
     font-size: 18px;
@@ -556,11 +561,13 @@ p {
     transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
 }
-.logo .btn:hover{
+
+.logo .btn:hover {
     background-color: rgb(58, 6, 6);
     color: #fbe7e1;
 }
-.map{
+
+.map {
     border: solid white;
     grid-column: 3/4;
     display: flex;
@@ -570,24 +577,29 @@ p {
     gap: 20px;
     padding: 50px;
 }
-.map h3{
+
+.map h3 {
     font-size: 25px;
 }
-.map iframe{
+
+.map iframe {
     border-radius: 25px;
 }
-.map p{
+
+.map p {
     font-size: 25px;
     text-align: center;
     width: 80%;
 }
-.navegation{
+
+.navegation {
     border: solid white;
     grid-column: 1/4;
     grid-row: 2/3;
     font-size: 25px;
 }
-.navegation ul{
+
+.navegation ul {
     width: 100%;
     height: 100%;
     display: flex;
@@ -595,26 +607,29 @@ p {
     align-items: center;
     list-style: none;
 }
-.navegation li{
+
+.navegation li {
     padding: 5px 10px;
     position: relative;
     cursor: pointer;
 }
-.navegation li::before{
+
+.navegation li::before {
     content: "";
     position: absolute;
     left: 0;
     right: 100%;
     bottom: 0;
-    background-color:white;
+    background-color: white;
     height: 3px;
     transition: right 0.3s ease-in-out;
 }
+
 .navegation li:hover::before {
     right: 0;
 }
 
-.copyright{
+.copyright {
     width: 100%;
     height: 50px;
     background-color: #888;

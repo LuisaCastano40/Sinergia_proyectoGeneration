@@ -607,7 +607,7 @@ body {
 /* ------------MEDIA QUERIES --------- */
 
 /* Responsive */
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1200px) {
     /* header */
     .nav-links {
         display: none;
@@ -633,7 +633,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1023px){
     .contenido-banner h2{
         font-size: 40px;
     }

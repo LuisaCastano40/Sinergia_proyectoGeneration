@@ -1,7 +1,7 @@
 // Obtener el elemento del navbar
-const navbar = document.getElementById('navBar');
+const navbar = document.getElementById("navBar");
 // Definir la distancia a partir de la cual se cambia el color
-const scrollDistance = 50;
+const scrollDistance = 20;
 
 // escuchamos el evento de scroll
 window.addEventListener('scroll', changeNavbarColor);

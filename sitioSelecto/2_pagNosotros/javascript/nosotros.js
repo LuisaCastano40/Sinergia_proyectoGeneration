@@ -1,5 +1,5 @@
 // Obtener el elemento del navbar
-const navbar = document.querySelector('.menu-navegacion');
+const navbar = document.getElementById('navBar');
 // Definir la distancia a partir de la cual se cambia el color
 const scrollDistance = 50;
 

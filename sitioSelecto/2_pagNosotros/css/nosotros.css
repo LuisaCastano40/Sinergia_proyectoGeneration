@@ -249,7 +249,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 0 5%;
-    background-image: url(/sitioSelecto/2_pagNosotros/assets/img/banner-nosotros.jpg);
+    background-image: url(/assets/img/banner-nosotros.jpg);
     background-size: cover;
     background-position: center;
     filter: grayscale(30%);
@@ -267,8 +267,8 @@ body {
 
 /* Estilos para el texto h3 del banner principal */
 .contenido-banner h2 {
-    color: #ffffff;
-    font-size: 80px;
+    color: var(--colorTextoBlanco);
+    font-size: 60px;
     font-weight: 500;
     padding: 20px 0px;
     position: relative;
@@ -297,13 +297,13 @@ body {
 
     0%,
     100% {
-        background-image: url('/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg');
+        background-image: url('/assets/img/barberos.jpg');
         background-position: center;
         background-size: cover;
     }
 
     50% {
-        background-image: url('/sitioSelecto/2_pagNosotros/assets/img/manada-lobos.jpg');
+        background-image: url('/assets/img/manada-lobos.jpg');
         background-position: center;
         background-size: cover;
     }
@@ -332,7 +332,7 @@ body {
     text-align: right;
     font-size: 60px;
     margin-bottom: 20px;
-    color: var(--colorCafe);
+    color: #75210e;
 }
 
 .p-los-mejores {
@@ -358,7 +358,7 @@ body {
 /*sección Únete */
 .unete-banner {
     padding: 0 5%;
-    background-image: url(/sitioSelecto/2_pagNosotros/assets/img/fondoNosotros.svg);
+    background-image: url(/assets/img/fondoNosotros.svg);
     height: 85vh;
     background-size: cover;
     background-position: center;
@@ -380,10 +380,11 @@ body {
     font-weight: 400;
     padding: 10px 0px;
     z-index: 1;
+    width: 80%;
 }
 
 .button-agenda button {
-    background-color: #f5f5f5;
+    background-color: var(--colorTextoBlanco);
     color: rgb(52, 5, 5);
     font-size: 20px;
     border: none;
@@ -404,118 +405,94 @@ body {
 /*Seccion conoce al team*/
 .conoce-team {
     text-align: center;
-    padding: 20px;
     background-color: var(--colorNegro);
+    padding: 100px 50px;
 }
-
-h3 {
+.conoce-team h3 {
     font-size: 60px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--colorTextoBlanco);
 }
-
 .team-barber {
     display: inline-block;
-    margin: 10px;
+    margin:20px;
     text-align: center;
     position: relative;
 }
-
-.team-barber img {
-    max-width: 100%;
-    border-radius: 50%;
-}
-
-
 .team-barber h4 {
     margin-top: 10px;
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 25px;
+    color: var(--colorTextoBlanco);
 }
-
-.team-barber a img {
-    max-width: 30px;
-    margin-top: 10px;
-}
-
 .team-barber img {
-    width: 170px;
-    height: 170px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.instagramIcon {
+    max-width: 50px;
 }
 
 /*sección Líder manada */
 
 .lider-manada {
+    width: 80%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 100px 0;
 }
-
 .contenido-andres {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
-
+.img-andres {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+}
+.img-andres img {
+    width: 60%;
+    border-radius: 20px;
+    object-fit: cover;
+}
 .contenedor-titulos {
+    width: 50%;
     text-align: left;
-    margin-bottom: 20px;
 }
-
 .titulo-principal {
-    font-size: 40px;
-    margin-top: 0;
-    margin-left: 25px;
+    font-size: 60px;
     color: #75210e;
 }
-
 .subt-lider {
     font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: 25px;
-    color: #000000;
+    color: var(--colorNegro);
 }
-
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    margin-left: 25px;
-}
-
-.img-andres {
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.img-andres img {
-    display: block;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
+.contenedor-titulos p {
+    width: 70%;
+    font-size: 30px;
+    margin: 20px 0;
 }
 
 /* ----------------FOOTER----------------- */
 .container-footer {
-    border: solid red;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1.5fr .5fr;
-    background-color: #521705;
-    color: white;
+    background-color: var(--colorCafe);
+    color: var(--colorTextoBlanco);
 }
-
 .container-footer h3 {
-    color: white;
+    color: var(--colorTextoBlanco);
 }
-
 .container-footer a {
-    color: white;
+    color: var(--colorTextoBlanco);
     text-decoration: none;
 }
-
 .socialMedia {
-    border: solid white;
     grid-column: 1/2;
     display: flex;
     justify-content: center;
@@ -523,7 +500,6 @@ p {
     flex-direction: column;
     gap: 20px;
 }
-
 .socialMedia h3 {
     font-size: 25px;
 }
@@ -536,7 +512,6 @@ p {
 }
 
 .logo {
-    border: solid white;
     grid-column: 2/3;
     display: flex;
     justify-content: center;
@@ -544,15 +519,13 @@ p {
     flex-direction: column;
     gap: 30px;
 }
-
 .logo img {
     width: 150px;
     height: 140px;
 }
-
 .logo .btn {
-    background-color: #f5f5f5;
-    color: #521705;
+    background-color: var(--colorTextoBlanco);
+    color: var(--colorCafe);
     font-size: 18px;
     border: none;
     padding: 10px 20px;
@@ -563,12 +536,11 @@ p {
 }
 
 .logo .btn:hover {
-    background-color: rgb(58, 6, 6);
-    color: #fbe7e1;
+    background-color: var(--colorCafe);
+    color: var(--colorTextoBlanco);
 }
 
 .map {
-    border: solid white;
     grid-column: 3/4;
     display: flex;
     justify-content: center;
@@ -577,43 +549,37 @@ p {
     gap: 20px;
     padding: 50px;
 }
-
 .map h3 {
     font-size: 25px;
 }
-
 .map iframe {
     border-radius: 25px;
 }
-
 .map p {
     font-size: 25px;
     text-align: center;
     width: 80%;
 }
-
 .navegation {
-    border: solid white;
     grid-column: 1/4;
     grid-row: 2/3;
     font-size: 25px;
 }
-
 .navegation ul {
     width: 100%;
     height: 100%;
+    padding: 0 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    flex-wrap: wrap;
 }
-
 .navegation li {
     padding: 5px 10px;
     position: relative;
     cursor: pointer;
 }
-
 .navegation li::before {
     content: "";
     position: absolute;
@@ -640,19 +606,93 @@ p {
 
 /* ------------MEDIA QUERIES --------- */
 
-/* Responsive movil */
+/* Responsive */
 @media screen and (max-width: 1550px) {
+    /* header */
     .nav-links {
         display: none;
     }
-
     .menu-responsive {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    /* los mejores en lo que hacemos */
+    .p-los-mejores{
+        width: 90%;
+    }
+    .imagen-los-mejores img{
+        width: 90%;
+    }
+    /* Lider de la manada */
+    .img-andres img{
+        width: 90%;
+    }
+    .contenedor-titulos p{
+        width: 90%;
+    }
 }
 
-/* responsive tablet */
-/* @media screen and (max-width: 1023px) {
-} */
+@media screen and (max-width: 1200px){
+    .contenido-banner h2{
+        font-size: 40px;
+    }
+    /* main*/
+    .seccion-mejores{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo-mejores{
+        text-align: center;
+        width: 100%;
+        font-size: 40px;
+    }
+    .p-los-mejores{
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+    }
+    .imagen-los-mejores{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .texto-banner h3{
+        font-size: 40px;
+    }
+    .contenido-andres{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-andres{
+        justify-content: center;
+    }
+    .contenedor-titulos{
+        text-align: center;
+        width: 100%;
+    }
+
+    /* footer */
+    .container-footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr .5fr;
+    }
+    .socialMedia{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .logo{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .map{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .navegation{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}

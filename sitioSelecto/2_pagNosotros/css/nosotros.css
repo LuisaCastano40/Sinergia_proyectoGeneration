@@ -12,6 +12,7 @@ body {
     width: 100vw;
     /* dimensión de pantalla */
     background-color: rgb(218, 216, 216);
+    overflow-x: hidden;
 }
 /* Cambiar el color de la barra de desplazamiento */
 ::-webkit-scrollbar {
@@ -38,7 +39,6 @@ body {
 
 /* Estilos del encabezado */
 .header {
-    border: solid red;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.989);
@@ -50,7 +50,6 @@ body {
 
 /* menú de navegación */
 .menu-navegacion{
-    border: solid green;
     width: 100%;
     padding: 2% 70px;
 }
@@ -68,7 +67,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; 
-    gap: 100px;
+    gap: 50px;
 } 
 
 /* Estilos de la lista de navegación */
@@ -199,11 +198,11 @@ body {
 
 /* Banner */
 .banner {
-    border: solid pink;
+
     width: 100%;
     height: 85vh;
     padding: 0 5%; 
-    background-image: url(/img/banner-nosotros.jpg);
+    background-image: url(/sitioSelecto/2_pagNosotros/assets/img/banner-nosotros.jpg);
     background-size: cover;
     background-position: center;
     filter: grayscale(30%);
@@ -229,9 +228,9 @@ body {
 
 /* Estilos para el texto resaltado del banner principal */
 .resaltar {
-    color: #b03030;
+    color: #ffffff;
     font-size: 60px;
-    font-weight: 700;
+    font-weight: 800;
     padding: 10px 0px;
 }
 .flecha__icon {
@@ -285,6 +284,13 @@ body {
     width: 100%;
 }
 
+.barberosImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* clase "active" img barberos */
 .active {
     transform: translateX(0);
@@ -329,7 +335,7 @@ p {
 /*sección "Únete" */
 .unete-banner {
     padding: 0 5%; 
-    background-image: url(./img/fondoNosotros.svg);
+    background-image: url(/sitioSelecto/2_pagNosotros/assets/img/fondoNosotros.svg);
     height: 85vh;
     background-size: cover;
     background-position: center;
@@ -375,6 +381,48 @@ p {
     background-color: rgb(58, 6, 6);
     color: #fbe7e1;
     text-decoration: underline;
+}
+
+/*Seccion conoce al team*/
+.conoce-team {
+    text-align: center;
+    padding: 20px;
+    background-color: #020101;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #662e1d;
+}
+
+.team-barber {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.team-barber img {
+    max-width: 100%;
+    border-radius: 50%; 
+}
+
+
+.team-barber h4 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.team-barber a img {
+    max-width: 30px;
+    margin-top: 10px;
+}
+
+/* Ajusta el tamaño del círculo */
+.team-barber img {
+    width: 170px;
+    height: 170px;
 }
 
 /* ----------------FOOTER----------------- */

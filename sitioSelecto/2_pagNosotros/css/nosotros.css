@@ -8,32 +8,34 @@
     padding: 0;
     font-family: 'avenir', sans-serif;
 }
+
 body {
     width: 100vw;
     /* dimensión de pantalla */
     background-color: rgb(218, 216, 216);
     overflow-x: hidden;
 }
+
 /* Cambiar el color de la barra de desplazamiento */
 ::-webkit-scrollbar {
     background-color: #f5f5f5;
     width: 10px;
-  }
-  
-  /* Cambiar el color del pulgar de desplazamiento */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Cambiar el color del pulgar de desplazamiento */
+::-webkit-scrollbar-thumb {
     background-color: #888;
-  }
-  
-  /* Cambiar el color del fondo de la barra de desplazamiento */
-  ::-webkit-scrollbar-track {
+}
+
+/* Cambiar el color del fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
     background-color: #f5f5f5;
-  }
-  
-  /* Cambiar el color del pulgar de desplazamiento cuando se pasa el cursor sobre él */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Cambiar el color del pulgar de desplazamiento cuando se pasa el cursor sobre él */
+::-webkit-scrollbar-thumb:hover {
     background-color: #555;
-  }
+}
 
 /*------------------ HEADER --------------*/
 
@@ -49,11 +51,12 @@ body {
 }
 
 /* menú de navegación */
-.menu-navegacion{
+.menu-navegacion {
     width: 100%;
     padding: 2% 70px;
 }
-.menu-navegacion nav{
+
+.menu-navegacion nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,9 +69,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 50px;
-} 
+}
 
 /* Estilos de la lista de navegación */
 .nav-links a {
@@ -115,6 +118,7 @@ body {
 .btn a {
     color: #521705;
 }
+
 .btn button:hover,
 .header .menu-responsive button {
     background-color: rgb(58, 6, 6);
@@ -145,9 +149,11 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
+
 .menu-responsive .open {
     display: block;
 }
+
 .menu-responsive button:hover {
     background-color: rgb(255, 250, 250);
     color: #020101;
@@ -205,12 +211,13 @@ body {
 
     width: 100%;
     height: 85vh;
-    padding: 0 5%; 
+    padding: 0 5%;
     background-image: url(/sitioSelecto/2_pagNosotros/assets/img/banner-nosotros.jpg);
     background-size: cover;
     background-position: center;
     filter: grayscale(30%);
 }
+
 .contenido-banner {
     height: 100vh;
     display: flex;
@@ -237,16 +244,18 @@ body {
     font-weight: 800;
     padding: 10px 0px;
 }
+
 .flecha__icon {
     color: #ffffff;
-    font-size: 20px; 
+    font-size: 20px;
     display: block;
     text-decoration: none;
-    margin-top: -10px; 
+    margin-top: -10px;
 }
-.flecha__icon a{
+
+.flecha__icon a {
     color: #ffffff;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 /* -----------------MAIN----------------- */
@@ -254,31 +263,39 @@ body {
 /* Slider de imágenes */
 .slider-frame {
     width: 100%;
-    height: 500px; 
+    height: 500px;
     overflow: hidden;
     position: relative;
 }
+
 .slider-frame ul {
     width: 200%;
     display: flex;
     animation: slide 5s infinite;
     list-style: none;
 }
+
 /* Keyframes para la transición del carrusel */
 @keyframes slide {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
+
     25% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(-50%);
     }
+
     75% {
         transform: translateX(-50%);
     }
 }
+
 .slider-frame li {
     width: 100%;
     transition: transform 1s ease-in-out;
@@ -301,7 +318,7 @@ body {
 }
 
 /*sección "Los mejores en lo que hacemos" */
-#seccion-mejores {
+.seccion-mejores {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,36 +326,42 @@ body {
 }
 
 .los-mejores {
-    text-align: left;
+    text-align: right;
     margin-bottom: 20px;
 }
 
-h3 {
-    font-size: 38px;
-    margin-bottom: 10px; 
-    color: #521705;
+.titulo-mejores {
+    text-align: right;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: -80px;
+    color: #75210e;
+
 }
 
-p {
-    font-size: 16px;
-    text-align: left;
+.p-los-mejores {
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 5px;
+    margin-left: -80px;
 }
 
-.imagen {
-    border-radius: 15px; 
-    overflow: hidden; 
+.imagen-los-mejores {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 50px;
 }
 
-.imagen img {
+.imagen-los-mejores img {
     display: block;
-    width: 400px; 
-    height: 400px; 
-    object-fit: cover; 
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
-/*sección "Únete" */
+/*sección Únete */
 .unete-banner {
-    padding: 0 5%; 
+    padding: 0 5%;
     background-image: url(/sitioSelecto/2_pagNosotros/assets/img/fondoNosotros.svg);
     height: 85vh;
     background-size: cover;
@@ -347,12 +370,12 @@ p {
 }
 
 .texto-banner {
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    text-align: center; 
+    align-items: center;
+    text-align: center;
 }
 
 .texto-banner h3 {
@@ -397,7 +420,7 @@ p {
 h2 {
     font-size: 40px;
     margin-bottom: 20px;
-    color: #662e1d;
+    color: #ffffff;
 }
 
 .team-barber {
@@ -409,13 +432,14 @@ h2 {
 
 .team-barber img {
     max-width: 100%;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 
 .team-barber h4 {
     margin-top: 10px;
     font-size: 18px;
+    color: #ffffff;
 }
 
 .team-barber a img {
@@ -423,10 +447,61 @@ h2 {
     margin-top: 10px;
 }
 
-/* Ajusta el tamaño del círculo */
 .team-barber img {
     width: 170px;
     height: 170px;
+}
+
+/*sección Líder manada */
+
+.lider-manada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenido-andres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-titulos {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.titulo-principal {
+    font-size: 40px;
+    margin-top: 0;
+    margin-left: 25px;
+    color: #75210e;
+}
+
+.subt-lider {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    color: #000000;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.img-andres {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img-andres img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
 /* ----------------FOOTER----------------- */
@@ -437,10 +512,12 @@ h2 {
 
 /* Responsive movil */
 @media screen and (max-width: 767px) {
+
     .nav-links,
     .btn {
         display: none;
     }
+
     .menu-responsive {
         display: block;
     }
@@ -455,11 +532,9 @@ h2 {
     }
 
     .nav-links {
-        justify-content: center; 
+        justify-content: center;
     }
 }
 
 /* responsive tablet */
-@media screen and (max-width: 1023px) {
-
-}
+@media screen and (max-width: 1023px) {}

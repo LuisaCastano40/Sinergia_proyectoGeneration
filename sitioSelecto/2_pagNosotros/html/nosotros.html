@@ -1,192 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Nosotros</title>
 
-    <!-- Links a los estilos de la página -->
-    <link
-      rel="stylesheet"
-      href="/sitioSelecto/2_pagNosotros/css/nosotros.css"
-    />
-    <!-- Links a los scripts de la página -->
-    <script
-      type="text/javascript"
-      src="/2_pagNosotros/javascript/nosotros.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Nosotros</title>
 
-    <!-- Links a páginas de íconos -->
-    <!-- Enlace a la hoja de estilos externa de Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Enlace a la hoja de estilos externa de Font awesome-->
-    <script
-      src="https://kit.fontawesome.com/9af4a257dc.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- Links a los estilos de la página -->
+  <link rel="stylesheet" href="/sitioSelecto/2_pagNosotros/css/nosotros.css" />
+  <!-- Links a los scripts de la página -->
+  <script type="text/javascript" src="/2_pagNosotros/javascript/nosotros.js"></script>
 
-  <body>
-    <!-- Inicio header de la página  -->
-    <header class="header">
-      <!-- seccion menú navegacion -->
-      <section class="menu-navegacion">
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contáctanos</a></li>
-            <li><a href="#">Servicios</a></li>
-          </ul>
-          <div class="logo">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/logo_selecto.png" alt="Logo de marca" />
-          </div>
-          <ul class="nav-links">
-            <li><a href="#">Regístrate</a></li>
-            <li>
-              <a class="btn" href="#"><button>AGENDA AHORA</button></a>
-            </li>
-            <li>
-                <img class="shoppingBag" src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg" alt="shoppingBag">
-            </li>
-          </ul>
-        </nav>
-      </section>
+  <!-- Links a páginas de íconos -->
+  <!-- Enlace a la hoja de estilos externa de Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Enlace a la hoja de estilos externa de Font awesome-->
+  <script src="https://kit.fontawesome.com/9af4a257dc.js" crossorigin="anonymous"></script>
+</head>
 
-      <!-- Responsive menu -->
-      <div class="menu-responsive">
-        <a onclick="openNav()" href="#"><button>≡</button></a>
-        <div class="overlay" id="responsive-menu">
-          <a onclick="closeNav()" href="#" class="close">&times;</a>
-          <div class="overlay-content">
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Contáctanos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Regístrate</a>
-            <a href="#">Agenda ahora</a>
-          </div>
+<body>
+  <!-- Inicio header de la página  -->
+  <header class="header">
+    <!-- seccion menú navegacion -->
+    <section class="menu-navegacion">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+        <div class="logo">
+          <img src="/sitioSelecto/2_pagNosotros/assets/img/logo_selecto.png" alt="Logo de marca" />
         </div>
-      </div>
-
-      <!-- Banner principal -->
-      <section class="banner" id="banner">
-        <div class="contenido-banner">
-          <h2>
-            Somos más que una <br />
-            barbería; somos un símbolo de<br /><span class="resaltar"
-              >distinción y confianza</span
-            >
-          </h2>
-          <div class="flecha__icon">
-            <a href="#">
-              <i class="fa-solid fa-arrow-down-long fa-beat"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    </header>
-    <!-- Fin header de la página -->
-
-    <!-- Inicio del contenido de la página -->
-    <main>
-      <!-- Slider de imágenes -->
-      <section class="slider-frame">
-        <ul>
-          <li class="slide active">
-            <img class="barberosImg" src="/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg" alt="Barberos" />
+        <ul class="nav-links">
+          <li><a href="#">Regístrate</a></li>
+          <li>
+            <a class="btn" href="#"><button>AGENDA AHORA</button></a>
           </li>
-          <li class="slide">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/manada-lobos.jpg" alt="Manada de Lobos" />
+          <li>
+            <img class="shoppingBag" src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg"
+              alt="shoppingBag">
           </li>
         </ul>
-      </section>
+      </nav>
+    </section>
 
-      <!--seccion los mejores en lo que hacemos-->
-      <section id="seccion-mejores">
-        <div class="los-mejores">
-          <h4>
-            Los mejores en <br />
-            lo que hacemos
+    <!-- Responsive menu -->
+    <div class="menu-responsive">
+      <a onclick="openNav()" href="#"><button>≡</button></a>
+      <div class="overlay" id="responsive-menu">
+        <a onclick="closeNav()" href="#" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Contáctanos</a>
+          <a href="#">Servicios</a>
+          <a href="#">Regístrate</a>
+          <a href="#">Agenda ahora</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner principal -->
+    <section class="banner" id="banner">
+      <div class="contenido-banner">
+        <h2>
+          Somos más que una <br>
+          barbería; somos un símbolo de<br> distinción y confianza</span>
+        </h2>
+        <div class="flecha__icon">
+          <a href="#">
+            <i class="fa-solid fa-arrow-down-long fa-beat"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- Fin header de la página -->
+
+  <!-- Inicio del contenido de la página -->
+  <main>
+    <!-- Slider de imágenes -->
+    <section class="slider-frame">
+      <ul>
+        <li class="slide active">
+          <img class="barberosImg" src="/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg" alt="Barberos" />
+        </li>
+        <li class="slide">
+          <img src="/sitioSelecto/2_pagNosotros/assets/img/manada-lobos.jpg" alt="Manada de Lobos" />
+        </li>
+      </ul>
+    </section>
+
+    <!--seccion los mejores en lo que hacemos-->
+    <section class="seccion-mejores">
+      <div class="los-mejores">
+        <h4 class="titulo-mejores">
+          Los mejores en <br />
+          lo que hacemos
+        </h4>
+        <p class="p-los-mejores">
+          Lorem ipsum dolor sit amet, consectetur <br />
+          Nulla facilisi. VestibulumNulla facilisi. <br />
+          Nulla facilisi. Vestibulum <br />
+          Lorem ipsum dolor sit amet, consectetur <br />
+          Nulla facilisi. Vestibulum.<br />
+          Nulla facilisi. Vestibulum.<br />
+        </p>
+      </div>
+      <div class="imagen-los-mejores">
+        <img src="/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg" alt="Imagen barberos" class="imagen-cuadrada" />
+      </div>
+    </section>
+
+    <!--seccion únete al grupo selecto-->
+    <section class="unete-banner" id="unete-banner">
+      <div class="texto-banner">
+        <h3>
+          Únete al grupo selecto que elige lo mejor,<br />
+          descubre una experiencia excepcional y<br />
+          conviértete en la mejor versión de ti mismo.
+        </h3>
+        <a class="button-agenda" href="#"><button>AGENDA AHORA</button></a>
+      </div>
+    </section>
+
+    <!--Seccion conoce al Team-->
+    <section class="conoce-team">
+      <h3>¡Conoce al team!</h3>
+
+      <div class="team-barber">
+        <img src="/sitioSelecto/2_pagNosotros/assets/img/Miguel.png" alt="Miguel" />
+        <h4>Miguel</h4>
+        <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram" /></a>
+      </div>
+
+      <div class="team-barber">
+        <img src="/sitioSelecto/2_pagNosotros/assets/img/Valeria.png" alt="Valeria" />
+        <h4>Valeria</h4>
+        <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram" /></a>
+      </div>
+
+      <div class="team-barber">
+        <img src="/sitioSelecto/2_pagNosotros/assets/img/wallas.png" alt="Wallas" />
+        <h4>Wallas</h4>
+        <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram" /></a>
+      </div>
+
+      <div class="team-barber">
+        <img src="/sitioSelecto/2_pagNosotros/assets/img/Kevin.png" alt="Kevin" />
+        <h4>Kevin</h4>
+        <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram" /></a>
+      </div>
+
+      <div class="team-barber">
+        <img src="/sitioSelecto/2_pagNosotros/assets/img/Christian.png" alt="Christian" />
+        <h4>Christian</h4>
+        <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram" /></a>
+      </div>
+    </section>
+
+    <!-- sección lider de la manada -->
+    <section class="lider-manada">
+      <div class="contenido-andres">
+        <div class="img-andres">
+          <img src="/sitioSelecto/2_pagNosotros/assets/img/Andrés-liderManada.jpg" alt="Imagen barberos"
+            class="imagen-cuadrada" />
+        </div>
+        <div class="contenedor-titulos">
+          <h4 class="titulo-principal">
+            Andrés Monrroy
           </h4>
+          <h5 class="subt-lider">Líder de la manada</h5>
           <p>
             Lorem ipsum dolor sit amet, consectetur <br />
             Nulla facilisi. VestibulumNulla facilisi. <br />
             Nulla facilisi. Vestibulum <br />
             Lorem ipsum dolor sit amet, consectetur <br />
             Nulla facilisi. Vestibulum.<br />
+            Nulla facilisi. Vestibulum.<br />
           </p>
         </div>
-        <div class="imagen">
-          <img
-            src="/sitioSelecto/2_pagNosotros/assets/img/barberos.jpg"
-            alt="Imagen barberos"
-            class="imagen-cuadrada"
-          />
-        </div>
-      </section>
-
-      <!--seccion únete al grupo selecto-->
-      <section class="unete-banner" id="unete-banner">
-        <div class="texto-banner">
-          <h3>
-            Únete al grupo selecto que elige lo mejor,<br />
-            descubre una experiencia excepcional y<br />
-            conviértete en la mejor versión de ti mismo.
-          </h3>
-          <a class="button-agenda" href="#"><button>AGENDA AHORA</button></a>
-        </div>
-      </section>
-
-      <!--Seccion conoce al Team-->
-      <section class="conoce-team">
-        <h3>¡Conoce al team!</h3>
-        
-        <div class="team-barber">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/Miguel.png" alt="Miguel"/>
-            <h4>Miguel</h4>
-            <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram"/></a>
-        </div>
-        
-        <div class="team-barber">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/Valeria.png" alt="Valeria"/>
-            <h4>Valeria</h4>
-            <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram"/></a>
-        </div>
-    
-        <div class="team-barber">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/wallas.png" alt="Wallas"/>
-            <h4>Wallas</h4>
-            <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram"/></a>
-        </div>
-    
-        <div class="team-barber">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/Kevin.png" alt="Kevin"/>
-            <h4>Kevin</h4>
-            <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram"/></a>
-        </div>
-    
-        <div class="team-barber">
-            <img src="/sitioSelecto/2_pagNosotros/assets/img/Christian.png" alt="Christian"/>
-            <h4>Christian</h4>
-            <a href="#"><img src="/sitioSelecto/2_pagNosotros/assets/icons/instagram.png" alt="Instagram"/></a>
-        </div>
+      </div>
     </section>
 
-      <!-- sección lider de la manada -->
-      <section>
-        <!-- Aquí dentro editas la parte de Andrés -->
-      </section>
-    </main>
-    <!-- Fin del contenido de la página -->
+  </main>
+  <!-- Fin del contenido de la página -->
 
-    <!-- Inicio del pie de página -->
-    <footer>
-      <!-- Parte luisa -->
-    </footer>
-    <!-- Fin del pie de página -->
-  </body>
+  <!-- Inicio del pie de página -->
+  <footer>
+    <!-- Parte luisa -->
+  </footer>
+  <!-- Fin del pie de página -->
+</body>
+
 </html>

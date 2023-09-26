@@ -10,29 +10,22 @@
 }
 
 body {
-    width: 100vw;
-    /* dimensión de pantalla */
+    width: 100%;
     background-color: rgb(218, 216, 216);
     overflow-x: hidden;
 }
 
-/* Cambiar el color de la barra de desplazamiento */
+/* estilos del scroll */
 ::-webkit-scrollbar {
     background-color: #f5f5f5;
     width: 10px;
-}
-
-/* Cambiar el color del pulgar de desplazamiento */
+  }
 ::-webkit-scrollbar-thumb {
     background-color: #888;
-}
-
-/* Cambiar el color del fondo de la barra de desplazamiento */
+  }
 ::-webkit-scrollbar-track {
     background-color: #f5f5f5;
-}
-
-/* Cambiar el color del pulgar de desplazamiento cuando se pasa el cursor sobre él */
+  }
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
@@ -41,19 +34,24 @@ body {
 
 /* Estilos del encabezado */
 .header {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.989);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 /* menú de navegación */
 .menu-navegacion {
     width: 100%;
-    padding: 2% 70px;
+    padding: 2% 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu-navegacion nav {
@@ -76,36 +74,47 @@ body {
 /* Estilos de la lista de navegación */
 .nav-links a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 22px;
-    color: rgb(218, 216, 216);
+    font-size: 25px;
 }
-
-.nav-links a:hover {
-    text-decoration: underline;
+.active{
+    color: rgb(218, 216, 216);
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: white;
+    height: 2px;
+    transition: right 0.3s ease-in-out;
+}
+.active:hover::before {
+    right: 0;
 }
 
 /* Estilos del logotipo */
-.logo {
+.logoNav {
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
 }
-
-.logo img {
-    height: 70px;
+.logoNav img {
+    height: 100px;
     width: auto;
     transition: all;
 }
-
-.logo img:hover {
-    transform: scale(1.2);
+.logoNav img:hover {
+    transform: scale(1.05);
 }
 
 /* Estilos del botón navbar */
-.btn button {
+.nav-links .btn {
     background-color: #f5f5f5;
-    color: rgb(52, 5, 5);
+    color: #521705;
     font-size: 18px;
     border: none;
     padding: 10px 20px;
@@ -114,56 +123,49 @@ body {
     transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
 }
-
-.btn a {
-    color: #521705;
-}
-
-.btn button:hover,
+.btn:hover,
 .header .menu-responsive button {
     background-color: rgb(58, 6, 6);
     color: #fbe7e1;
-    text-decoration: underline;
+}
+.shoppingBag span{
+    background-color: white;
+    font-size: 20px;
+    padding: 1px 5px;
+    border-radius: 50%;
 }
 
 /* Menú responsive */
 .menu-responsive {
-    display: none;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    height: 100%;
+    left: 0;
+    top: 0;
     z-index: 2;
-    border-radius: 5px;
-    padding: 10px;
+    margin-left: 80px;
+    display: none;
 }
-
-/* Estilos para el botón de menú responsive */
-.header .menu-responsive button {
+/* botones del menú responsive */
+.menu-responsive button {
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 50px;
     color: rgb(253, 253, 253);
-    padding: 9px 25px;
+    padding: 5px 20px;
     background-color: #521705;
-    border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.menu-responsive .open {
-    display: block;
 }
 
 .menu-responsive button:hover {
     background-color: rgb(255, 250, 250);
     color: #020101;
-    text-decoration: underline;
 }
 
 /* Menú responsive desplegado */
-.header .overlay {
+.overlay {
     height: 100%;
-    width: -100%;
+    width: 100%;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -171,47 +173,41 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease 0s;
 }
-
-.header .overlay.open {
-    width: 100%;
+.d-none{
+    display: none;
 }
-
-.header .overlay .overlay-content {
+.overlay-content {
     display: flex;
     height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-.header .overlay a {
+.overlay-content a {
+    border: solid white;
     padding: 19px;
-    font-size: 36px;
+    font-size: 30px;
     display: block;
     transition: all 0.3s ease 0s;
     font-weight: 700;
     color: #eceff1;
-}
-
-.header .overlay a:hover,
-.header .overlay a:focus {
-    color: #644904;
+    text-decoration: none;
 }
 
 /* Estilos para el botón de cierre del menú responsive */
-.header .overlay .close {
+.close {
     position: absolute;
-    top: 20px;
+    top: 45px;
     right: 45px;
-    font-size: 65px;
+    font-size: 50px;
 }
 
 /* Estilos Banner principal */
 .banner {
-
+    border: solid red;
     width: 100%;
-    height: 85vh;
-    padding: 0 5%;
+    height: 100%;
+    padding: 0 5%; 
     background-image: url(/sitioSelecto/2_pagNosotros/assets/img/banner-nosotros.jpg);
     background-size: cover;
     background-position: center;
@@ -398,11 +394,9 @@ body {
     color: #521705;
 }
 
-.button-agenda button:hover,
-.header .menu-responsive button {
+.button-agenda button:hover {
     background-color: rgb(58, 6, 6);
     color: #fbe7e1;
-    text-decoration: underline;
 }
 
 /*Seccion conoce al team*/
@@ -501,36 +495,145 @@ p {
 }
 
 /* ----------------FOOTER----------------- */
+.container-footer{
+    border: solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1.5fr .5fr;
+    background-color: #521705;
+    color: white;
+}
+.container-footer h3{
+    color: white;
+}
+.container-footer a{
+    color: white;
+    text-decoration: none;
+}
+.socialMedia{
+    border: solid white;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.socialMedia h3{
+    font-size: 25px;
+}
+.redes {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    border: solid white;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.logo img{
+    width: 150px;
+    height: 140px;
+}
+.logo .btn{
+    background-color: #f5f5f5;
+    color: #521705;
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+.logo .btn:hover{
+    background-color: rgb(58, 6, 6);
+    color: #fbe7e1;
+}
+.map{
+    border: solid white;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+}
+.map h3{
+    font-size: 25px;
+}
+.map iframe{
+    border-radius: 25px;
+}
+.map p{
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+}
+.navegation{
+    border: solid white;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-size: 25px;
+}
+.navegation ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.navegation li{
+    padding: 5px 10px;
+    position: relative;
+    cursor: pointer;
+}
+.navegation li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color:white;
+    height: 3px;
+    transition: right 0.3s ease-in-out;
+}
+.navegation li:hover::before {
+    right: 0;
+}
 
-
+.copyright{
+    width: 100%;
+    height: 50px;
+    background-color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ------------MEDIA QUERIES --------- */
 
 /* Responsive movil */
-@media screen and (max-width: 767px) {
-
-    .nav-links,
-    .btn {
+@media screen and (max-width: 1550px) {
+    .nav-links {
         display: none;
     }
 
     .menu-responsive {
-        display: block;
-    }
-
-    .header .nav-links {
-        display: none;
-    }
-
-    /* Estilos para pantallas pequeñas */
-    .header {
-        padding: 3px 5%;
-    }
-
-    .nav-links {
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
 }
 
 /* responsive tablet */
-@media screen and (max-width: 1023px) {}
+/* @media screen and (max-width: 1023px) {
+} */

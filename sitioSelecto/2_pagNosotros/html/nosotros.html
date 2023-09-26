@@ -6,10 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página Nosotros</title>
 
-  <!-- Links a los estilos de la página -->
-  <link rel="stylesheet" href="/sitioSelecto/2_pagNosotros/css/nosotros.css"/>
-  <!-- Links a los scripts de la página -->
-  <script type="text/javascript" src="/sitioSelecto/2_pagNosotros/javascript/nosotros.js"></script>
+    <!-- Links a los estilos de la página -->
+    <link
+      rel="stylesheet"
+      href="/sitioSelecto/2_pagNosotros/css/nosotros.css"
+    />
+    <!-- Links a los scripts de la página -->
+    <script
+      async
+      src="/sitioSelecto/2_pagNosotros/javascript/nosotros.js"
+    ></script>
 
   <!-- Links a páginas de íconos -->
   <!-- Enlace a la hoja de estilos externa de Boxicons -->
@@ -18,49 +24,58 @@
   <script src="https://kit.fontawesome.com/9af4a257dc.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <!-- Inicio header de la página  -->
-  <header class="header">
-    <!-- seccion menú navegacion -->
-    <section class="menu-navegacion">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Contáctanos</a></li>
-          <li><a href="#">Servicios</a></li>
-        </ul>
-        <div class="logo">
-          <img src="/sitioSelecto/2_pagNosotros/assets/img/logo_selecto.png" alt="Logo de marca" />
+  <body>
+    <!-- Inicio header de la página  -->
+    <header class="header">
+      <!-- seccion menú navegacion -->
+      <section class="menu-navegacion" id="navbar">
+          <nav>
+            <ul class="nav-links">
+              <li><a class="active" href="#">Inicio</a></li>
+              <li><a class="active" href="#">Nosotros</a></li>
+              <li><a class="active" href="#">Contáctanos</a></li>
+              <li><a class="active" href="#">Servicios</a></li>
+            </ul>
+            <div class="logoNav">
+              <img
+                src="/sitioSelecto/2_pagNosotros/assets/icons/selecto-Logo 3.svg"
+                alt="Logo de marca"
+              />
+            </div>
+            <ul class="nav-links">
+              <li><a class="active" href="#">Regístrate</a></li>
+              <li>
+                <a class="btn" href="#">AGENDA AHORA</a>
+              </li>
+              <li>
+                <div class="shoppingBag">
+                  <img
+                    src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg"
+                    alt="shoppingBag"
+                  />
+                  <span>0</span>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        
+        <!-- Responsive menu -->
+        <div class="menu-responsive">
+          <button onclick="openNav()" class="open">≡</button>
+          
+          <div class="overlay d-none" id="responsive-menu">
+            <button onclick="closeNav()" class="close">&times;</button>
+            <div class="overlay-content" id="overlay-content">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contáctanos</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Regístrate</a></li>
+              <li><a href="#">Agenda ahora</a></li>
+            </div>
+          </div>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Regístrate</a></li>
-          <li>
-            <a class="btn" href="#"><button>AGENDA AHORA</button></a>
-          </li>
-          <li>
-            <img class="shoppingBag" src="/sitioSelecto/2_pagNosotros/assets/icons/shoppingBag_Icon.svg"
-              alt="shoppingBag">
-          </li>
-        </ul>
-      </nav>
-    </section>
-
-    <!-- Responsive menu -->
-    <div class="menu-responsive">
-      <a onclick="openNav()" href="#"><button>≡</button></a>
-      <div class="overlay" id="responsive-menu">
-        <a onclick="closeNav()" href="#" class="close">&times;</a>
-        <div class="overlay-content">
-          <a href="#">Inicio</a>
-          <a href="#">Nosotros</a>
-          <a href="#">Contáctanos</a>
-          <a href="#">Servicios</a>
-          <a href="#">Regístrate</a>
-          <a href="#">Agenda ahora</a>
-        </div>
-      </div>
-    </div>
+      </section>
 
     <!-- Banner principal -->
     <section class="banner" id="banner">
@@ -188,11 +203,64 @@
   </main>
   <!-- Fin del contenido de la página -->
 
-  <!-- Inicio del pie de página -->
-  <footer>
-    <!-- Parte luisa -->
-  </footer>
-  <!-- Fin del pie de página -->
-</body>
-
+    <!-- Inicio del pie de página -->
+    <footer>
+      <section class="container-footer">
+        <article class="socialMedia">
+          <h3>¡HABLEMOS!</h3>
+          <div class="redes">
+            <a href="#"
+              ><img
+                src="/sitioSelecto/2_pagNosotros/assets/icons/whatsapp_Icon.svg"
+                alt="whatsapp-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="/sitioSelecto/2_pagNosotros/assets/icons/instagram_Icon.svg"
+                alt="instagram-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="/sitioSelecto/2_pagNosotros/assets/icons/mail_Icon.svg"
+                alt="email-icon"
+            /></a>
+          </div>
+        </article>
+        <article class="logo">
+          <a href="#"
+            ><img
+              src="/sitioSelecto/2_pagNosotros/assets/icons/selecto-Logo 3.svg"
+              alt="logo"
+          /></a>
+          <a class="btn" href="#">AGENDA AHORA</a>
+        </article>
+        <article class="map">
+          <h3>¡VISÍTANOS!</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.51822666078849!2d-74.1106697!3d4.7193227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85798ec29299%3A0x30afc4a2a8ec4944!2sSelecto%20Barber%20Shop!5e0!3m2!1ses-419!2sco!4v1695652551410!5m2!1ses-419!2sco"
+            width="400"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>Cl. 86 #103D 22, Engativá, Bogotá, Cundinamarca</p>
+        </article>
+        <article class="navegation">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Regístrate</a></li>
+          </ul>
+        </article>
+      </section>
+      <section class="copyright">
+        <p>© POWERED BY SINERGIA</p>
+      </section>
+    </footer>
+    <!-- Fin del pie de página -->
+  </body>
 </html>

@@ -249,7 +249,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 0 5%;
-    background-image: url(/assets/img/banner-nosotros.jpg);
+    background-image: url('../assets/img/banner-nosotros.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(30%);
@@ -297,13 +297,13 @@ body {
 
     0%,
     100% {
-        background-image: url('/assets/img/barberos.jpg');
+        background-image: url('../assets/img/barberos.jpg');
         background-position: center;
         background-size: cover;
     }
 
     50% {
-        background-image: url('/assets/img/manada-lobos.jpg');
+        background-image: url('../assets/img/manada-lobos.jpg');
         background-position: center;
         background-size: cover;
     }
@@ -358,7 +358,7 @@ body {
 /*sección Únete */
 .unete-banner {
     padding: 0 5%;
-    background-image: url(/assets/img/fondoNosotros.svg);
+    background-image: url('../assets/img/fondoNosotros.svg');
     height: 85vh;
     background-size: cover;
     background-position: center;
@@ -606,6 +606,7 @@ body {
 
 /* ------------MEDIA QUERIES --------- */
 
+/* Movil first y rangos exactos de pantallas */
 /* Responsive */
 @media screen and (max-width: 1200px) {
     /* header */
@@ -632,7 +633,7 @@ body {
         width: 90%;
     }
 }
-
+/* Trabajar con los rangos exactos max y min */
 @media screen and (max-width: 1023px){
     .contenido-banner h2{
         font-size: 40px;

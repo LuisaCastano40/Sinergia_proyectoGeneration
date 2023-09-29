@@ -31,10 +31,105 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    background-color: var(--colorGrisOscuro);
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    background-color: var(--colorGrisClaro);
+    width: 6px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorNegroTransparencia);
+    border-radius: 5px; 
+}
+
 /* --------------HEADER--------------- */
+.container-header{
+    width: 100%;
+    height: 100px;
+}
+.menu-navegacion{
+    width: 100%;
+    height: 100px;
+    border: solid wheat;
+    position: fixed;
+    top: 0;
+}
+.menu-navegacion nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--textoMedium);
+    background-color: var(--colorNegro);
+    padding: 20px 50px;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
+    list-style: none;
+}
+.active{
+    text-decoration: none;
+    color: var(--colorBlanco);
+}
+.logoNav img{
+    height: 75px;
+}
+.nav-links .btn{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: var(--colorBlanco);
+    color: var(--colorNegro);
+    font-family: var(--textoBold);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: solid 2px var(--colorBlanco);
+    transition: background-color 500ms ease-in-out;
+}
+.nav-links .btn:hover{
+    background-color: transparent;
+    color: var(--colorBlanco);
+}
+.shoppingBag{
+    position: relative;
+}
+.shoppingBag img{
+    width: 30px;
+    height: 30px;
+}
+.shoppingBag span{
+    color: var(--colorNegro);
+    background-color: var(--colorBlanco);
+    border: solid 1px white;
+    padding: 1.5px 5px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20%;
+    right: -20%;
+}
 
+.container-menuResponsive{
+    display: none;
+}
 /* ---------------MAIN---------------- */
-
+.container-forms{
+    border: solid white;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assetsContactenos/images/selecto-barber-bg.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover; 
+}
 /* --------------FOOTER--------------- */
 
 /* --------------RESPONSIVE--------------- */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +14,110 @@
     <!-- Link del script de javascript -->
     <script defer src="javascript/contactanos.js"></script>
 </head>
+
 <body>
-    
+
     <!-- Inicio cabecera de la página -->
     <header>
-        <p>Soy la página de Contáctanos</p>
+        <section class="menu-navegacion" id="navBar">
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="active" href="#">Inicio</a></li>
+                    <li><a class="active" href="#">Nosotros</a></li>
+                    <li><a class="active" href="#">Contáctanos</a></li>
+                    <li><a class="active" href="#">Servicios</a></li>
+                </ul>
+                <div class="logoNav">
+                    <img src="../logo/selecto-Logo-white.svg" alt="Logo de marca" />
+                </div>
+                <ul class="nav-links">
+                    <li><a class="active" href="#">Regístrate</a></li>
+                    <li><a class="btn" href="#">AGENDA AHORA</a></li>
+                </ul>
+                <div class="shoppingBag">
+                    <img src="assetsContactenos/icon/shoppingBag-white.svg" alt="shoppingBag" />
+                    <span>0</span>
+                </div>
+            </nav>
+
+            <!-- Responsive menu -->
+            <article class="container-menuResponsive">
+                <button onclick="openNav()" class="open">≡</button>
+                <div class="responsive-menu d-none" id="responsive-menu">
+                    <button onclick="closeNav()" class="close">&times;</button>
+                    <nav class="menuResponsive-content" id="menuResponsive-content">
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Contáctanos</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Regístrate</a></li>
+                            <li><a class="btnAgenda" href="#">AGENDA AHORA</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+        </section>
     </header>
     <!-- Fin cabecera de la página -->
 
     <!-- Inicio contenido de la página -->
     <main>
+        <!-- Sección de formularios -->
+        <section class="container-forms">
+            <div class="address">
+                <h3>Cl. 86 #103D 22</h3>
+                <p> Engativá, Bogotá, Cundinamarca</p>
+            </div>
+            <article class="forms-content">
+                <h1>Dale un toque <span>Fresco a tu estilo</span></h1>
+                <h2>¡Contáctanos!</h2>
 
+                <form action="" class="contact-form">
+                    <div class="clasificacion">
+                        <label for="rol">Selecciona tu rol:</label>
+                        <select id="rol" name="rol" required>
+                            <option value="cliente">Cliente</option>
+                            <option value="proveedor">Proveedor</option>
+                            <option value="barbero">Barbero</option>
+                        </select>
+                    </div>
+                    <div class="datos">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" type="text" required>
+                    </div>
+                    <div class="datos">
+                        <label for="apellido">Apellido</label>
+                        <input id="apellido" type="text" required>
+                    </div>
+                    <div class="datos">
+                        <label for="email">Email</label>
+                        <input id="apellido" type="email" required>
+                    </div>
+                    <div class="mensaje">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje"></textarea>
+                    </div>
+                    <div class="curriculum"></div>
+                    <div class="submit">
+                        <button type="submit">
+                            <img src="assetsContactenos/icon/send-white.svg" alt="icon-send">
+                            Enviar
+                        </button>
+                        <p>¡Gracias por tu mensaje!</p>
+                    </div>
+                </form>
+            </article>
+        </section>
+
+        <!-- Sección de frase y número -->
+        <section class="container-number">
+            <div class="contact-number">
+                <img src="assetsContactenos/icon/whatsapp-white.svg" alt="whatsapp-icon">
+                <p>3024158693</p>
+            </div>
+            <p>Cada corte de cabello es una obra maestra única, creada con precisión. Nuestro objetivo es superar las expectativas en cada visita</p>
+        </section>
     </main>
     <!-- Fin contenido de la página -->
 
@@ -34,4 +128,5 @@
     <!-- Fin pie de pagina -->
 
 </body>
+
 </html>

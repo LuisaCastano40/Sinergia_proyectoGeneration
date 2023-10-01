@@ -135,6 +135,7 @@ body{
 }
 .casilla input {
     border-style: none;
+    outline: none;
 }
 .casilla i{
     font-size: 20px;
@@ -155,7 +156,6 @@ body{
     font-family: var(--textoBold);
 }
 .register:hover{
-    transform: scale(1.05);
     background-color: var(--colorNegro);
     color: var(--colorBlanco);
 }

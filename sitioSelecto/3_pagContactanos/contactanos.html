@@ -11,54 +11,22 @@
 
     <!-- Link de los estilos de la página -->
     <link rel="stylesheet" href="css/contactanos.css">
-    <!-- Link del script de javascript -->
+    <!-- Link de los estilos de los componentes -->
+    <link rel="stylesheet" href="../componentes/componentes.css">
+    <!-- Link del script de contáctenos -->
     <script defer src="javascript/contactanos.js"></script>
+    <!-- Link de los scripts de los componentes -->
+    <script defer src="../componentes/navBar.js"></script>
+    <script defer src="../componentes/footer.js"></script>
+    <!-- Link de boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
     <!-- Inicio cabecera de la página -->
     <header>
-        <section class="container-navBar">
-            <article class="menu-navegacion" id="navBar">
-                <nav>
-                    <ul class="nav-links">
-                        <li class="active"><a href="#">Inicio</a></li>
-                        <li class="active"><a href="#">Nosotros</a></li>
-                        <li class="active"><a href="#">Contáctanos</a></li>
-                        <li class="active"><a href="#">Servicios</a></li>
-                    </ul>
-                    <div class="logoNav">
-                        <img src="../logo/selecto-Logo-white.svg" alt="Logo de marca" />
-                    </div>
-                    <ul class="nav-links">
-                        <li class="active"><a href="#">Regístrate</a></li>
-                        <li><a class="btnAgenda" href="#">AGENDA AHORA</a></li>
-                    </ul>
-                    <div class="shoppingBag">
-                        <img src="assetsContactenos/icon/shoppingBag-white.svg" alt="shoppingBag" />
-                        <span>0</span>
-                    </div>
-                </nav>
-    
-                <!-- Responsive menu -->
-                <article class="container-menuResponsive">
-                    <button onclick="openNav()" class="open">≡</button>
-                    <div class="responsive-menu d-none" id="responsive-menu">
-                        <button onclick="closeNav()" class="close">&times;</button>
-                        <nav class="menuResponsive-content" id="menuResponsive-content">
-                            <ul>
-                                <li class="active"><a href="#">Inicio</a></li>
-                                <li class="active"><a href="#">Nosotros</a></li>
-                                <li class="active"><a href="#">Contáctanos</a></li>
-                                <li class="active"><a href="#">Servicios</a></li>
-                                <li class="active"><a href="#">Regístrate</a></li>
-                                <li><a class="btnAgenda" href="#">AGENDA AHORA</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article>
-            </article>
+        <section class="container-navBar" id="container-navBar">
         </section>
     </header>
     <!-- Fin cabecera de la página -->
@@ -79,6 +47,7 @@
                     <div class="clasificacion">
                         <label for="rol">Selecciona tu rol <span>*</span></span></label>
                         <select id="rol" name="rol" required>
+                            <option value="vacío"></option>
                             <option value="cliente">Cliente</option>
                             <option value="proveedor">Proveedor</option>
                             <option value="barbero">Barbero</option>
@@ -95,11 +64,11 @@
                         </div>
                     </div>
                     <div class="contenedor-email">
-                        <div class="datos">
+                        <div class="datos datos-email">
                             <label for="email">Email <span>*</span></span></label>
                             <input id="email" type="email" required>
                         </div>
-                        <div class="curriculim"></div>   
+                        <div class="curriculum"></div>   
                     </div>
                     <div class="mensaje">
                         <label for="mensaje">Mensaje <span>*</span></span></label>
@@ -128,43 +97,9 @@
     <!-- Fin contenido de la página -->
 
     <!-- Inicio del pie de página -->
-  <footer>
-    <section class="container-footer">
-      <article class="socialMedia">
-        <h3>¡HABLEMOS!</h3>
-        <div class="redes">
-          <a href="#"><img src="../icons/whatsapp-white.svg" alt="whatsapp-icon" /></a>
-          <a href="#"><img src="../icons/instagram-white.svg" alt="instagram-icon" /></a>
-          <a href="#"><img src="../icons/email-white.svg" alt="email-icon" /></a>
-        </div>
-      </article>
-      <article class="logo">
-        <a href="#"><img src="../logo/selecto-Logo-white.svg" alt="logo" /></a>
-        <a class="btn" href="#">AGENDA AHORA</a>
-      </article>
-      <article class="map">
-        <h3>¡VISÍTANOS!</h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.51822666078849!2d-74.1106697!3d4.7193227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85798ec29299%3A0x30afc4a2a8ec4944!2sSelecto%20Barber%20Shop!5e0!3m2!1ses-419!2sco!4v1695652551410!5m2!1ses-419!2sco"
-          width="400" height="200" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p>Cl. 86 #103D 22, Engativá, Bogotá, Cundinamarca</p>
-      </article>
-      <article class="navegation">
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Contáctanos</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Regístrate</a></li>
-        </ul>
-      </article>
-    </section>
-    <section class="copyright">
-      <p>© POWERED BY SINERGIA</p>
-    </section>
-  </footer>
-  <!-- Fin del pie de página -->
+    <footer id="footer">
+    </footer>
+    <!-- Fin del pie de página -->
 
 </body>
 

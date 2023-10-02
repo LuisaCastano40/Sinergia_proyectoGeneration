@@ -1,23 +1,15 @@
-//Efecto Navbar responsive//
-// function openNav() {
-//     document.getElementById("responsive-menu").style.width = "100%";
-//     document.querySelector('.d-none').style.display = 'block';
-//     document.getElementById('menuResponsive-content').style.visibility = "visible";
-//     document.querySelector('.close').style.visibility = "visible";
-// }
-
-// function closeNav() {
-//     document.getElementById("responsive-menu").style.width = "0%";
-//     document.getElementById('menuResponsive-content').style.visibility = "hidden";
-//     document.querySelector('.close').style.visibility = "hidden";
-// }
 
 //Traemos los elementos del HTML//
+const form = document.querySelector('.contact-form');
 const selectRol = document.getElementById("rol");
-isCliente = false;
+let isWorker = false;
 
 //Eventos
 selectRol.addEventListener("change", mostrarInput);
+form.addEventListener('submit', verificarInput);
+// document.addEventListener('DOMContentLoaded', function(){
+//     form.reset();
+// })
 
 //Funciones
 function mostrarInput(){
@@ -29,6 +21,7 @@ function mostrarInput(){
     if (seleccion === "cliente") {
         divCurriculum.style.display = "none";
         inputEmail.style.width = "100%";
+        isWorker = false;
     } else if (seleccion === "proveedor" || seleccion === "barbero") {
         divCurriculum.style.display = "block";
         divCurriculum.style.width = "50%";
@@ -43,5 +36,34 @@ function mostrarInput(){
             </label>
             <input id="file" type="file">
         </div>`;
+        isWorker = true;
+    }
+    validarFile();
+}
+function validarFile(){
+
+    if(isWorker){
+        const cvInput =document.getElementById('file');
+        cvInput.addEventListener('change', function(){
+            // Obtiene el primer archivo seleccionado
+            const selectedFile = cvInput.files[0];
+
+            // Verifica si el archivo tiene la extensión .pdf
+            if (!selectedFile.name.toLowerCase().endsWith('.pdf')) {
+                alert('Solo se admiten archivos PDF');
+                cvInput.value = '';
+            } else {
+                alert('Se cargó el archivo correctamente');
+            }
+        });
+    }
+}
+
+function verificarInput(e){
+    const cvInput =document.getElementById('file');
+    // Verifica si se seleccionó un archivo
+    if(isWorker && cvInput.files.length === 0){
+        alert('No se seleccionó ningún archivo');
+        e.preventDefault();
     }
 }

@@ -8,8 +8,13 @@
 
   <!-- Links a los estilos de la página -->
   <link rel="stylesheet" href="css/nosotros.css" />
+  <!-- Link de los estilos de los componentes -->
+  <link rel="stylesheet" href="/2_pagNosotros/componentes/componentes.css">
   <!-- Links a los scripts de la página -->
   <script defer src="javascript/nosotros.js"></script>
+  <!-- Link scripts de los componentes -->
+  <script defer src="/2_pagNosotros/componentes/navBar.js"></script>
+  <script defer src="/2_pagNosotros/componentes/footer.js"></script>
 
   <!-- Links a páginas de íconos -->
   <!-- Enlace a la hoja de estilos externa de Boxicons -->
@@ -21,51 +26,8 @@
 <body>
   <!-- Inicio header de la página  -->
   <header class="header">
-    <!-- seccion menú navegacion -->
-    <section class="menu-navegacion" id="navBar">
-      <nav>
-        <ul class="nav-links">
-          <li><a class="active" href="#">Inicio</a></li>
-          <li><a class="active" href="#">Nosotros</a></li>
-          <li><a class="active" href="#">Contáctanos</a></li>
-          <li><a class="active" href="#">Servicios</a></li>
-        </ul>
-        <div class="logoNav">
-          <img src="assets/icons/selecto-Logo 3.svg" alt="Logo de marca" />
-        </div>
-        <ul class="nav-links">
-          <li><a class="active" href="#">Regístrate</a></li>
-          <li>
-            <a class="btn" href="#">AGENDA AHORA</a>
-          </li>
-          <li>
-            <div class="shoppingBag">
-              <img src="assets/icons/shoppingBag_Icon.svg" alt="shoppingBag" />
-              <span>0</span>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Responsive menu -->
-      <div class="menu-responsive">
-        <button onclick="openNav()" class="open">≡</button>
-
-        <div class="overlay d-none" id="responsive-menu">
-          <button onclick="closeNav()" class="close">&times;</button>
-          <div class="overlay-content" id="overlay-content">
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Contáctanos</a></li>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Regístrate</a></li>
-              <li><a class="btnAgenda" href="#">AGENDA AHORA</a></li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
+    <!-- Sección menú de navegación -->
+    <section class="container-navBar" id="container-navBar">
     </section>
 
     <!-- Banner principal -->
@@ -181,43 +143,9 @@
   <!-- Fin del contenido de la página -->
 
   <!-- Inicio del pie de página -->
-  <footer>
-    <section class="container-footer">
-      <article class="socialMedia">
-        <h3>¡HABLEMOS!</h3>
-        <div class="redes">
-          <a href="#"><img src="assets/icons/whatsapp_Icon.svg" alt="whatsapp-icon" /></a>
-          <a href="#"><img src="assets/icons/instagram_Icon.svg" alt="instagram-icon" /></a>
-          <a href="#"><img src="assets/icons/mail_Icon.svg" alt="email-icon" /></a>
-        </div>
-      </article>
-      <article class="logo">
-        <a href="#"><img src="assets/icons/selecto-Logo 3.svg" alt="logo" /></a>
-        <a class="btn" href="#">AGENDA AHORA</a>
-      </article>
-      <article class="map">
-        <h3>¡VISÍTANOS!</h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.51822666078849!2d-74.1106697!3d4.7193227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85798ec29299%3A0x30afc4a2a8ec4944!2sSelecto%20Barber%20Shop!5e0!3m2!1ses-419!2sco!4v1695652551410!5m2!1ses-419!2sco"
-          width="400" height="200" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p>Cl. 86 #103D 22, Engativá, Bogotá, Cundinamarca</p>
-      </article>
-      <article class="navegation">
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Contáctanos</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Regístrate</a></li>
-        </ul>
-      </article>
-    </section>
-    <section class="copyright">
-      <p>© POWERED BY SINERGIA</p>
-    </section>
-  </footer>
-  <!-- Fin del pie de página -->
+    <footer id="footer">
+    </footer>
+    <!-- Fin del pie de página -->
 </body>
 
 </html>

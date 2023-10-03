@@ -12,24 +12,64 @@
     <link rel="stylesheet" href="css/ingreso.css">
     <!-- Link del script de javascript -->
     <script defer src="javascript/ingreso.js"></script>
+    <!--link de Boxicons-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
     
     <!-- Inicio cabecera de la página -->
-    <header>
-        <p>Soy la página de ingreso</p>
+    <!--header|banner informativo a la izquierda-->
+    <header class="containerHeader">
+        <div class="containerInformation">
+            <div class="tituloInicioSesionDiv">
+                <h2 class="tituloInicioSesion">¡Bienvenido a Selecto Barbería¡</h2>
+            </div class="parrafoInicioSesionDiv">
+            <div class="parrafoInicioSesion">
+                <p>Estamos emocionados de que te unas nuestra comunidad de estilo</p>
+            </div>
+            <div class="InicioSesionDiv">
+                <a href="../7_pagRegistro/registro.html" class="incioSesion">Resgistrarme</a>
+            </div>
+        </div>
     </header>
     <!-- Fin cabecera de la página -->
 
     <!-- Inicio contenido de la página -->
-    <main>
-
+    <main class="formulario">
+        <div class="containerTituloForm">
+            <h2>"Únete a Selecto Barberia: Tu pasaporte al Estilo Exepcional"</h2>
+        </div>
+        <!--Formulario de Login-->
+        <form class="formularioInformation" id="loginForm">
+            <label class="casilla">
+                <box-icon name='envelope' ></box-icon>
+                <input type="email" placeholder="Email" id="email">
+            </label>
+            <label class="casilla">
+                <box-icon name='lock' ></box-icon>
+                <input type="password" placeholder="Contraseña" id="password" >
+            </label>
+        </form>
+        <div class="registerDiv">
+            <input class="register" type="submit" value="INICIAR SESIÓN">
+        </div>
+        <div class="iconsLoginDiv">
+            <box-icon type='logo' name='github' class="iconsLogin"></box-icon>
+            <box-icon type='logo' name='google' class="iconsLogin"></box-icon>
+            <box-icon name='facebook-circle' type='logo' class="iconsLogin"></box-icon>
+        </div>
+        <div class="fpasswordDiv">
+            <p class="fpassword">Olvide mi contraseña</p>
+        </div>
     </main>
     <!-- Fin contenido de la página -->
 
     <!-- Inicio pie de pagina -->
     <footer>
-
+        <div class="logosDiv">
+            <img src="../logo/selecto-Logo-white.svg" class="logoSelecto" width="60px" height="60px">
+            <p class="copySinergia">Powered By SINERGIA</p>
+        </div>
     </footer>
     <!-- Fin pie de pagina -->
 

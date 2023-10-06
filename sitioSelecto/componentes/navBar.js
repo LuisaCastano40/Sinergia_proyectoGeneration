@@ -1,12 +1,12 @@
 const navBar = document.getElementById('container-navBar');
 
-document.addEventListener('DOMContentLoaded', function() {
-   mostrarNavbar();
+document.addEventListener('DOMContentLoaded', function () {
+    mostrarNavbar();
 });
 
-function mostrarNavbar(){
+function mostrarNavbar() {
     navBar.innerHTML = `
-    <article class="menu-navegacion" id="navBar">
+        <article class="menu-navegacion" id="navBar">
                 <nav>
                     <ul class="nav-links">
                         <li class="active"><a href="../index.html">Inicio</a></li>
@@ -21,10 +21,25 @@ function mostrarNavbar(){
                         <li class="active"><a href="../8_pagIngreso/ingreso.html">Iniciar sesión</a></li>
                         <li><a class="btnAgenda" href="../6_pagReservas/reservas.html">AGENDA AHORA</a></li>
                     </ul>
-                    <div class="shoppingBag">
+                    <div class="shoppingBag" id="shoppingBag">
                         <img src="/1_pagInicio/icons/shoppingBag-white.svg" alt="shoppingBag" />
                         <span>0</span>
                     </div>
+                    <section class="carrito_compras activeCart">
+                        <div class="carro_comprar">
+                            <div class="header-carrito">
+                                <i class='bx bx-x' id="close"></i>
+                                <a href="../index.html"><img src="/1_pagInicio/logo/selecto-Logo-white.svg" alt="logo" /></a>
+                            </div>
+                            <p class="titulo_carrito">Bienvenido a tu carrito de compras</p>
+                            <article class="contenedor-productosCart" id="container-cartProd">
+                            </article>
+                            <div class='seccion-total'>
+                                <p class="total" id="total">TOTAL: <span id="total-valor">$0.00</span></p>
+                                <button class="boton_carro" id="btn-vaciar">Vaciar carrito</button>
+                            </div>  
+                        </div>
+                    </section>
                 </nav>
     
                 <!-- Responsive menu -->
@@ -43,8 +58,8 @@ function mostrarNavbar(){
                             </ul>
                         </nav>
                     </div>
-                </article>  
-            </article>
+                </article>             
+        </article>
     `
 }
 
@@ -63,15 +78,3 @@ function closeNav() {
 }
 
 //Función para cambiar el color del menú
-function cambiarColorMenu() {
-    if (window.location.pathname === '../1_pagInicio/index.html' && window.scrollY > 50) {
-        navBar.style.backgroundColor = '#000000'; 
-    } else {
-        navBar.style.backgroundColor = '#00000080';
-    }
-}
-
-// Llama a la función al cargar la página y cuando cambia la ubicación
-window.addEventListener('load', cambiarColorMenu);
-window.addEventListener('popstate', cambiarColorMenu);
-window.addEventListener('scroll', cambiarNavbar);

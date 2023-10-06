@@ -36,6 +36,7 @@ body{
     overflow-x: hidden;
     background-color: var(--colorGrisOscuro);
     color: var(--colorBlanco);
+   
 }
 
 /* --------------HEADER--------------- */
@@ -44,7 +45,10 @@ body{
     height: 100vh;
     background-image: url('/1_pagInicio/assetsInicio/banner/baner-inicio.svg');
     background-position: center;
+    position: relative;
 }
+
+/* Sección baner */
 .container-btns{
     height: 45%;
     display: flex;

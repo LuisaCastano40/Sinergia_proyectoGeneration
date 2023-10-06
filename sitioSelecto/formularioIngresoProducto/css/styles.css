@@ -79,7 +79,7 @@ main{
     background-color: var(--colorGrisClaro);
     margin: 40px 0 40px 70px;
     width: 70vw;
-    height: 60vh;
+    height: 70vh;
 }
 
 .formulario {
@@ -87,8 +87,8 @@ main{
     height: 100%;
     box-sizing: border-box;
     padding: 30px 30px;
-    display: grid;
-    grid-template-columns: .6fr 1fr;
+    display: flex;
+    
     gap: 10px;
 }
 
@@ -97,6 +97,9 @@ main{
     justify-items: center;
     align-items: center;
     gap: 20px;
+    grid-template-rows: 70% 30%;
+    width: 40%;
+    height: 100%;
 }
 
 .containerImg img {
@@ -114,14 +117,16 @@ main{
     font-family: var(--textoBold);
     font-size: 18px;
     padding: 10px 50px;
+    margin-top: 10px;
     border-radius: 25px;
     border: solid 2px var(--colorNegro);
     display: flex;
     justify-items: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     text-transform: uppercase;
     text-align: center;
+    cursor: pointer;
     transition: all ease-in-out 250ms;
 }
 
@@ -140,7 +145,11 @@ main{
 }
 
 .containerInputs{
-    display: grid;
+    display: grid;  
+    box-sizing: border-box;
+    grid-template-rows: .5fr .5fr 1fr .5fr 1fr ;
+    width: 60%;
+    height: 100%;
 }
 
 .containerDual {
@@ -150,13 +159,30 @@ main{
 
 .casilla {
     display: grid;
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
 }
+
+.casilla textarea {
+    width: 100%;
+    height: 80px;
+}
+
+.casilla input {
+    width: 100%;
+    height: 40px;
+}
+
+/*.casilla span {
+    padding: 2px 0px;
+    border-bottom:solid 1px var(--colorNegro);
+}*/
 
 .containerBtnFinal {
     display: flex;
     place-content: center;
+    align-items: center;
+    padding: 15px;
     gap: 15px;
 }
 
@@ -168,7 +194,8 @@ main{
  font-size: 15px;
  font-style: var(--textoBold);
  color: var(--colorBlanco);
- background-color: var(--colorGrisOscuro);
+ background-color: var(--colorNegro);
+ cursor: pointer;
  transition: all ease-in-out 250ms;
 }
 
@@ -179,8 +206,9 @@ main{
     height: 40px;
     font-size: 15px;
     font-style: var(--textoBold);
-    color: var(--colorBlanco);
-    background-color: var(--colorGrisClaro);
+    color: var(--colorNegro);
+    background-color: var(--colorBlanco);
+    cursor: pointer;
     transition: all ease-in-out 250ms;
    }
 

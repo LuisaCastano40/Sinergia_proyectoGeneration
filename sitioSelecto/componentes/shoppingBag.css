@@ -1,0 +1,79 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('../fonts/AvenirLTStd-Medium.otf');
+}
+
+/* Variables de css */
+:root{
+    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+    --colorNegro:#000000;
+    --colorNegroTransparencia:#00000080;
+    --colorGrisOscuro:#232323;
+    --colorGrisClaro:#A4A5A6;
+    --colorBlanco:#FFFFFF;
+}
+
+/* Condiciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sección productos dentro del carrito */
+
+.cartProductos{
+    border-bottom: solid var(--colorGrisOscuro);
+    width: 90%;
+    display: flex;
+    padding: 20px 10px;
+    gap: 10px;
+}
+.producto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.cart-image{
+   width: 50%;
+}
+.cart-image img{
+    width: 85%;
+}
+.cart-infoProducto{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: var(--textoMedium);
+}
+.cart-infoProducto h3{
+    color: var(--colorNegro);
+}
+.cart-infoProducto h4{
+    color: var(--colorGrisOscuro);
+    font-weight: 200;
+}
+.accionesProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accionesProducto i{
+    color: var(--colorNegro);
+    font-size: 25px;
+    border: none;
+    text-align: center;
+}
+.accionesProducto span{
+    color: var(--colorNegro);
+    margin: 5px 0;
+}
+.accionesProducto .bxs-trash{
+    color: darkred;
+    margin-top: 15px;
+}

@@ -35,8 +35,8 @@ function mostrarNavbar() {
                             <article class="contenedor-productosCart" id="container-cartProd">
                             </article>
                             <div class='seccion-total'>
-                                <p class="total" id="total">TOTAL: <span id="total-valor">$0.00</span></p>
-                                <button class="boton_carro" id="btn-vaciar">Vaciar carrito</button>
+                            <p class="total" id="total">TOTAL: <span id="total-valor">$0.00</span></p>
+                            <button class="boton_carro" id="btn-vaciar">Vaciar carrito</button>
                             </div>  
                         </div>
                     </section>

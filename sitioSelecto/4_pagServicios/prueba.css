@@ -1,0 +1,51 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Bold';
+    src: url('/fonts/AvenirLTStd-Bold.otf' );
+}
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('/fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Regular';
+    src: url('/fonts/AvenirLTStd-Regular.otf');
+}
+
+/* Variables de css */
+:root{
+    --textoBold: 'AvenirLTStd-Bold', sans-serif;
+    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
+    --colorNegro:#000000;
+    --colorNegroTransparencia:#00000080;
+    --colorGrisOscuro:#232323;
+    --colorGrisClaro:#A4A5A6;
+    --colorBlanco:#FFFFFF;
+}
+
+/* Condiciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    background-color: var(--colorGrisOscuro);
+    overflow-x: hidden;
+}
+
+.container-productos{
+    border: solid white;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card-image img{
+    width: 200px;
+}

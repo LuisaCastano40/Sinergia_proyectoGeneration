@@ -222,10 +222,11 @@
     height: 100%;
     padding-right: 40px;
 }   
-.carro_comprar i{
+.header-carrito i{
     font-size: 30px;
-    color: var(--colorBlanco);
+    color: var(--colorGrisClaro);
     cursor: pointer;
+    
 }
 .titulo_carrito{
     font-size: 22px;
@@ -251,7 +252,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
 .seccion-total{
     background-color: var(--colorNegro);
     width: 100%;
@@ -260,8 +260,11 @@
     bottom: 0;
     text-align: center;
 }
+.total{
+    font-family: var(--textoMedium);
+    color: var(--colorBlanco);
+}
 .boton_carro{
-    display: block;
     width: 80%;
     padding: 5px 10px;
     margin: 10px auto;
@@ -273,6 +276,7 @@
     text-transform: uppercase;
     font-family: var(--textoBold);
     font-size: 15px;
+    outline: none;
 }
 
 /* --------------FOOTER--------------- */

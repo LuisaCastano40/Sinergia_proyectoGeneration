@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icono del navegador -->
-    <link rel="shortcut icon" href="../logo/selecto-Logo-white.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assetsRegistro/icons/selecto-Logo-white.svg" type="image/x-icon">
     <title>Registro | Selecto</title>
 
     <!-- Link de los estilos de la página -->
     <link rel="stylesheet" href="css/registro.css">
     <!-- Link del script de javascript -->
     <script defer src="javascript/registro.js"></script>
+    <!--link de Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    
+
     <!-- Inicio cabecera de la página -->
-    <header>
-        <p>Soy la página de Registro</p>
+    <!--header|banner informativo a la izquierda-->
+    <header class="containerForm">
+        <div class="containerInformation">
+            <div class="tituloInicioSesionDiv">
+                <h2 class="tituloInicioSesion">¡Bienvenido a Selecto Barbería</h2>
+            </div>
+            <div class="parrafoInicioSesion">
+                <p>Estamos emocionados de que te unas<br>nuestra comunidad de estilo</p>
+            </div>
+            <div class="InicioSesionDiv">
+                <p class="incioSesion"><a href="../8_pagIngreso/ingreso.html">Inicia Sesion</a></p>
+            </div>
+        </div>
     </header>
     <!-- Fin cabecera de la página -->
 
     <!-- Inicio contenido de la página -->
-    <main>
-
+    <main class="formulario">
+        <!--Main| Contenerdor de formulario a la derecha-->
+        <div class="containerTituloForm">
+            <h2>"Únete a Selecto Barberia: Tu pasaporte al Estilo Exepcional"</h2>
+        </div>
+        <!--Formulario de Registro-->
+        <form class="formularioInformation" id="signupForm">
+            <label class="casilla">
+                <i class='bx bx-user-circle'></i>
+                <input type="text" placeholder="Nombre Completo" id="nombre">
+            </label>
+            <label class="casilla">
+                <i class='bx bx-envelope' ></i>
+                <input type="email" placeholder="Email" id="email">
+            </label>
+            <label class="casilla">
+                <i class='bx bx-phone'></i>
+                <input type="number" placeholder="Numero de celular" id="phone">
+            </label>
+            <label class="casilla">
+                <i class='bx bx-lock'></i>
+                <input type="password" placeholder="Contraseña" id="password">
+            </label>
+            <div class="registerDiv">
+                <input type="submit" value="REGISTRARSE" class="register">
+            </div>
+        </form>
+        <div class="iconsLoginDiv">
+            <i class='bx bxl-github iconsLogin'></i>
+            <i class='bx bxl-google iconsLogin'></i>
+            <i class='bx bxl-facebook-circle iconsLogin'></i>
+        </div>
     </main>
     <!-- Fin contenido de la página -->
 
     <!-- Inicio pie de pagina -->
+    <!--Contenedor de logos a la izquierda abajo-->
     <footer>
-
+        <div class="logosDiv">
+            <img src="../logo/selecto-Logo-white.svg" class="logoSelecto" width="60px" height="60px">
+            <p class="copySinergia">Powered By SINERGIA</p>
+        </div>
     </footer>
     <!-- Fin pie de pagina -->
 
 </body>
+
 </html>

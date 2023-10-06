@@ -29,7 +29,7 @@ function mostrarNavbar() {
                         <div class="carro_comprar">
                             <div class="header-carrito">
                                 <i class='bx bx-x' id="close"></i>
-                                <a href="../index.html"><img src="/1_pagInicio/logo/selecto-Logo-white.svg" alt="logo" /></a>
+                                <img src="/1_pagInicio/logo/selecto-Logo-white.svg" alt="logo" />
                             </div>
                             <p class="titulo_carrito">Bienvenido a tu carrito de compras</p>
                             <article class="contenedor-productosCart" id="container-cartProd">

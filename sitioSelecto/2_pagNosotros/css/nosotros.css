@@ -1,9 +1,20 @@
-/* Importamos la fuente a utilizar */
-@import url('https://fonts.cdnfonts.com/css/avenir');
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Bold';
+    src: url('/2_pagNosotros/fonts/AvenirLTStd-Bold.otf' );
+}
+@font-face {
+    font-family: 'AvenirLTStd-Bold', sans-serif;
+    src: url('/2_pagNosotros/fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Regular';
+    src: url('/2_pagNosotros/fonts/AvenirLTStd-Regular.otf');
+}
 
 /* variables */
 :root {
-    --text: 'avenir', sans-serif;
+    --text: 'AvenirLTStd-Medium';
     --colorFondo: #dad8d8;
     --colorCafe: #521705;
     --colorTextoBlanco: #dad8d8;

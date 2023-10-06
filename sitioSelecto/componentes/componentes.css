@@ -1,7 +1,7 @@
 /* Importamos las fuentes a utilizar */
 @font-face {
     font-family: 'AvenirLTStd-Medium';
-    src: url('/1_pagInicio/fonts/AvenirLTStd-Medium.otf');
+    src: url('../fonts/AvenirLTStd-Medium.otf');
 }
 
 /* Variables de css */

@@ -46,6 +46,7 @@ body{
     background-image: url('/1_pagInicio/assetsInicio/banner/baner-inicio.svg');
     background-position: center;
     position: relative;
+    background-size: cover;
 }
 
 /* Sección baner */

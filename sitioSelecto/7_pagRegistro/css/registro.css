@@ -11,8 +11,6 @@
     font-family: 'AvenirLTStd-Regular';
     src: url('../../fonts/AvenirLTStd-Regular.otf');
 }
-<<<<<<< HEAD
-=======
 /* Importamos las fuentes a utilizar */
 @font-face {
     font-family: 'AvenirLTStd-Bold';
@@ -26,7 +24,6 @@
     font-family: 'AvenirLTStd-Regular';
     src: url('../../fonts/AvenirLTStd-Regular.otf');
 }
->>>>>>> development
 
 /* Variables de css */
 :root{
@@ -208,8 +205,6 @@ footer{
     color: var(--colorBlanco);
     gap: 150px;
 }
-<<<<<<< HEAD
-=======
 /* --------------RESPONSIVE--------------- */
 /* Variables de css */
 :root{
@@ -391,5 +386,4 @@ footer{
     color: var(--colorBlanco);
     gap: 150px;
 }
->>>>>>> development
 /* --------------RESPONSIVE--------------- */

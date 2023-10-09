@@ -223,3 +223,55 @@ main{
 /* --------------FOOTER--------------- */
 
 /* --------------RESPONSIVE--------------- */
+
+
+/*-----------Estilos Prueba-----------*/
+
+.sectionPrueba {
+    margin: 0;
+    padding: 0;
+}
+
+.Card {
+    background-color: #000000;
+    width: 600px;
+    height: 700px;
+    padding: 60px;
+    margin: 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.nombreProducto {
+    color: var(--colorBlanco);
+    font-family: var(--textoBold);
+    font-size: 30px;
+}
+
+.subtituloProducto {
+    color: var(--colorBlanco);
+    font-family: var(--textoMedium);
+    font-size: 25px;
+}
+
+.descripcionProducto {
+    color: var(--colorBlanco);
+    font-family: var(--textoRegular);
+    font-size: 18px;
+}
+
+.textProducto {
+    color: var(--colorGrisClaro);
+    font-family: var(--textoRegular);
+    font-size: 20px;
+}
+
+.imgPrueba {
+    max-width: 350px;
+}
+
+.divPrueba {
+    text-align: center;
+}

@@ -61,7 +61,7 @@
                         </div>
                         <div class="casilla">
                             <label for="descripcionProducto"><span>Descripcion</span></label>
-                            <textarea id="descripcionProducto"></textarea>
+                            <textarea id="descripcionProducto" required></textarea>
                         </div>
                         <div class="containerDual">
                             <div class="casilla">
@@ -70,7 +70,7 @@
                             </div>
                             <div class="casilla">
                                 <label for="descuentoProducto"><span>Descuento</span></label>
-                                <input type="number" id="descuentoProducto" required>
+                                <input type="number" id="descuentoProducto" >
                             </div>
                             <div class="casilla">
                                 <label for="cantidadProducto"><span>Cantidad</span></label>
@@ -78,11 +78,11 @@
                             </div>
                             <div class="casilla">
                                 <label for="categoriaProducto"><span>Categoria</span></label>
-                                <input type="number" id="categoriaProducto" required>
+                                <input type="text" id="categoriaProducto" required>
                             </div>
                         </div>
                         <div class="containerBtnFinal">
-                            <button type="submit" class="btnGuardar">Guardar</button>
+                            <button type="submit" class="btnGuardar" id="subir">Guardar</button>
                             <button type="button" class="btnDescartar">Descartar</button>
                         </div>
                     </article>
@@ -99,6 +99,7 @@
     <!-- Fin pie de pagina -->
     <!-- Link del script de javascript -->
     <script src="/js/script.js"></script>
+    <script src="/js/saveFormularo.js"></script>
 </body>
 
 </html>

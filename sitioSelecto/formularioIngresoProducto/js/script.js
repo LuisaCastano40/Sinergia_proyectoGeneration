@@ -1,4 +1,6 @@
 
+//Previsualizacion de imagen en Formulario
+
 const defaulFile = "/assests/Group 13.svg";
 
 const file = document.getElementById('imagenProducto');

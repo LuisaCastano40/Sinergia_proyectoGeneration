@@ -102,10 +102,15 @@
     color: var(--colorBlanco);
 }
 .shoppingBag{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 .shoppingBag:hover{
-    cursor: pointer;
     transform: scale(1.05);
 }
 .shoppingBag img{
@@ -118,8 +123,8 @@
     padding: 1.5px 5px;
     border-radius: 50%;
     position: absolute;
-    bottom: -20%;
-    right: -20%;
+    bottom: 0;
+    right: 0;
 }
 
 /* Menú responsive */
@@ -129,10 +134,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 50px;
     position: absolute;
     top: 0;
-    right: 6%;
     display: none;
 }
 .container-menuResponsive button{
@@ -420,10 +423,17 @@
         font-size: 30px;
     }
     .container-menuResponsive{
-        display: block;
+        right: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .btnAgenda{
         font-size: 25px;
+    }
+    /* carrito */
+    .carro_comprar{
+        width: 100%;
     }
     /* footer */
     .container-footer{
@@ -460,12 +470,17 @@
     }
     .container-menuResponsive{
         display: block;
+        right: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .btnAgenda{
         font-size: 25px;
     }
-    .container-menuResponsive {
-        right: 10%;
+    /* carrito */
+    .carro_comprar{
+        width: 100%;
     }
     
     /* footer */

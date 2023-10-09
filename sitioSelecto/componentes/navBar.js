@@ -23,7 +23,7 @@ function mostrarNavbar() {
                     </ul>
                     <div class="shoppingBag" id="shoppingBag">
                         <img src="/1_pagInicio/icons/shoppingBag-white.svg" alt="shoppingBag" />
-                        <span>0</span>
+                        <span id="prodAdded">0</span>
                     </div>
                     <section class="carrito_compras activeCart">
                         <div class="carro_comprar">
@@ -78,3 +78,5 @@ function closeNav() {
 }
 
 //Función para cambiar el color del menú
+
+//Actualizar

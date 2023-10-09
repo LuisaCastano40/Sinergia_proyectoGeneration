@@ -37,57 +37,57 @@
                 </div>
             </section>
             <section class="containerFormulario">
-                <form class="formulario" id="formularioProducto">
+                <form class="formulario" id="formularioProducto" enctype="multipart/form-data">
                     <article class="containerImg">
-                        <img src="/assests/Group 13.svg" id="img">
-                        <input type="file" id="imagenProducto">
+                        <img src="/assests/Group 13.svg" id="img" width="auto">
+                        <input type="file" id="imagenProducto" accept="image/*" required>
                         <label for="imagenProducto" class="btnImagen">Subir imagen <i
                                 class='bx bx-cloud-upload'></i></label>
                     </article>
                     <article class="containerInputs">
                         <div class="casilla">
-                            <label for="nombreProducto">Titulo</label>
-                            <input type="text" id="nombreProducto">
+                            <label for="nombreProducto"><span>Titulo</span></label>
+                            <input type="text" id="nombreProducto" required>
                         </div>
                         <div class="containerDual">
                             <div class="casilla">
-                                <label for="subtituloProducto">Subtitulo</label>
-                                <input type="text" id="subtituloProducto">
+                                <label for="subtituloProducto"><span>Subtitulo</span></label>
+                                <input type="text" id="subtituloProducto" required>
                             </div>
                             <div class="casilla">
-                                <label for="etiquetaProducto">Etiqueta <i class='bx bx-purchase-tag-alt'></i></label>
-                                <input type="text" id="etiquetaProducto">
+                                <label for="etiquetaProducto"><span>Etiqueta</span></span> <i class='bx bx-purchase-tag-alt'></i></label>
+                                <input type="text" id="etiquetaProducto" required>
                             </div>
                         </div>
                         <div class="casilla">
-                            <label for="descripcionProducto">Descripcion</label>
-                            <input type="text" id="descripcionProducto">
+                            <label for="descripcionProducto"><span>Descripcion</span></label>
+                            <textarea id="descripcionProducto" required></textarea>
                         </div>
                         <div class="containerDual">
                             <div class="casilla">
-                                <label for="precioProducto">Precio</label>
-                                <input type="number" id="precioProducto">
+                                <label for="precioProducto"><span>Precio</span></label>
+                                <input type="number" id="precioProducto" required>
                             </div>
                             <div class="casilla">
-                                <label for="descuentoProducto">Descuento</label>
-                                <input type="number" id="descuentoProducto">
+                                <label for="descuentoProducto"><span>Descuento</span></label>
+                                <input type="number" id="descuentoProducto" >
                             </div>
                             <div class="casilla">
-                                <label for="cantidadProducto">Cantidad</label>
-                                <input type="number" id="cantidadProducto">
+                                <label for="cantidadProducto"><span>Cantidad</span></label>
+                                <input type="number" id="cantidadProducto" required>
                             </div>
                             <div class="casilla">
-                                <label for="categoriaProducto">Categoria</label>
-                                <input type="number" id="categoriaProducto">
+                                <label for="categoriaProducto"><span>Categoria</span></label>
+                                <input type="text" id="categoriaProducto" required>
                             </div>
+                        </div>
+                        <div class="containerBtnFinal">
+                            <button type="submit" class="btnGuardar" id="subir">Guardar</button>
+                            <button type="button" class="btnDescartar">Descartar</button>
                         </div>
                     </article>
                 </form>
             </section>
-            <div class="containerBtnFinal">
-                <button type="submit" class="btnGuardar">Guardar</button>
-                <button type="button" class="btnDescartar">Descartar</button>
-            </div>
         </section>
     </main>
     <!-- Fin contenido de la página -->
@@ -99,6 +99,7 @@
     <!-- Fin pie de pagina -->
     <!-- Link del script de javascript -->
     <script src="/js/script.js"></script>
+    <script src="/js/saveFormularo.js"></script>
 </body>
 
 </html>

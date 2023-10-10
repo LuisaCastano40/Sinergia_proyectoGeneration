@@ -224,6 +224,24 @@ main{
 
 /* --------------RESPONSIVE--------------- */
 
+@media screen and (max-width: 768px) {
+    .containerFormulario {
+        margin: 40px 0 40px 10px;
+        width: 60%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .formulario {
+        grid-area: imagen; /* Asociar el formulario al área "imagen" */
+    }
+
+    .titulo span {
+        padding: 0.01em 0px;
+        border-bottom: solid 3px var(--colorNegro);
+    }
+}
 
 /*-----------Estilos Prueba-----------*/
 
@@ -275,3 +293,4 @@ main{
 .divPrueba {
     text-align: center;
 }
+

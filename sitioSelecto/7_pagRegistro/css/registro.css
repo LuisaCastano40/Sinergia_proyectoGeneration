@@ -33,12 +33,13 @@
 }
 
 body{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: relative;
 }
 /* --------------HEADER--------------- */
+
 
 .containerInformation {
     display: grid;
@@ -192,4 +193,6 @@ footer{
     color: var(--colorBlanco);
     gap: 150px;
 }
+
+
 /* --------------RESPONSIVE--------------- */

@@ -15,11 +15,7 @@ datos.addEventListener('submit', (e) => {
     const cantidadProducto = document.querySelector('#cantidadProducto').value;
     const categoriaProducto = document.querySelector('#categoriaProducto').value;
 
-    //Así estabas recibiendo los datos tú
-    //const datosRecibidos = [];
-    //localStorage.getItem(JSON.stringify(datosRecibidos));
-
-    //compara la diferencia con este
+    
     let datosRecibidos = JSON.parse(localStorage.getItem('datosRecibidos')) || [];
 
     datosRecibidos.push({
@@ -34,7 +30,6 @@ datos.addEventListener('submit', (e) => {
         categoriaProducto
     });
 
-    //Aquí estás guardando los datos en el local, muy bien
     localStorage.setItem('datosRecibidos', JSON.stringify(datosRecibidos));
 
     alert('!Producto agregado con exito!')

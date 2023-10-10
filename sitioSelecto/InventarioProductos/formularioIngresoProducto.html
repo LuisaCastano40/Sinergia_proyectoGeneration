@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icono del navegador -->
-    <link rel="shortcut icon" href="../logo/selecto-Logo-white.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo/selecto-Logo-white.svg" type="image/x-icon">
     <title>Edicion de Productos</title>
 
     <!-- Link de los estilos de la página -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/formulario.css">
+        <!-- Link del script de javascript -->
+        <script defer src="js/saveFormularo.js"></script>
+        <script defer src="js/script.js"></script>
     <!-- Link del script Boxicons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -38,7 +41,7 @@
             <section class="containerFormulario">
                 <form class="formulario" id="formularioProducto" enctype="multipart/form-data">
                     <article class="containerImg">
-                        <img src="/assests/Group 13.svg" id="img" width="auto">
+                        <img src="assestsInventario/Group 13.svg" id="img" width="auto">
                         <input type="file" id="imagenProducto" accept="image/*" required>
                         <label for="imagenProducto" class="btnImagen">Subir imagen <i
                                 class='bx bx-cloud-upload'></i></label>
@@ -96,9 +99,6 @@
 
     </footer>
     <!-- Fin pie de pagina -->
-    <!-- Link del script de javascript -->
-    <script src="/js/script.js"></script>
-    <script src="/js/saveFormularo.js"></script>
 </body>
 
 </html>

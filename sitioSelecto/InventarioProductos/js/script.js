@@ -1,7 +1,7 @@
 
 //Previsualizacion de imagen en Formulario
-
-const defaulFile = "/assests/Group 13.svg";
+console.log('holi');
+const defaulFile = "../assestsInventario/ejemploProduct.svg";
 
 const file = document.getElementById('imagenProducto');
 const img = document.getElementById('img');

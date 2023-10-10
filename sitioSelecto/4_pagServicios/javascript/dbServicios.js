@@ -1,6 +1,7 @@
-export const datosRecibidos = [];
+export const serviciosSelecto = [];
 
-function Servicio (imagen, nombre, precio, categoria, descripcion) {
+function Servicio (id, imagen, nombre, precio, categoria, descripcion) {
+    this.id = id;
     this.imagen = imagen;
     this.nombre = nombre;
     this.precio = precio;
@@ -14,10 +15,10 @@ for (let i = 0; i < 20; i++) {
         i,
         "/formularioIngresoProducto/assests/servicio1.svg",
         "Corte",
-        20000,
+        "50.000",
         "Cabello",
         "Corte de cabello a gusto del cliente"
 
     );
-    datosRecibidos.push(servicio);
+    serviciosSelecto.push(servicio);
 }

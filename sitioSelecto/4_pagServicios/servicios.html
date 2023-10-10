@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="/componentes/componentes.css">
     <link rel="stylesheet" href="/componentes/shoppingBag.css">
     <!-- Link del script de javascript -->
-    <script defer src="javascript/servicios.js"></script>
+    <script defer type="module" src="javascript/Productos.js"></script>
+    <script defer type="module" src="javascript/dbServicios.js"></script>
+    <script defer type="module" src="javascript/servicios.js"></script>
     
      <!-- Link de los scripts de los componentes -->
      <script defer src="/componentes/navBar.js"></script>
@@ -29,12 +31,35 @@
     <header>
         <section class="container-navBar" id="container-navBar">
         </section>
-        <p>Soy la página de servicios</p>
     </header>
     <!-- Fin cabecera de la página -->
 
     <!-- Inicio contenido de la página -->
     <main>
+        <!-- Título "Productos SELECTO" -->
+        <h1 class="titulo-product"><span>Productos</span> SELECTO</h1>
+
+    <!-- Contenedor principal para las tarjetas de productos y servicios -->
+        <section class="container-productos" id="products">
+        </section>
+
+        <!-- Sección de publicidad -->
+        <section class="publicidad-container">
+                <h3 class="texto-publicidad"> Sección de publicidad para otras empresas, o descuentos de la semana</h3>
+        </section>
+
+        <!-- Título "SERVICIOS SELECTO" -->
+        <div class="titulo-servicios-container">
+            <h2 class="titulo-servicios"><span>Servicios</span> SELECTO</h2>
+        </div>
+        
+        <!-- Contenedor para las tarjetas de servicios -->
+        <section class="container-servicios" id="servicios">
+        </section>
+        <!-- Botón de agenda -->
+        <div class="button-agenda">
+            <a href="#"><button>AGENDA AHORA</button></a>
+        </div>
 
     </main>
     <!-- Fin contenido de la página -->

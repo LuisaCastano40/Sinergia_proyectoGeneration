@@ -9,15 +9,14 @@ window.addEventListener('load', function(){
     closeBag.addEventListener('click', cerrarCarrito);
 });
 
-
 // Funciones
 function abrirCarrito(){
     const visible = document.querySelector('.activeCart');
     const carrito = document.querySelector('.carro_comprar');
 
     if (window.innerWidth <= 768) {
-        visible.style.visibility = 'visible'
-        carrito.style.width = '100%';
+            visible.style.visibility = 'visible'
+            carrito.style.width = '100%';
     } else
     {
         visible.style.visibility = 'visible'

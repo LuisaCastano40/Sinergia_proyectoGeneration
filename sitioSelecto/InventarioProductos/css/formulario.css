@@ -34,7 +34,10 @@
 }
 
 body {
+    width: 100vw;
     overflow: hidden;
+    background-color: var(--colorBlanco);
+    color: var(--colorNegro);
 }
 /* --------------HEADER--------------- */
 

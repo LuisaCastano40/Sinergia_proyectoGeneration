@@ -20,6 +20,6 @@ signupForm.addEventListener('submit', (e) => {
 
     alert('Registro Exitoso!');
 
-    window.location.href = '#'
+    window.location.href = '../8_pagIngreso/ingreso.html'
 
 });

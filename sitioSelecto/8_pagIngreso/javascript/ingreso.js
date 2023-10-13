@@ -14,6 +14,6 @@ loginForm.addEventListener('submit', (e) => {
 
     alert(`Bienvenido ${validUser.name}`);
 
-    window.location.href = '#';
+    window.location.href = '/1_pagInicio/index.html';
 
 });

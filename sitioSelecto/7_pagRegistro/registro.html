@@ -24,14 +24,10 @@
     <header class="containerForm">
         <div class="containerInformation">
             <div class="tituloInicioSesionDiv">
-                <h2 class="tituloInicioSesion">¡Bienvenido a Selecto Barbería</h2>
+                <h2 class="tituloInicioSesion">¡Bienvenido a Selecto Barbershop!</h2>
+                <p class="parrafoInicioSesion">Tu pasaporte al estilo excepcional</p>
             </div>
-            <div class="parrafoInicioSesion">
-                <p>Estamos emocionados de que te unas<br>nuestra comunidad de estilo</p>
-            </div>
-            <div class="InicioSesionDiv">
-                <p class="incioSesion"><a href="/7_pagRegistro/assetsRegistro/icons/selecto-Logo-white.svg">Inicia Sesion</a></p>
-            </div>
+            
         </div>
     </header>
     <!-- Fin cabecera de la página -->
@@ -40,12 +36,12 @@
     <main class="formulario">
         <!--Main| Contenerdor de formulario a la derecha-->
         <div class="containerTituloForm">
-            <h2>"Únete a Selecto Barberia: Tu pasaporte al Estilo Exepcional"</h2>
+            <h2>Registrate</h2>
         </div>
         <!--Formulario de Registro-->
         <form class="formularioInformation" id="signupForm">
             <label class="casilla">
-                <i class='bx bx-user-circle'></i>
+                <i class='bx bx-user-circle'></i>    
                 <input type="text" placeholder="Nombre Completo" id="nombre">
             </label>
             <label class="casilla">
@@ -59,9 +55,10 @@
             <label class="casilla">
                 <i class='bx bx-lock'></i>
                 <input type="password" placeholder="Contraseña" id="password">
+                <i class='bx bx-low-vision'></i>
             </label>
             <div class="registerDiv">
-                <input type="submit" value="REGISTRARSE" class="register">
+                <input type="submit" value="Registrate" class="register">
             </div>
         </form>
         <div class="iconsLoginDiv">
@@ -69,18 +66,18 @@
             <i class='bx bxl-google iconsLogin'></i>
             <i class='bx bxl-facebook-circle iconsLogin'></i>
         </div>
+        <div class="yaTienesCuenta">
+            <p>¿Ya tienes una cuenta? <a href="/8_pagIngreso/ingreso.html">Inicia Sesion</a>.</p>
+        </div>
     </main>
-    <!-- Fin contenido de la página -->
 
-    <!-- Inicio pie de pagina -->
-    <!--Contenedor de logos a la izquierda abajo-->
     <footer>
         <div class="logosDiv">
-            <img src="../logo/selecto-Logo-white.svg" class="logoSelecto" width="60px" height="60px">
-            <p class="copySinergia">Powered By SINERGIA</p>
+            <div><img src="./assetsRegistro/icons/selecto-Logo-white.svg" class="logoSelecto" width="80px" height="80px"></div>
+            <div><p class="copySinergia">Powered By SINERGIA</p></div>
         </div>
     </footer>
-    <!-- Fin pie de pagina -->
+    <!-- Fin contenido de la página -->
 
 </body>
 

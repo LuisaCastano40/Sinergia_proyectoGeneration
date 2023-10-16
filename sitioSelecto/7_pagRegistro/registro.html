@@ -44,22 +44,31 @@
         </div>
         <!--Formulario de Registro-->
         <form class="formularioInformation" id="signupForm">
-            <label class="casilla">
+            <p id="errorName"a></p>
+            <div class="casilla">
                 <i class='bx bx-user-circle'></i>
-                <input type="text" placeholder="Nombre Completo" id="nombre">
-            </label>
-            <label class="casilla">
+                <input type="text" placeholder="Nombre Completo" id="nombre" required>
+                <i class='bx bx-error-circle'></i>
+            </div>
+            <p id="errorEmail"></p>
+            <div class="casilla">
                 <i class='bx bx-envelope' ></i>
-                <input type="email" placeholder="Email" id="email">
-            </label>
-            <label class="casilla">
+                <input type="email" placeholder="Email" id="email" required>
+                <i class='bx bx-error-circle'></i>
+            </div>
+            <p id="errorNumber"></p>
+            <div class="casilla">
                 <i class='bx bx-phone'></i>
-                <input type="number" placeholder="Numero de celular" id="phone">
-            </label>
-            <label class="casilla">
+                <input type="number" placeholder="Numero de celular" id="phone" required>
+                <i class='bx bx-error-circle'></i>
+            </div>
+            
+            <div class="casilla">
                 <i class='bx bx-lock'></i>
-                <input type="password" placeholder="Contraseña" id="password">
-            </label>
+                <input type="password" placeholder="Contraseña" id="password" oninput="validarContrasenaInput(this.value)" required>
+                <i class='bx bx-error-circle'></i>
+                <div id="passwordRequirements" style="color: red;"></div><br><br>
+            </div>
             <div class="registerDiv">
                 <input type="submit" value="REGISTRARSE" class="register">
             </div>

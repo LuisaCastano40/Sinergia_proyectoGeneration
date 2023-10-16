@@ -97,13 +97,14 @@ body{
 }
 
 .containerTituloForm {
+    font-family: var(--textoBold);
     display: flex;
+    align-items: end;
     justify-content: center;
     font-size: 30px;
-    text-align: center;
     color: var(--colorNegro);
     width: 100%;
-    height: 60%;
+    height: 100px;
 }
 .formularioInformation{
     display: grid;
@@ -167,13 +168,13 @@ body{
     justify-content: center;
     gap: 10px;
     width: 100%;
-    height: 25%;
+    height: 40%;
 }
 
 .iconsLogin {
     font-size: 25px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
     border-radius: 100%;
     color: var(--colorBlanco);
@@ -231,3 +232,149 @@ body{
 }
 
 /* --------------RESPONSIVE--------------- */
+
+@media screen and (min-width: 320px) and (max-width: 1023px){
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100vw;
+        height: 100vh;
+    }
+    .casilla {
+        height: 10%;
+        padding: 25px;
+        margin: 0;
+    }
+
+    .logosDiv {
+        position: absolute;
+        place-items: center;
+        bottom: 0;
+        left: 0px;
+        width: 80vw;
+    }
+    .logosDiv p {
+        font-size: 15px;
+    }
+
+    .containerInformation {
+        display: inline-block;
+        height: 50%;
+    }
+
+    .containerForm {
+        height: 25vh;
+    }
+
+    .formulario {
+        height: 60%;
+    }
+
+    .formularioInformation {
+        align-items: center;
+        justify-items: center;
+        width: 80%;
+        height: 230px;
+        margin: 0;
+        gap: 0;
+    }
+
+    .formularioInformation i {
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+    }
+
+    .registerDiv{
+        margin: 0;
+    }
+
+    .iconsLogin {
+        margin: 0px 0px;
+        place-items: center;
+    }
+
+    .iconsLoginDiv {
+        height: 60px;
+    }
+
+    .containerTituloForm{
+        height: 60px;
+        margin: 20px;
+    }
+
+    .tituloInicioSesion {
+        margin: 0;
+        font-size: 35px;
+    }
+
+    .register {
+        padding: 7px;
+        width: 100px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .yaTienesCuenta{
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 677px){
+
+
+    .tituloInicioSesion{
+        font-size: 25px;
+        align-items: center;
+    }
+    .parrafoInicioSesion {
+        font-size: 20px;
+    }
+
+    .containerTituloForm {
+        font-size: 18px;
+        height: 30px;
+    }
+
+    .formularioInformation {
+        height: 250px;
+    }
+
+    .casilla{
+        height: 10px;
+        width: 90%;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .casilla i {
+        font-size: 20px;
+    }
+
+    .register{
+        width: 100px;
+    }
+
+    .logosDiv {
+        height: 60px;
+    }
+
+    .logosDiv img {
+        width: 50px;
+    }
+
+    .copySinergia {
+        font-size: 15px;
+    }
+
+    .iconsLogin {
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .yaTienesCuenta{
+        font-size: 15px;
+        height: 40px;
+    }
+}

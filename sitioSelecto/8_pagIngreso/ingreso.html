@@ -19,17 +19,13 @@
     
     <!-- Inicio cabecera de la página -->
     <!--header|banner informativo a la izquierda-->
-    <header class="containerHeader">
+    <header class="containerForm">
         <div class="containerInformation">
             <div class="tituloInicioSesionDiv">
-                <h2 class="tituloInicioSesion">¡Bienvenido a Selecto Barbería¡</h2>
-            </div class="parrafoInicioSesionDiv">
-            <div class="parrafoInicioSesion">
-                <p>Estamos emocionados de que te unas nuestra comunidad de estilo</p>
+                <h2 class="tituloInicioSesion">¡Bienvenido a Selecto Barbershop!</h2>
+                <p class="parrafoInicioSesion">Tu pasaporte al estilo excepcional</p>
             </div>
-            <div class="InicioSesionDiv">
-                <a href="../7_pagRegistro/registro.html" class="incioSesion">Resgistrarme</a>
-            </div>
+            
         </div>
     </header>
     <!-- Fin cabecera de la página -->
@@ -37,7 +33,7 @@
     <!-- Inicio contenido de la página -->
     <main class="formulario">
         <div class="containerTituloForm">
-            <h2>"Únete a Selecto Barberia: Tu pasaporte al Estilo Exepcional"</h2>
+            <h2>Inicia Sesión</h2>
         </div>
         <!--Formulario de Login-->
         <form class="formularioInformation" id="loginForm">
@@ -48,18 +44,20 @@
             <label class="casilla">
                 <box-icon name='lock' ></box-icon>
                 <input type="password" placeholder="Contraseña" id="password" >
+                <i class='bx bx-low-vision'></i>
             </label>
+            <div class="registerDiv">
+                <input class="register" type="submit" value="Iniciar Sesión">
+            </div>
         </form>
-        <div class="registerDiv">
-            <input class="register" type="submit" value="INICIAR SESIÓN">
-        </div>
+        
         <div class="iconsLoginDiv">
             <box-icon type='logo' name='github' class="iconsLogin"></box-icon>
             <box-icon type='logo' name='google' class="iconsLogin"></box-icon>
             <box-icon name='facebook-circle' type='logo' class="iconsLogin"></box-icon>
         </div>
-        <div class="fpasswordDiv">
-            <p class="fpassword">Olvide mi contraseña</p>
+        <div class="yaTienesCuenta">
+            <p>¿aun no tienes una cuenta? <a href="/7_pagRegistro/registro.html">Registrate</a>.</p>
         </div>
     </main>
     <!-- Fin contenido de la página -->

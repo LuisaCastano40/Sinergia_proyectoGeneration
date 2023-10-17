@@ -117,6 +117,7 @@ body {
     position: relative;
     display: flex;
     animation: slide 10s infinite;
+    background-color: var(--colorNegro);
 }
 
 /* Keyframes para la transición del carrusel */
@@ -145,6 +146,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 100px 0;
+    background-color: var(--colorNegro);
 }
 
 .los-mejores {
@@ -157,16 +159,17 @@ body {
 
 .titulo-mejores {
     text-align: right;
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom: 20px;
-    color: #75210e;
+    color: var(--colorTextoBlanco);
 }
 
 .p-los-mejores {
-    font-size: 30px;
+    font-size: 25px;
     text-align: right;
     margin-bottom: 5px;
     width: 60%;
+    color: var(--colorTextoBlanco)
 }
 
 .imagen-los-mejores {

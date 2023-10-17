@@ -1,15 +1,15 @@
 /* Importamos las fuentes a utilizar */
 @font-face {
     font-family: 'AvenirLTStd-Bold';
-    src: url('../../fonts/AvenirLTStd-Bold.otf' );
+    src: url('/fonts/AvenirLTStd-Bold.otf' );
 }
 @font-face {
     font-family: 'AvenirLTStd-Medium';
-    src: url('../../fonts/AvenirLTStd-Medium.otf');
+    src: url('/fonts/AvenirLTStd-Medium.otf');
 }
 @font-face {
     font-family: 'AvenirLTStd-Regular';
-    src: url('../../fonts/AvenirLTStd-Regular.otf');
+    src: url('/fonts/AvenirLTStd-Regular.otf');
 }
 
 /* Variables de css */
@@ -31,10 +31,248 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    background-color: var(--colorGrisOscuro);
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    background-color: var(--colorGrisClaro);
+    width: 6px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorNegroTransparencia);
+    border-radius: 5px; 
+}
+
 /* --------------HEADER--------------- */
 
 /* ---------------MAIN---------------- */
+.container-forms{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assetsContactenos/images/selecto-barber-bg.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorBlanco);
+    font-family: var(--textoMedium);
+}
+.address{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    font-size: 35px;
+    text-align: center;
+    padding: 40px;
+}
+.address p{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--colorBlanco);
+}
+.forms-content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.forms-content h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--textoBold);
+}
+.forms-content span{
+    font-family: var(--textoRegular);
+    font-weight: 100;
+    text-transform: initial;
+}
+.forms-content h2{
+    font-size: 30px;
+}
+.contact-form{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form span{
+    color: darkred;
+}
+.clasificacion, 
+.datos,
+.mensaje{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.clasificacion select{
+    width: 48%;
+    height: 30px;
+}
+.datos input{
+    height: 30px;
+    padding: 0 10px;
+}
+.contenedor-info,
+.contenedor-email{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.datos-email{
+    width: 100%;
+}
+.curriculum{
+    display: none;
+    height: 100%;
+}
+.inputCV label{
+    width: 100%;
+    background-color: var(--colorBlanco);
+    border: 2px solid var(--colorBlanco);
+    border-radius: 20px;
+    color: var(--colorNegro);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: var(--textoBold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.inputCV i{
+    font-size: 25px;
+}
+.inputCV label:hover{
+    background-color: transparent;
+    color: var(--colorBlanco);
+}
+.inputCV label:hover i{
+    color: var(--colorBlanco);
+}
+.inputCV input{
+    display: none;
+}
+.mensaje textarea{
+    height: 50px;
+    padding: 0 10px;
+}
+.submit{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.submit button{
+    background-color: var(--colorBlanco);
+    color: var(--colorNegro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px;
+    border: 2px solid var(--colorBlanco);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-family: var(--textoBold);
+    font-size: 20px;
+    cursor: pointer;
+}
+.submit button:hover{
+    transform: scale(1.05);
+    background-color: transparent;
+    color: var(--colorBlanco);
+}
+.submit button:hover img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
 
-/* --------------FOOTER--------------- */
+/* Sección frase y número */
+.container-number{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--colorGrisClaro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--textoRegular);
+    gap: 20px;
+}
+.contact-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: var(--textoBold);
+    gap: 10px;
+}
+.contact-number img{
+    width: 40px;
+    height: 40px;
+}
+.parrafo-contact{
+    font-size: 25px;
+    width: 52%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--textoMedium);
+}
+
 
 /* --------------RESPONSIVE--------------- */
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* main */
+    .container-forms{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .address,
+    .forms-content{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+
+     /* main */
+     .container-forms{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .address,
+    .forms-content{
+        width: 100%;
+        height: auto;
+    }
+
+}

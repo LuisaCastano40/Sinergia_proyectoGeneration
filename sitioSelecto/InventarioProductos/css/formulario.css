@@ -1,0 +1,235 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Bold';
+    src: url('../../fonts/AvenirLTStd-Bold.otf' );
+}
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('../../fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Regular';
+    src: url('../../fonts/AvenirLTStd-Regular.otf');
+}
+
+/* Variables de css */
+:root{
+    --textoBold: 'AvenirLTStd-Bold', sans-serif;
+    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
+    --colorNegro:#000000;
+    --colorNegroTransparencia:#00000080;
+    --colorGrisOscuro:#232323;
+    --colorGrisClaro:#A4A5A6;
+    --colorBlanco:#FFFFFF;
+}
+
+/* Condiciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'AvenirLTStd-Medium', sans-serif;
+
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--colorBlanco);
+    color: var(--colorNegro);
+}
+/* --------------HEADER--------------- */
+
+
+.topBar{
+    background-color: var(--colorNegro);
+    width: 100%;
+    height: 80px;
+}
+
+/* ---------------MAIN---------------- */
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.barralateral{
+    background-color: var(--colorGrisOscuro);
+    width: 20%;
+    height: 100%;
+}
+
+.topContainer {
+    margin: 70px 30px 20px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.containerTitulo {
+    font-size: 40px;
+    color: var(--colorNegro);
+}
+
+.titulo span {
+    padding: 5px 0px;
+    border-bottom:solid 3px var(--colorNegro);
+}
+
+.containerFormulario {
+    background-color: var(--colorGrisClaro);
+    margin: 40px 0 40px 70px;
+    width: 70vw;
+    height: 70vh;
+}
+
+.formulario {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.containerImg {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    grid-template-rows: 70% 30%;
+    width: 40%;
+    height: 100%;
+}
+
+.containerImg img {
+    width: 90%;
+    height: 85%;
+}
+
+.containerImg input {
+    display: none;
+}
+
+.btnImagen {
+    background-color: var(--colorNegro);
+    color: var(--colorBlanco);
+    font-family: var(--textoBold);
+    font-size: 18px;
+    padding: 10px 50px;
+    margin-top: 10px;
+    border-radius: 25px;
+    border: solid 2px var(--colorNegro);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out 250ms;
+}
+
+.btnImagen i {
+    font-size: 30px;
+    color: var(--colorBlanco);
+}
+
+.btnImagen:hover {
+    background-color: var(--colorBlanco);
+    color: var(--colorNegro);
+}
+.btnImagen:hover i {
+    background-color: transparent;
+    color: var(--colorNegro);
+}
+
+.containerInputs{
+    display: grid;  
+    box-sizing: border-box;
+    grid-template-rows: .5fr .5fr 1fr .5fr 1fr ;
+    width: 60%;
+    height: 100%;
+}
+
+.containerDual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.casilla {
+    display: grid;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.casilla textarea {
+    width: 100%;
+    height: 80px;
+}
+
+.casilla input {
+    width: 100%;
+    height: 40px;
+}
+
+.containerBtnFinal {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.btnGuardar{
+ border: none;
+ border-radius: 30px;
+ width: 140px;
+ height: 40px;
+ font-size: 15px;
+ font-style: var(--textoBold);
+ color: var(--colorBlanco);
+ background-color: var(--colorNegro);
+ cursor: pointer;
+ transition: all ease-in-out 250ms;
+}
+
+.btnDescartar{
+    border: none;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+    font-size: 15px;
+    font-style: var(--textoBold);
+    color: var(--colorNegro);
+    background-color: var(--colorBlanco);
+    cursor: pointer;
+    transition: all ease-in-out 250ms;
+   }
+
+.btnGuardar:hover,
+.btnDescartar:hover {
+    background-color: var(--colorBlanco);
+    color: var(--colorNegro);
+    border: 1px solid var(--colorNegro);
+}
+
+/* --------------RESPONSIVE--------------- */
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas de hasta 768px de ancho */
+    .containerFormulario {
+        margin: 40px 0 40px 10px;
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .titulo span{
+    padding: .01em 0px;
+    border-bottom:solid 3px var(--colorNegro);
+}
+
+}

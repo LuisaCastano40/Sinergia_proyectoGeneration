@@ -1,0 +1,374 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Bold';
+    src: url('/2_pagNosotros/fonts/AvenirLTStd-Bold.otf' );
+}
+@font-face {
+    font-family: 'AvenirLTStd-Bold', sans-serif;
+    src: url('/2_pagNosotros/fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Regular';
+    src: url('/2_pagNosotros/fonts/AvenirLTStd-Regular.otf');
+}
+
+/* variables */
+:root {
+    --text: 'AvenirLTStd-Medium';
+    --colorFondo: #dad8d8;
+    --colorCafe: #521705;
+    --colorTextoBlanco: #dad8d8;
+    --colorNegro: #020101;
+    --colorFondoNav: #000000b3;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--text);
+}
+
+body {
+    width: 100%;
+    background-color: var(--colorFondo);
+    overflow-x: hidden;
+}
+
+/* estilos del scroll */
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/*------------------ HEADER --------------*/
+
+/* Estilos del encabezado */
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Estilos Banner principal */
+.banner {
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+    background-image: url('../assets/img/banenr-nosotros.svg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%);
+}
+
+.contenido-banner {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    gap: 30px;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+/* Estilos para el texto h3 del banner principal */
+.contenido-banner h2 {
+    color: var(--colorTextoBlanco);
+    font-size: 50px;
+    font-weight: 500;
+    padding: 20px 0px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px; 
+    margin-top: 30px;
+}
+
+.flecha__icon i {
+    color: var(--colorTextoBlanco);
+    font-size: 50px;
+}
+/* -----------------MAIN----------------- */
+
+/* Slider de imágenes */
+.slider-frame {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    animation: slide 10s infinite;
+    background-color: var(--colorNegro);
+}
+
+/* Keyframes para la transición del carrusel */
+@keyframes slide {
+
+    0%,
+    100% {
+        background-image: url('../assets/img/barberos.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url('../assets/img/manada-lobos.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+/*sección "Los mejores en lo que hacemos" */
+.seccion-mejores {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: var(--colorNegro);
+}
+
+.los-mejores {
+    width: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.titulo-mejores {
+    text-align: right;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--colorTextoBlanco);
+}
+
+.p-los-mejores {
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 5px;
+    width: 60%;
+    color: var(--colorTextoBlanco)
+}
+
+.imagen-los-mejores {
+    width: 50%;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.imagen-los-mejores img {
+    display: block;
+    width: 60%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/*sección Únete */
+.unete-banner {
+    padding: 0 5%;
+    background-image: url('../assets/img/fondoNosotros.svg');
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%);
+}
+
+.texto-banner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+}
+.texto-banner h3 {
+    color: var(--colorTextoBlanco);
+    font-size: 60px;
+    font-weight: 400;
+    padding: 10px 0px;
+    z-index: 1;
+    width: 80%;
+}
+
+.button-agenda button {
+    background-color: var(--colorTextoBlanco);
+    color: rgb(52, 5, 5);
+    font-size: 20px;
+    border: none;
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+.button-agenda a {
+    color: var(--colorCafe);
+}
+.button-agenda button:hover {
+    background-color: var(--colorCafe);
+    color: var(--colorTextoBlanco);
+}
+
+/*Seccion conoce al team*/
+.conoce-team {
+    text-align: center;
+    background-color: var(--colorNegro);
+    padding: 100px 50px;
+}
+.conoce-team h3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--colorTextoBlanco);
+}
+.team-barber {
+    display: inline-block;
+    margin:20px;
+    text-align: center;
+    position: relative;
+}
+.team-barber h4 {
+    margin-top: 10px;
+    font-size: 25px;
+    color: var(--colorTextoBlanco);
+}
+.team-barber img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.instagramIcon {
+    max-width: 50px;
+}
+
+/*sección Líder manada */
+
+.lider-manada {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+.contenido-andres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.img-andres {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+}
+.img-andres img {
+    width: 60%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.contenedor-titulos {
+    width: 50%;
+    text-align: left;
+}
+.titulo-principal {
+    font-size: 60px;
+    color: #75210e;
+}
+.subt-lider {
+    font-size: 30px;
+    color: var(--colorNegro);
+}
+.contenedor-titulos p {
+    width: 70%;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+/* ----------------FOOTER----------------- */
+
+/* ------------MEDIA QUERIES --------- */
+
+/* Movil first y rangos exactos de pantallas */
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    
+    /* los mejores en lo que hacemos */
+    .p-los-mejores{
+        width: 90%;
+    }
+    .imagen-los-mejores img{
+        width: 90%;
+    }
+    /* Lider de la manada */
+    .img-andres img{
+        width: 90%;
+    }
+    .contenedor-titulos p{
+        width: 90%;
+    }
+}
+/* Trabajar con los rangos exactos max y min */
+@media screen and (max-width: 1023px){
+    .contenido-banner h2{
+        font-size: 40px;
+    }
+    /* main*/
+    .seccion-mejores{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo-mejores{
+        text-align: center;
+        width: 100%;
+        font-size: 40px;
+    }
+    .p-los-mejores{
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+    }
+    .imagen-los-mejores{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .texto-banner h3{
+        font-size: 40px;
+    }
+    .contenido-andres{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-andres{
+        justify-content: center;
+    }
+    .contenedor-titulos{
+        text-align: center;
+        width: 100%;
+    }
+}

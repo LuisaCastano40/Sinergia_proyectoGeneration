@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -36,46 +36,49 @@
     <main class="formulario">
         <!--Main| Contenerdor de formulario a la derecha-->
         <div class="containerTituloForm">
-            <h2>Registrate</h2>
+            <h2>Regístrate</h2>
         </div>
         <!--Formulario de Registro-->
         <form class="formularioInformation" id="signupForm">
-            <p id="errorName"a></p>
+            
             <div class="casilla">
                 <i class='bx bx-user-circle'></i>
                 <input type="text" placeholder="Nombre Completo" id="nombre" required>
-                <i class='bx bx-error-circle'></i>
+                <i class='bx bx-error-circle' id="errorName"></i>
+                <i class='bx bx-check-circle' id="correctName"></i>
             </div>
-            <p id="errorEmail"></p>
+            
             <div class="casilla">
                 <i class='bx bx-envelope' ></i>
                 <input type="email" placeholder="Email" id="email" required>
-                <i class='bx bx-error-circle'></i>
+                <i class='bx bx-error-circle' id="errorEmail"></i>
+                <i class='bx bx-check-circle' id="correctEmail"></i>
             </div>
-            <p id="errorNumber"></p>
+        
             <div class="casilla">
                 <i class='bx bx-phone'></i>
-                <input type="number" placeholder="Numero de celular" id="phone" required>
-                <i class='bx bx-error-circle'></i>
+                <input type="number" placeholder="Número" id="phone" required>
+                <i class='bx bx-error-circle' id="errorNumber"></i>
+                <i class='bx bx-check-circle' id="correctNumber"></i>
             </div>
             
             <div class="casilla">
                 <i class='bx bx-lock'></i>
                 <input type="password" placeholder="Contraseña" id="password" oninput="validarContrasenaInput(this.value)" required>
-                <i class='bx bx-error-circle'></i>
-                <div id="passwordRequirements" style="color: red;"></div><br><br>
+                <i class='bx bx-error-circle' id="errorPassword"></i>
+                <i class='bx bx-check-circle' id="correctPassword"></i>
+                <div id="passwordRequirements"></div>
             </div>
             <div class="registerDiv">
-                <input type="submit" value="Registrate" class="register">
+                <input type="submit" value="Regístrate" class="register">
             </div>
         </form>
         <div class="iconsLoginDiv">
-            <i class='bx bxl-github iconsLogin'></i>
             <i class='bx bxl-google iconsLogin'></i>
             <i class='bx bxl-facebook-circle iconsLogin'></i>
         </div>
         <div class="yaTienesCuenta">
-            <p>¿Ya tienes una cuenta? <a href="/8_pagIngreso/ingreso.html">Inicia Sesion</a>.</p>
+            <p>¿Ya tienes una cuenta? <a href="/8_pagIngreso/ingreso.html">Inicia Sesion</a></p>
         </div>
     </main>
 

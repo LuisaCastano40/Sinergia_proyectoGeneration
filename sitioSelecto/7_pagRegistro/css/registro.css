@@ -11,19 +11,6 @@
     font-family: 'AvenirLTStd-Regular';
     src: url('../../fonts/AvenirLTStd-Regular.otf');
 }
-/* Importamos las fuentes a utilizar */
-@font-face {
-    font-family: 'AvenirLTStd-Bold';
-    src: url('../../fonts/AvenirLTStd-Bold.otf' );
-}
-@font-face {
-    font-family: 'AvenirLTStd-Medium';
-    src: url('../../fonts/AvenirLTStd-Medium.otf');
-}
-@font-face {
-    font-family: 'AvenirLTStd-Regular';
-    src: url('../../fonts/AvenirLTStd-Regular.otf');
-}
 
 /* Variables de css */
 :root{
@@ -43,7 +30,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--textoRegular);
-    overflow: hidden;
 }
 
 body{
@@ -91,13 +77,11 @@ body{
 
 /* ---------------MAIN---------------- */
 .containerForm {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-family: 'Avenir', sans-serif;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100vh;
+    text-align: center;
 }
 
 .formulario {
@@ -117,59 +101,65 @@ body{
     text-align: center;
     color: var(--colorNegro);
     width: 100%;
-    height: 50%;
+    margin-top: 20px;
 }
 .formularioInformation{
     display: grid;
     place-content: center;
     box-sizing: border-box;
     border-style: none;
-    gap: 10px;
+    width: 100%;
     height: 90%;
 }
 .casilla {
+    width: 100%;
     background-color: var(--colorNegroTransparencia);
     border-radius: 5px; 
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 10px;
-    width: 350px;
-    height: 60px;
     padding: 15px;
     margin: 10px 0;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    position: relative;  
 }
 .casilla input {
+    width: 20vw;
     border-style: none;
     outline: none;
-    width: 80%;
     background-color: transparent;
-    font-size: 25px;
+    font-size: 20px;
+    color: var(--colorGrisClaro); 
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
 }
 
 .casilla i {
     color: var(--colorBlanco);
     place-items: center;
-    width: 20% ;
-    height: 25px;
     font-size: 25px;
 }
 .registerDiv {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    align-items: center;
+    margin-top: 10px;
 }
 .register {
     background-color: var(--colorBlanco);
     border-radius: 35px;
-    padding: 13px;
-    width: 10rem;
+    padding: 13px 25px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
     cursor: pointer;
     transition: all 300ms ;
-    font-family: var(--textoRegular);
+    font-family: var(--textoBold);
     border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 15px;
 }
 .register:hover{
     background-color: var(--colorNegro);
@@ -178,6 +168,7 @@ body{
 .iconsLoginDiv{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -186,10 +177,10 @@ body{
     border-radius: 100%;
     padding: 5px;
     color: var(--colorBlanco);
-    border: solid 1px rgba(255, 255, 255, 0.5);
+    border: solid 2.5px rgba(255, 255, 255, 0.5);
     cursor: pointer;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .5s;
+    transition: all .5s;
 }
 
 .iconsLogin:hover{
@@ -201,16 +192,76 @@ body{
     text-decoration: none;
     color: var(--colorBlanco);
     font-family: var(--textoRegular);
-    margin: 20px;
-    height: 15%;
+    margin: 10px;
+    font-size: 18px;
 }
 
 .yaTienesCuenta a {
     text-align: center;
     text-decoration: none;
     color: var(--colorBlanco);
-    font-family: var(--textoBold);
+    font-family: var(--textoMedium);
+    padding: 5px 2px;
+    position: relative;
 }
+.yaTienesCuenta a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: var(--colorBlanco);
+    height: 3px;
+    transition: right 0.3s ease-in-out;
+}
+.yaTienesCuenta a:hover::before {
+    right: 0;
+}
+#errorName,
+#errorEmail,
+#errorNumber,
+#errorPassword,
+#correctName,
+#correctEmail,
+#correctNumber,
+#correctPassword {
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+}
+#errorName,
+#errorEmail,
+#errorNumber,
+#errorPassword{
+    color: red;
+}
+
+#passwordRequirements {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--colorGrisClaro);
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 45%;
+  }
+  
+  #passwordRequirements::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:var(--colorGrisClaro) transparent transparent transparent;
+  }
+  #passwordRequirements ul{
+    list-style: none;
+  }
 
 /* --------------FOOTER--------------- */
 
@@ -239,18 +290,21 @@ body{
 
 /* --------------RESPONSIVE--------------- */
 
-@media screen and (min-width: 320px) and (max-width: 1023px){
+/* medidas tablet */
+@media screen and (min-width: 678px) and (max-width: 1023px){
     body {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        width: 100vw;
-        height: 100vh;
     }
-    .casilla {
-        height: 10%;
-        padding: 25px;
-        margin: 0;
+    .containerForm {
+        height: 18vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .casilla input{
+        width: 30vw;
     }
 
     .logosDiv {
@@ -266,11 +320,85 @@ body{
 
     .containerInformation {
         display: inline-block;
-        height: 50%;
     }
 
+    .formulario {
+        height:65%;
+    }
+
+    .formularioInformation {
+        align-items: center;
+        justify-items: center;
+    }
+
+    .formularioInformation i {
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+    }
+
+    .iconsLogin {
+        margin: 0px 0px;
+        place-items: center;
+    }
+
+    .containerTituloForm{
+        font-size: 25px;
+    }
+
+    .tituloInicioSesion {
+        margin: 0;
+        font-size: 35px;
+    }
+    .register {
+        padding: 10px 25px;
+    }
+    .yaTienesCuenta{
+        height: 40px;
+    }
+}
+
+/* medidas movil */
+@media screen and (max-width: 677px){
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
     .containerForm {
-        height: 25vh;
+        height: 20vh;
+        padding: 20px;
+    }
+    .casilla {
+        height: 10px;
+        width: 90%;
+        padding: 20px;
+        margin: 10px 0;
+    }
+    .casilla input{
+        width: 40vw;
+    }
+    .casilla i {
+        font-size: 20px;
+    }
+    .logosDiv {
+        position: absolute;
+        place-items: center;
+        bottom: 0;
+        left: 0px;
+        width: 80vw;
+        height: 70px;
+    }
+    .logosDiv img {
+        width: 50px;
+    }
+    .logosDiv p {
+        font-size: 15px;
+    }
+
+    .containerInformation {
+        display: inline-block;
+
     }
 
     .formulario {
@@ -281,7 +409,6 @@ body{
         align-items: center;
         justify-items: center;
         width: 80%;
-        height: 380px;
         margin: 0;
         gap: 0;
     }
@@ -299,84 +426,32 @@ body{
     .iconsLogin {
         margin: 0px 0px;
         place-items: center;
-
+        font-size: 15px;
+        padding: 2px;
     }
-
     .containerTituloForm{
-        height: 60px;
-        margin: 30px;
+        margin: 10px;
+        font-size: 18px;
+        height: 30px;
     }
-
     .tituloInicioSesion {
         margin: 0;
-        font-size: 35px;
-    }
-
-    .register {
-        padding: 7px;
-        width: 100px;
-        height: 30px;
-        margin: 5px;
-    }
-
-    .yaTienesCuenta{
-        height: 40px;
-    }
-}
-
-@media screen and (max-width: 677px){
-
-
-    .tituloInicioSesion{
         font-size: 25px;
         align-items: center;
     }
     .parrafoInicioSesion {
         font-size: 20px;
     }
-
-    .containerTituloForm {
-        font-size: 18px;
-        height: 30px;
+    .register {
+        padding: 7px 20px;
+        margin: 5px;
     }
-
-    .formularioInformation {
-        height: 250px;
-    }
-
-    .casilla{
-        height: 10px;
-        width: 90%;
-        padding: 15px;
-        margin: 10px 0;
-    }
-
-    .casilla i {
-        font-size: 20px;
-    }
-
-    .register{
-        width: 80px;
-    }
-
-    .logosDiv {
-        height: 70px;
-    }
-
-    .logosDiv img {
-        width: 50px;
-    }
-
-    .copySinergia {
-        font-size: 15px;
-    }
-
-    .iconsLogin {
-        font-size: 15px;
-        padding: 2px;
-    }
-
+    
     .yaTienesCuenta{
+        height: 40px;
+        font-size: 15px;
+    }
+    .copySinergia {
         font-size: 15px;
     }
 }

@@ -140,7 +140,7 @@ body {
 
 /*sección "Los mejores en lo que hacemos" */
 .seccion-mejores {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -215,7 +215,7 @@ body {
 
 .button-agenda button {
     background-color: var(--colorTextoBlanco);
-    color: rgb(52, 5, 5);
+    color: var(--colorNegro);
     font-size: 20px;
     border: none;
     padding: 15px 50px;
@@ -228,7 +228,7 @@ body {
     color: var(--colorCafe);
 }
 .button-agenda button:hover {
-    background-color: var(--colorCafe);
+    background-color: var(--colorNegro);
     color: var(--colorTextoBlanco);
 }
 
@@ -261,17 +261,19 @@ body {
 }
 .instagramIcon {
     max-width: 50px;
+    color: var(--colorNegro);
 }
 
 /*sección Líder manada */
 
 .lider-manada {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px 0;
+    background-color: rgb(62, 62, 64);
 }
 .contenido-andres {
     display: flex;
@@ -295,13 +297,14 @@ body {
 }
 .titulo-principal {
     font-size: 60px;
-    color: #75210e;
+    color: var(--colorNegro);
 }
 .subt-lider {
     font-size: 30px;
-    color: var(--colorNegro);
+    color: var(--colorTextoBlanco);
 }
 .contenedor-titulos p {
+    color: var(--colorTextoBlanco);
     width: 70%;
     font-size: 30px;
     margin: 20px 0;

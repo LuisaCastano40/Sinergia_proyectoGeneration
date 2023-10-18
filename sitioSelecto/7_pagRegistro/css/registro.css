@@ -11,19 +11,6 @@
     font-family: 'AvenirLTStd-Regular';
     src: url('../../fonts/AvenirLTStd-Regular.otf');
 }
-/* Importamos las fuentes a utilizar */
-@font-face {
-    font-family: 'AvenirLTStd-Bold';
-    src: url('../../fonts/AvenirLTStd-Bold.otf' );
-}
-@font-face {
-    font-family: 'AvenirLTStd-Medium';
-    src: url('../../fonts/AvenirLTStd-Medium.otf');
-}
-@font-face {
-    font-family: 'AvenirLTStd-Regular';
-    src: url('../../fonts/AvenirLTStd-Regular.otf');
-}
 
 /* Variables de css */
 :root{

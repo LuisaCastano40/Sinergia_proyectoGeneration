@@ -10,14 +10,12 @@ document.addEventListener('DOMContentLoaded', function(){
         const phone = document.querySelector('#phone').value;
         const password = document.querySelector('#password').value;
 
-        isValid = validarForm(name, phone, password);
+        isValid = validarForm(name, phone, password, email);
 
         const users = JSON.parse(localStorage.getItem('users')) || [];
 
         if(isValid){
-            
             const isUserRegistered = users.find(user => user.email === email);
-
             if(isUserRegistered){
                 return alert('El usuario ya está registrado!');
             } else {
@@ -111,12 +109,13 @@ function validarCampoNumerico(phone) {
     return true; 
 }
 
-function validarForm(name, phone, password) {
+function validarForm(name, phone, password, email) {
     const isValidPassword = validarContrasena(password);
     const isValidName = validarNombreUsuario(name);
     const isValidNumber = validarCampoNumerico(phone);
+    const isValidEmail = validarEmail(email);
 
-    return isValidPassword && isValidName && isValidNumber;
+    return isValidPassword && isValidName && isValidNumber && isValidEmail;
 }
 
 function mostrarErrorEmail() {

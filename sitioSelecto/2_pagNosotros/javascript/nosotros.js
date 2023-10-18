@@ -1,20 +1,3 @@
-// Obtener el elemento del navbar
-const navbar = document.getElementById("navBar");
-// Definir la distancia a partir de la cual se cambia el color
-const scrollDistance = 20;
-
-// escuchamos el evento de scroll
-window.addEventListener('scroll', changeNavbarColor);
-
-
-//Cambiar el color del navbar al hacer scroll
-function changeNavbarColor() {
-    if (window.scrollY >= scrollDistance) {
-        navbar.style.backgroundColor = 'black';
-    } else {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-    }
-}
 
 //Efecto Navbar responsive//
 function openNav() {

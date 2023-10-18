@@ -1,25 +1,27 @@
 /* Importamos las fuentes a utilizar */
 @font-face {
     font-family: 'AvenirLTStd-Bold';
-    src: url('/2_pagNosotros/fonts/AvenirLTStd-Bold.otf' );
+    src: url('/1_pagInicio/fonts/AvenirLTStd-Bold.otf' );
 }
 @font-face {
-    font-family: 'AvenirLTStd-Bold', sans-serif;
-    src: url('/2_pagNosotros/fonts/AvenirLTStd-Medium.otf');
+    font-family: 'AvenirLTStd-Medium';
+    src: url('/1_pagInicio/fonts/AvenirLTStd-Medium.otf');
 }
 @font-face {
     font-family: 'AvenirLTStd-Regular';
-    src: url('/2_pagNosotros/fonts/AvenirLTStd-Regular.otf');
+    src: url('/1_pagInicio/fonts/AvenirLTStd-Regular.otf');
 }
 
-/* variables */
-:root {
-    --text: 'AvenirLTStd-Medium';
-    --colorFondo: #dad8d8;
-    --colorCafe: #521705;
-    --colorTextoBlanco: #dad8d8;
-    --colorNegro: #020101;
-    --colorFondoNav: #000000b3;
+/* Variables de css */
+:root{
+    --textoBold: 'AvenirLTStd-Bold', sans-serif;
+    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
+    --colorNegro:#121212;
+    --colorNegroTransparencia:#00000080;
+    --colorGrisOscuro:#232323;
+    --colorGrisClaro:#A4A5A6;
+    --colorBlanco:#FFFFFF;
 }
 
 /* Estilos generales */
@@ -27,12 +29,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var(--text);
+    font-family: var(--textoMedium);
 }
 
 body {
     width: 100%;
-    background-color: var(--colorFondo);
+    background-color: var(--colorNegro);
     overflow-x: hidden;
 }
 
@@ -93,8 +95,9 @@ body {
 
 /* Estilos para el texto h3 del banner principal */
 .contenido-banner h2 {
-    color: var(--colorTextoBlanco);
-    font-size: 50px;
+    width: 80%;
+    color: var(--colorBlanco);
+    font-size: 55px;
     font-weight: 500;
     padding: 20px 0px;
     position: relative;
@@ -104,7 +107,7 @@ body {
 }
 
 .flecha__icon i {
-    color: var(--colorTextoBlanco);
+    color: var(--colorBlanco);
     font-size: 50px;
 }
 /* -----------------MAIN----------------- */
@@ -117,7 +120,6 @@ body {
     position: relative;
     display: flex;
     animation: slide 10s infinite;
-    background-color: var(--colorNegro);
 }
 
 /* Keyframes para la transición del carrusel */
@@ -159,9 +161,15 @@ body {
 
 .titulo-mejores {
     text-align: right;
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: var(--colorTextoBlanco);
+    font-size: 60px;
+    margin-bottom: 50px;
+    color: var(--colorBlanco);
+    font-family: var(--textoRegular);
+}
+.modificador{
+    padding: 5px 0;
+    border-bottom: solid var(--colorBlanco);
+    font-family: var(--textoRegular);
 }
 
 .p-los-mejores {
@@ -169,7 +177,7 @@ body {
     text-align: right;
     margin-bottom: 5px;
     width: 60%;
-    color: var(--colorTextoBlanco)
+    color: var(--colorBlanco)
 }
 
 .imagen-los-mejores {
@@ -202,11 +210,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 100px;
+    gap: 80px;
 }
 .texto-banner h3 {
-    color: var(--colorTextoBlanco);
-    font-size: 60px;
+    color: var(--colorBlanco);
+    font-size: 50px;
     font-weight: 400;
     padding: 10px 0px;
     z-index: 1;
@@ -214,34 +222,34 @@ body {
 }
 
 .button-agenda button {
-    background-color: var(--colorTextoBlanco);
+    background-color: var(--colorBlanco);
     color: var(--colorNegro);
     font-size: 20px;
-    border: none;
+    border: solid 2px var(--colorBlanco);
     padding: 15px 50px;
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
-    font-weight: bold;
+    font-family: var(--textoBold);
 }
 .button-agenda a {
-    color: var(--colorCafe);
+    color: var(--colorNegro);
 }
 .button-agenda button:hover {
     background-color: var(--colorNegro);
-    color: var(--colorTextoBlanco);
+    color: var(--colorBlanco);
 }
 
 /*Seccion conoce al team*/
 .conoce-team {
     text-align: center;
-    background-color: var(--colorNegro);
+    background-color: var(--colorGrisOscuro);
     padding: 100px 50px;
 }
 .conoce-team h3 {
     font-size: 60px;
     margin-bottom: 20px;
-    color: var(--colorTextoBlanco);
+    color: var(--colorBlanco);
 }
 .team-barber {
     display: inline-block;
@@ -252,7 +260,7 @@ body {
 .team-barber h4 {
     margin-top: 10px;
     font-size: 25px;
-    color: var(--colorTextoBlanco);
+    color: var(--colorBlanco);
 }
 .team-barber img {
     width: 200px;
@@ -273,7 +281,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 100px 0;
-    background-color: rgb(62, 62, 64);
+    background-color: var(--colorNegro);
 }
 .contenido-andres {
     display: flex;
@@ -297,20 +305,20 @@ body {
 }
 .titulo-principal {
     font-size: 60px;
-    color: var(--colorNegro);
+    color: var(--colorBlanco);
+    margin-bottom: 20px;
 }
 .subt-lider {
     font-size: 30px;
-    color: var(--colorTextoBlanco);
+    color: var(--colorBlanco);
 }
 .contenedor-titulos p {
-    color: var(--colorTextoBlanco);
+    color: var(--colorBlanco);
     width: 70%;
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px 0;
 }
 
-/* ----------------FOOTER----------------- */
 
 /* ------------MEDIA QUERIES --------- */
 
@@ -336,7 +344,8 @@ body {
 /* Trabajar con los rangos exactos max y min */
 @media screen and (max-width: 1023px){
     .contenido-banner h2{
-        font-size: 40px;
+        font-size: 45px;
+        width: 100%;
     }
     /* main*/
     .seccion-mejores{
@@ -362,7 +371,16 @@ body {
     .texto-banner h3{
         font-size: 40px;
     }
+    .contenedor-titulos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+    }
     .contenido-andres{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -370,8 +388,22 @@ body {
     .img-andres{
         justify-content: center;
     }
-    .contenedor-titulos{
+}
+
+@media screen and (max-width: 677px){
+    .contenido-banner h2{
+        font-size: 30px;
+    }
+    /* main */
+    .titulo-mejores{
         text-align: center;
-        width: 100%;
+        font-size: 30px;
+    }
+    .p-los-mejores{
+        text-align: center;
+        font-size: 20px;
+    }
+    .titulo-principal{
+        font-size: 40px;
     }
 }

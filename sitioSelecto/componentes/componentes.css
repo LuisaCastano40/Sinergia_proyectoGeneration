@@ -444,10 +444,12 @@
     .socialMedia{
         grid-column: 1/2;
         grid-row: 2/3;
+        margin: 20px 0;
     }
     .logo{
         grid-column: 1/2;
         grid-row: 1/2;
+        gap: 0;
     }
     .map{
         grid-column: 1/2;
@@ -489,13 +491,22 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+    .container-footer h3,
+    .container-footer a,
+    .socialMedia h3,
+    .map h3,
+    .map p{
+        font-size: 15px;
+    }
     .socialMedia{
         grid-column: 1/2;
         grid-row: 2/3;
+        margin: 20px 0;
     }
     .logo{
         grid-column: 1/2;
         grid-row: 1/2;
+        gap: 0;
     }
     .map{
         grid-column: 1/2;

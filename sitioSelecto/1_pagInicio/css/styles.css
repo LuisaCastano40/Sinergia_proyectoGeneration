@@ -79,13 +79,13 @@ body{
     background-color: transparent;
 }
 .titulo-baner{
-    height: 35%;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 40px;
     font-family: var(--textoMedium);
-    line-height: 55px;
+    line-height: 90px;
 }
 .titulo-baner h1{
     width: 70%;
@@ -101,6 +101,8 @@ body{
 /* ---------------MAIN---------------- */
 /* promociones de la semana */
 .container-promociones{
+    
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,10 +113,16 @@ body{
     padding: 50px;
 }
 .promos-content{
+    width: 80%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
-
+.promos{
+    text-align: center;
+}
 /* Sección conoce a selecto */
 .container-conoceSelecto{
     width: 70%;
@@ -166,7 +174,7 @@ body{
     gap: 30px;
 }
 .cardServicio{
-    width: 30%;
+    width: 300px;
     min-height: 430px;
     text-align: center;
     padding: 20px;
@@ -203,9 +211,10 @@ body{
     font-size: 20px;
     text-decoration: none;
     border-radius: 25px;
-    margin-top: 50px;
+    margin: 50px 40px 0 40px;
     transition: all 250ms;
     text-transform: uppercase;
+    text-align: center;
 }
 .btn:hover{
     color: var(--colorBlanco);
@@ -262,12 +271,8 @@ body{
 }
 .slider-images img{
     width: 100%;
-    animation: slide 3s infinite ease-in-out reverse 0.5s;
+    object-fit: cover;
 }
-/* @keyframes slide {
-    from{transform: translate(0);}
-    to{transform: translate(-100%);}
-} */
 
 /* Sección contáctanos */
 .container-contactanos{
@@ -289,6 +294,46 @@ body{
 .container-contactanos img{
     width: 40%;
 }
-/* --------------FOOTER--------------- */
 
 /* --------------RESPONSIVE--------------- */
+/* Tablet */
+@media screen and (min-width: 678px) and (max-width: 1023px){
+    .titulo-baner{
+        font-size: 30px;
+        line-height: 60px;
+    }
+    .titles{
+        font-size: 40px;
+    }
+}
+
+/* móvil */
+@media screen and (max-width: 677px){
+    .container-btns{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid;
+        padding-left: 15%;
+    }
+    .titulo-baner{
+        font-size: 25px;
+        line-height: 50px;
+    }
+    .titles{
+        font-size: 30px;
+    }
+    .btn{
+        margin-top: 30px;
+    }
+    .container-contactanos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-contactanos img{
+        width: 80%;
+    }
+}

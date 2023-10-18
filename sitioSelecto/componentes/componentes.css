@@ -341,6 +341,7 @@
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
+    border: solid 2px var(--colorBlanco);
 }
 .logo .btn:hover {
     background-color: var(--colorNegro);

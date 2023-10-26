@@ -95,13 +95,10 @@ body{
     border-radius: 70px;
     margin-top: 50px;
 }
-.titulo-baner span{
-    border-bottom: solid var(--colorBlanco);
-}
+
 /* ---------------MAIN---------------- */
 /* promociones de la semana */
 .container-promociones{
-    
     width: 100%;
     display: flex;
     justify-content: center;
@@ -110,7 +107,7 @@ body{
     gap: 20px;
     font-family: var(--textoMedium);
     font-size: 25px;
-    padding: 50px;
+    padding: 100px;
 }
 .promos-content{
     width: 80%;
@@ -130,6 +127,7 @@ body{
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
 }
 .titles{
@@ -137,11 +135,9 @@ body{
     font-family: var(--textoRegular);
     text-align: center;
 }
-.title--modificador{
-    border-bottom:solid 2px var(--colorBlanco);
-}
 .container-conoceSelecto p{
-    font-size: 20px;
+    width: 80%;
+    font-size: 25px;
     font-family: var(--textoRegular);
     font-weight: 100;
     margin-bottom: 100px;
@@ -158,6 +154,7 @@ body{
     padding: 30px 0 100px 0;
     background-image: url('../assetsInicio/images/bg-secionServicios.svg');
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     padding: 100px 0;
 }
@@ -174,8 +171,8 @@ body{
     gap: 30px;
 }
 .cardServicio{
-    width: 300px;
-    min-height: 430px;
+    width: 350px;
+    min-height: 500px;
     text-align: center;
     padding: 20px;
     border: solid 2px var(--colorBlanco);
@@ -184,7 +181,9 @@ body{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    justify-content: center;
     background-color: var(--colorNegroTransparencia);
+    font-size: 20px;
 }
 .cardServicio img{
     width: 150px;
@@ -267,11 +266,25 @@ body{
     margin: 50px auto 0;
     border-radius: 60px;
     overflow: hidden;
-    display: flex;
 }
-.slider-images img{
-    width: 100%;
+.slide{
+    width: 300%;
+    height: 100%;
+    border-radius: 60px;
+    overflow: hidden;
+    display: flex;
+    animation: slide 15s 10 300ms alternate ease-in-out;
+}
+@keyframes slide {
+    0% {transform: translateX(0%)}
+    50% {transform: translateX(-75vw)}
+    100% {transform: translateX(-150vw)}
+}
+.slideImg{
+    width: 33.4%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* Sección contáctanos */

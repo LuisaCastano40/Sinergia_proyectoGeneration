@@ -1,5 +1,6 @@
 const loginForm = document.querySelector('#loginForm');
 let isValid = false;
+let isLogged = false;
 
 document.addEventListener('DOMContentLoaded', function () {
     loginForm.addEventListener('submit', (e) => {
@@ -16,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return alert('Usuario y/o contraseña son incorrectos o no existen');
             }
             alert(`Bienvenido ${validUser.name}`);
+            isLogged = true;
+            localStorage.setItem('logged', JSON.stringify(isLogged));
+            localStorage.setItem('userLogged', JSON.stringify(validUser.name));
             window.location.href = '/index.html';
         } else {
             alert('Datos inválidos');

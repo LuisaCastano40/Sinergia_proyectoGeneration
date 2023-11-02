@@ -1,0 +1,58 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+  font-family: "AvenirLTStd-Bold";
+  src: url("/2_pagNosotros/fonts/AvenirLTStd-Bold.otf");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url("/2_pagNosotros/fonts/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Regular";
+  src: url("/2_pagNosotros/fonts/AvenirLTStd-Regular.otf");
+}
+
+/*Variables*/
+:root {
+  --text: "AvenirLTStd-Medium";
+  --colorFondo: #dad8d8;
+  --colorCafe: #521705;
+  --colorTextoBlanco: #dad8d8;
+  --colorNegro: #020101;
+  --colorFondoNav: #000000b3;
+}
+
+.modal-header {
+  background-color: var(--colorFondoNav);
+  color: var(--colorTextoBlanco);
+  font-family: "AvenirLTStd-Bold";
+  padding: 10px; 
+  margin-left: 60px;
+}
+
+.modal-header img {
+  margin-right: 60px; 
+}
+
+.modal-body {
+  background-color: var(--colorNegro);
+  color: var(--colorTextoBlanco);
+  font-family: "AvenirLTStd-Bold";
+  font-size: 18px;
+  
+}
+
+.modal-logo {
+  width: 40px;
+}
+
+.modal-body p {
+  margin-right: 20px; 
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}

@@ -1,17 +1,17 @@
 /* Importamos las fuentes a utilizar */
 @font-face {
   font-family: "AvenirLTStd-Bold";
-  src: url("/2_pagNosotros/fonts/AvenirLTStd-Bold.otf");
+  src: url("/fonts/AvenirLTStd-Medium.otf");
 }
 
 @font-face {
   font-family: "AvenirLTStd-Medium";
-  src: url("/2_pagNosotros/fonts/AvenirLTStd-Medium.otf");
+  src: url("/fonts/AvenirLTStd-Medium.otf");
 }
 
 @font-face {
   font-family: "AvenirLTStd-Regular";
-  src: url("/2_pagNosotros/fonts/AvenirLTStd-Regular.otf");
+  src: url("/fonts/AvenirLTStd-Regular.otf");
 }
 
 /*Variables*/
@@ -25,31 +25,71 @@
 }
 
 .modal-header {
-  background-color: var(--colorFondoNav);
+  background-color: #d4d4d4;
   color: var(--colorTextoBlanco);
   font-family: "AvenirLTStd-Bold";
-  padding: 10px; 
-  margin-left: 60px;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-content {
+  border-radius: 80px;
 }
 
 .modal-header img {
-  margin-right: 60px; 
+  margin: 0 auto;
+  display: block;
+
 }
 
 .modal-body {
-  background-color: var(--colorNegro);
-  color: var(--colorTextoBlanco);
+  background-color: #fdfdfd;
+  color: var(--colorNegro);
   font-family: "AvenirLTStd-Bold";
   font-size: 18px;
-  
+  border-radius: 20px;
+}
+
+.modal-logo {
+  width: 43px;
+  align-content: center;
+}
+
+.modal-header img {
+  max-width: 70px;
+  margin: 0 auto;
+}
+
+.modal-body p {
+  margin-right: 40px; 
+}
+
+.modal-body p {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: black;
 }
 
 .modal-logo {
   width: 40px;
+  align-items: center;
+}
+
+.modal-header img {
+  margin: 0 auto; 
+  display: block; 
+  max-width: 50px;
 }
 
 .modal-body p {
-  margin-right: 20px; 
+  text-align: center;
+  justify-content: center;
 }
 
 .btn-primary {

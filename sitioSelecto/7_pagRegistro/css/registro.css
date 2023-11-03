@@ -442,6 +442,11 @@ input[type=number]::-webkit-outer-spin-button {
     .parrafoInicioSesion {
         font-size: 20px;
     }
+
+    .tituloInicioSesionDiv{
+        height: 150px;
+        margin: 10px;
+    }
     .register {
         padding: 7px 20px;
         margin: 5px;
@@ -452,15 +457,6 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 15px;
     }
     .copySinergia {
-        font-size: 15px;
-    }
-
-    .iconsLogin {
-        font-size: 15px;
-        padding: 2px;
-    }
-
-    .yaTienesCuenta{
         font-size: 15px;
     }
 }

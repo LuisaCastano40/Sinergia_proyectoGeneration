@@ -35,6 +35,8 @@ if(document.readyState == 'loading'){
 }
 
 window.addEventListener('load', function(){
+    const navBar = document.getElementById('navBar');
+    navBar.style.backgroundColor = '#121212';
     const btnVaciar = document.getElementById('btn-vaciar');
     btnVaciar.addEventListener('click', vaciarCarrito);
     totalCarrito();

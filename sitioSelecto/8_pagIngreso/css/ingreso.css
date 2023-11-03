@@ -18,7 +18,7 @@
     --textoMedium: 'AvenirLTStd-Medium', sans-serif;
     --textoRegular: 'AvenirLTStd-Regular', sans-serif;
     --colorNegro:#000000;
-    --colorNegroTransparencia:#00000080;
+    --colorNegroTransparencia:#000000a6;
     --colorGrisOscuro:#232323;
     --colorGrisClaro:#A4A5A6;
     --colorBlanco:#FFFFFF;
@@ -29,17 +29,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Avenir', sans-serif;
+    font-family: var(--textoRegular);
 }
 
 body{
-    display: flex;
-    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: relative;
+    background-image: url('../assetsIngreso/banner/fondo-login-registro.svg');
+    background-position: center;
+    background-size:cover;
+    align-items: center;
+    place-items: center;
 }
 /* --------------HEADER--------------- */
 
-.containerHeader {
+.containerInformation {
+    place-content: center;
+    background-color: transparent;
+}
+
+.tituloInicioSesionDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0;
+}
+
+.tituloInicioSesion {
+    font-size: 48px;
+    color: var(--colorBlanco);
+    font-family: var(--textoBold);
+    margin: 25px;
+    text-align: center;
+}
+
+.parrafoInicioSesion {
+    font-size: 25px;
+    color: var(--colorBlanco);
+    display: flex;
+    justify-items: center;
+    text-align: center;
+}
+/* ---------------MAIN---------------- */
+
+.containerForm {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -49,173 +86,354 @@ body{
     grid-template-rows: 100vh;
 }
 
-.containerInformation {
-    display: grid;
-    place-content: center;
-    background-image: url('../assetsIngreso/banner/fondo-login-registro.svg');
-    background-size: cover;
-    grid-template-rows: 4fr 2fr 2fr 1fr;
-}
-
-.tituloInicioSesionDiv {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-}
-
-.tituloInicioSesion {
-    font-size: 46px;
-    color: #FFFFFF;
-    margin: 25px;
-    text-align: center;
-}
-
-.parrafoInicioSesionDiv {
-    display: flex;
-    place-content: center;
-}
-
-.parrafoInicioSesion {
-    font-size: 25px;
-    color: #FFFFFF;
-    text-align: center;
-    margin: 55px;
-}
-
-.InicioSesionDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 60px;
-}
-
-.incioSesion {
-    background-color: rgba(255, 255, 255, 0.187);
-    border-radius: 35px;
-    border: solid 2px #FFFFFF;
-    width: 220px;
-    padding: 5px;
-    font-size: 20px;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .3s;
-}
-
-.InicioSesionDiv a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.incioSesion:hover {
-    transform: scale(1.05);
-}
-
-/* ---------------MAIN---------------- */
-
 .formulario {
     display: grid;
-    align-content: center;
-    background-color: #FFFFFF;
-}
-
-.formularioInformation{
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    border-style: none;
-    gap: 20px;
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter:blur(0.5rem) ;
+    border-radius: 45px;
+    width: 70%;
+    height: 80%;
 }
 
 .containerTituloForm {
+    font-family: var(--textoBold);
     display: flex;
-    place-items: center;
-    font-size: 20px;
-    margin: 40px;
-    padding: 40px;
-    text-align: center;
+    align-items: end;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--colorNegro);
+    width: 100%;
+    height: 100px;
 }
-
+.formularioInformation{
+    display: grid;
+    place-content: center;
+    box-sizing: border-box;
+    border-style: none;
+    gap: 10px;
+    height: 90%;
+}
 .casilla {
-    background-color: #FFFFFF;
-    border-radius: 35px;
-    border: solid 1.5px --colorNegro;
+    background-color: var(--colorNegroTransparencia);
+    border-radius: 5px; 
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 10px;
-    width: 280px;
+    width: 350px;
+    height: 60px;
     padding: 15px;
+    margin: 10px 0;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
 }
-
 .casilla input {
     border-style: none;
+    outline: none;
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    color: var(--colorGrisClaro);
+}
+
+.casilla i {
+    color: var(--colorBlanco);
+    place-items: center;
+    width: 20% ;
+    height: 25px;
+    font-size: 25px;
 }
 .registerDiv {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    align-items: center;
+    margin-top: 10px;
 }
 .register {
     background-color: var(--colorBlanco);
     border-radius: 35px;
-    border: solid 1.5px var(--colorNegro);
-    padding: 13px;
+    padding: 13px 25px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
     cursor: pointer;
     transition: all 300ms ;
     font-family: var(--textoBold);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    margin-top: 20px;
 }
-
 .register:hover{
     background-color: var(--colorNegro);
     color: var(--colorBlanco);
 }
-
 .iconsLoginDiv{
     display: flex;
     justify-content: center;
-    margin: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
 .iconsLogin {
-    border-radius: 50%;
-    margin: 0 10px;
-    border: solid 1px black;
+    font-size: 25px;
+    border-radius: 100%;
+    padding: 5px;
+    color: var(--colorBlanco);
+    border: solid 2.5px rgba(255, 255, 255, 0.5);
     cursor: pointer;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .5s;
+    transition: all .5s;
 }
 
 .iconsLogin:hover{
     transform: scale(1.05);
 }
 
-.fpasswordDiv {
-    display: flex;
-    justify-content: center;
+.yaTienesCuenta{
+    text-align: center;
+    text-decoration: none;
+    color: var(--colorBlanco);
+    font-family: var(--textoRegular);
+    margin: 10px;
+    font-size: 18px;
 }
 
-.fpassword {
-    font-size: 13px;
-    transition: .3s;
+.yaTienesCuenta a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--colorBlanco);
+    font-family: var(--textoMedium);
+    padding: 5px 2px;
+    position: relative;
+}
+.yaTienesCuenta a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: var(--colorBlanco);
+    height: 3px;
+    transition: right 0.3s ease-in-out;
+}
+.yaTienesCuenta a:hover::before {
+    right: 0;
 }
 
-.fpassword:hover{
-    transform: scale(1.05);
+#errorEmail,
+#errorPassword,
+#correctEmail,
+#correctPassword {
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+}
+#errorEmail,
+#errorPassword{
+    color: red;
 }
 
 /* --------------FOOTER--------------- */
-footer{
+
+.logosDiv{
+    display: grid;
+    margin: 25px;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40%;
+    grid-template-columns: 1fr 1fr;
+    color: var(--colorBlanco);
+    width: 45%;
     position: absolute;
     bottom: 0;
-    left: 5%;
+    left: 0;
 }
-.logosDiv{
-    display: flex;
+
+.logosDiv p {
+    display: grid;
+    margin: 25px;
     align-items: center;
-    justify-content: center;
     color: var(--colorBlanco);
-    gap: 150px;
+    width: 100%;
+    font-size: 20px;
 }
+
 /* --------------RESPONSIVE--------------- */
+
+@media screen and (min-width: 320px) and (max-width: 1023px){
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .casilla {
+        height: 10%;
+        padding: 25px;
+        margin: 0;
+    }
+
+    .logosDiv {
+        position: absolute;
+        place-items: center;
+        bottom: 0;
+        left: 0px;
+        width: 80vw;
+    }
+    .logosDiv p {
+        font-size: 15px;
+    }
+
+    .containerInformation {
+        display: inline-block;
+        height: 50%;
+    }
+
+    .containerForm {
+        height: 25vh;
+    }
+
+    .formulario {
+        height: 60%;
+    }
+
+    .formularioInformation {
+        align-items: center;
+        justify-items: center;
+        width: 80%;
+        height: 230px;
+        margin: 0;
+        gap: 0;
+    }
+
+    .formularioInformation i {
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+    }
+
+    .registerDiv{
+        margin: 0;
+    }
+    
+    .iconsLogin {
+        margin: 0px 0px;
+        place-items: center;
+    }
+    
+    .iconsLoginDiv {
+        height: 60px;
+    }
+    
+    .register {
+        padding: 10px 25px;
+    }
+    .containerTituloForm{
+        height: 60px;
+        margin: 20px;
+    }
+
+    .tituloInicioSesion {
+        margin: 0;
+        font-size: 35px;
+    }
+
+    .yaTienesCuenta{
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 677px){
+
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .containerForm {
+        height: 20vh;
+        padding: 20px;
+    }
+    .casilla {
+        height: 10px;
+        width: 90%;
+        padding: 20px;
+        margin: 10px 0;
+    }
+    .casilla input{
+        width: 40vw;
+    }
+    .casilla i {
+        font-size: 20px;
+    }
+    .logosDiv {
+        position: absolute;
+        place-items: center;
+        bottom: 0;
+        left: 0px;
+        width: 80vw;
+        height: 70px;
+    }
+    .logosDiv img {
+        width: 50px;
+    }
+    .logosDiv p {
+        font-size: 15px;
+    }
+
+    .containerInformation {
+        display: inline-block;
+
+    }
+
+    .formulario {
+        height: 60%;
+    }
+
+    .formularioInformation {
+        align-items: center;
+        justify-items: center;
+        width: 80%;
+        margin: 0;
+        gap: 0;
+    }
+
+    .formularioInformation i {
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+    }
+
+    .registerDiv{
+        margin: 0;
+    }
+    .containerTituloForm{
+        margin: 10px;
+        font-size: 18px;
+        height: 30px;
+    }
+    .tituloInicioSesion {
+        margin: 0;
+        font-size: 25px;
+        align-items: center;
+    }
+    .parrafoInicioSesion {
+        font-size: 20px;
+    }
+
+    .tituloInicioSesionDiv{
+        height: 150px;
+        margin: 10px;
+    }
+    .register {
+        padding: 7px 20px;
+        margin-top: 20px;
+    }
+    
+    .yaTienesCuenta{
+        height: 40px;
+        font-size: 15px;
+    }
+    .copySinergia {
+        font-size: 15px;
+    }
+}

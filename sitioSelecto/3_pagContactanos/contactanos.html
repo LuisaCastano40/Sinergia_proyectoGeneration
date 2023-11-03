@@ -15,13 +15,16 @@
     <link rel="stylesheet" href="/componentes/componentes.css">
     <link rel="stylesheet" href="/componentes/shoppingBag.css">
     <!-- Link del script de contáctenos -->
-    <script defer src="/3_pagContactanos/javascript/contactanos.js"></script>
+    <script defer src="javascript/contactanos.js"></script>
     <!-- Link de los scripts de los componentes -->
     <script defer src="/componentes/navBar.js"></script>
     <script defer src="/componentes/footer.js"></script>
     <script defer src="/componentes/shoppingBag.js"></script>
     <!-- Link de boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bot trabaja con nosotros -->
+    <script>(function(w, d) { w.CollectId = "6529d89bb8a0d51225e595d4"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 </head>
 
 <body>
@@ -46,15 +49,6 @@
                 <h2>¡Contáctanos!</h2>
 
                 <form action="https://formspree.io/f/xgejpkqb" method="POST" enctype="multipart/form-data" class="contact-form" id="miFormulario">
-                    <div class="clasificacion">
-                        <label for="rol">Selecciona tu rol <span>*</span></span></label>
-                        <select id="rol" name="rol" required>
-                            <option value="vacío"></option>
-                            <option value="cliente">Cliente</option>
-                            <option value="proveedor">Proveedor</option>
-                            <option value="barbero">Barbero</option>
-                        </select>
-                    </div>
                     <div class="contenedor-info">
                         <div class="datos">
                             <label for="nombre">Nombre <span>*</span></span></label>

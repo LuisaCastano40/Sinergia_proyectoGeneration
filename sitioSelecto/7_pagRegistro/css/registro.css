@@ -11,19 +11,6 @@
     font-family: 'AvenirLTStd-Regular';
     src: url('../../fonts/AvenirLTStd-Regular.otf');
 }
-/* Importamos las fuentes a utilizar */
-@font-face {
-    font-family: 'AvenirLTStd-Bold';
-    src: url('../../fonts/AvenirLTStd-Bold.otf' );
-}
-@font-face {
-    font-family: 'AvenirLTStd-Medium';
-    src: url('../../fonts/AvenirLTStd-Medium.otf');
-}
-@font-face {
-    font-family: 'AvenirLTStd-Regular';
-    src: url('../../fonts/AvenirLTStd-Regular.otf');
-}
 
 /* Variables de css */
 :root{
@@ -31,7 +18,7 @@
     --textoMedium: 'AvenirLTStd-Medium', sans-serif;
     --textoRegular: 'AvenirLTStd-Regular', sans-serif;
     --colorNegro:#000000;
-    --colorNegroTransparencia:#00000080;
+    --colorNegroTransparencia:#000000a6;
     --colorGrisOscuro:#232323;
     --colorGrisClaro:#A4A5A6;
     --colorBlanco:#FFFFFF;
@@ -46,30 +33,37 @@
 }
 
 body{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: relative;
+    background-image: url('../assetsRegistro/banner/fondo-login-registro.svg');
+    background-position: center;
+    background-size:cover;
+    align-items: center;
+    place-items: center;
 }
 /* --------------HEADER--------------- */
 
+
 .containerInformation {
-    display: grid;
     place-content: center;
-    background-image: url('../assetsRegistro/banner/fondo-login-registro.svg');
-    background-size: cover;
-    grid-template-rows: 4fr 2fr 2fr 1fr;
+    background-color: transparent;
 }
 
 .tituloInicioSesionDiv {
     display: flex;
-    align-items: end;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0;
 }
 
 .tituloInicioSesion {
-    font-size: 46px;
+    font-size: 48px;
     color: var(--colorBlanco);
+    font-family: var(--textoBold);
     margin: 25px;
     text-align: center;
 }
@@ -77,277 +71,95 @@ body{
 .parrafoInicioSesion {
     font-size: 25px;
     color: var(--colorBlanco);
-    text-align: center;
-    margin: 55px;
     display: flex;
-    place-content: center;
-}
-
-.InicioSesionDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 60px;
-}
-
-.incioSesion {
-    background-color: rgba(255, 255, 255, 0.187);
-    border-radius: 35px;
-    border: solid 2px var(--colorBlanco);
-    width: 220px;
-    padding: 5px;
-    font-size: 20px;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .3s;
-}
-
-.InicioSesionDiv a {
-    text-decoration: none;
-    color: var(--colorBlanco);
-}
-
-.incioSesion:hover {
-    transform: scale(1.05);
+    justify-items: center;
 }
 
 /* ---------------MAIN---------------- */
+.containerForm {
+    font-family: 'Avenir', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    text-align: center;
+}
 
 .formulario {
     display: grid;
-    align-content: center;
-    background-color: var(--colorBlanco);
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter:blur(0.5rem) ;
+    border-radius: 45px;
+    width: 70%;
+    height: 90%;
 }
 
 .containerTituloForm {
     display: flex;
-    place-items: center;
-    font-size: 20px;
-    margin: 40px;
-    padding: 40px;
+    justify-content: center;
+    font-size: 30px;
     text-align: center;
+    color: var(--colorNegro);
+    width: 100%;
+    margin-top: 20px;
 }
 .formularioInformation{
     display: grid;
-    align-content: center;
-    justify-content: center;
-    border-style: none;
-    gap: 20px;
-}
-.casilla {
-    background-color: var(--colorBlanco);
-    border-radius: 35px;
-    border: solid 1.5px --colorNegro;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    width: 280px;
-    padding: 15px;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-}
-.casilla input {
-    border-style: none;
-    outline: none;
-}
-.casilla i{
-    font-size: 20px;
-}
-.registerDiv {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-}
-.register {
-    background-color: var(--colorBlanco);
-    border-radius: 35px;
-    border: solid 1.5px var(--colorNegro);
-    padding: 13px;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    transition: all 300ms ;
-    font-family: var(--textoBold);
-}
-.register:hover{
-    background-color: var(--colorNegro);
-    color: var(--colorBlanco);
-}
-.iconsLoginDiv{
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-}
-
-.iconsLogin {
-    font-size: 30px;
-    border-radius: 50%;
-    margin: 0 10px;
-    border: solid 1px var(--colorNegro);
-    cursor: pointer;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .5s;
-}
-
-.iconsLogin:hover{
-    transform: scale(1.05);
-}
-
-/* --------------FOOTER--------------- */
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-}
-.logosDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--colorBlanco);
-    gap: 150px;
-}
-/* --------------RESPONSIVE--------------- */
-/* Variables de css */
-:root{
-    --textoBold: 'AvenirLTStd-Bold', sans-serif;
-    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
-    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
-    --colorNegro:#000000;
-    --colorNegroTransparencia:#00000080;
-    --colorGrisOscuro:#232323;
-    --colorGrisClaro:#A4A5A6;
-    --colorBlanco:#FFFFFF;
-}
-
-/* Condiciones iniciales */
-*{
-    margin: 0;
-    padding: 0;
+    place-content: center;
     box-sizing: border-box;
-    font-family: var(--textoRegular);
-}
-
-body{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-/* --------------HEADER--------------- */
-
-.containerInformation {
-    display: grid;
-    place-content: center;
-    background-image: url('../assetsRegistro/banner/fondo-login-registro.svg');
-    background-size: cover;
-    grid-template-rows: 4fr 2fr 2fr 1fr;
-}
-
-.tituloInicioSesionDiv {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-}
-
-.tituloInicioSesion {
-    font-size: 46px;
-    color: var(--colorBlanco);
-    margin: 25px;
-    text-align: center;
-}
-
-.parrafoInicioSesion {
-    font-size: 25px;
-    color: var(--colorBlanco);
-    text-align: center;
-    margin: 55px;
-    display: flex;
-    place-content: center;
-}
-
-.InicioSesionDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 60px;
-}
-
-.incioSesion {
-    background-color: rgba(255, 255, 255, 0.187);
-    border-radius: 35px;
-    border: solid 2px var(--colorBlanco);
-    width: 220px;
-    padding: 5px;
-    font-size: 20px;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .3s;
-}
-
-.InicioSesionDiv a {
-    text-decoration: none;
-    color: var(--colorBlanco);
-}
-
-.incioSesion:hover {
-    transform: scale(1.05);
-}
-
-/* ---------------MAIN---------------- */
-
-.formulario {
-    display: grid;
-    align-content: center;
-    background-color: var(--colorBlanco);
-}
-
-.containerTituloForm {
-    display: flex;
-    place-items: center;
-    font-size: 20px;
-    margin: 40px;
-    padding: 40px;
-    text-align: center;
-}
-.formularioInformation{
-    display: grid;
-    align-content: center;
-    justify-content: center;
     border-style: none;
-    gap: 20px;
+    width: 100%;
+    height: 90%;
 }
 .casilla {
-    background-color: var(--colorBlanco);
-    border-radius: 35px;
-    border: solid 1.5px --colorNegro;
+    width: 100%;
+    background-color: var(--colorNegroTransparencia);
+    border-radius: 5px; 
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 10px;
-    width: 280px;
     padding: 15px;
+    margin: 10px 0;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    position: relative;  
 }
 .casilla input {
+    width: 20vw;
     border-style: none;
     outline: none;
-}
-.casilla i{
+    background-color: transparent;
     font-size: 20px;
+    color: var(--colorGrisClaro); 
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+}
+
+.casilla i {
+    color: var(--colorBlanco);
+    place-items: center;
+    font-size: 25px;
 }
 .registerDiv {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    align-items: center;
+    margin-top: 10px;
 }
 .register {
     background-color: var(--colorBlanco);
     border-radius: 35px;
-    border: solid 1.5px var(--colorNegro);
-    padding: 13px;
+    padding: 13px 25px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
     cursor: pointer;
     transition: all 300ms ;
     font-family: var(--textoBold);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 15px;
 }
 .register:hover{
     background-color: var(--colorNegro);
@@ -356,34 +168,295 @@ body{
 .iconsLoginDiv{
     display: flex;
     justify-content: center;
-    margin: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
 .iconsLogin {
-    font-size: 30px;
-    border-radius: 50%;
-    margin: 0 10px;
-    border: solid 1px var(--colorNegro);
+    font-size: 25px;
+    border-radius: 100%;
+    padding: 5px;
+    color: var(--colorBlanco);
+    border: solid 2.5px rgba(255, 255, 255, 0.5);
     cursor: pointer;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-    transition: .5s;
+    transition: all .5s;
 }
 
 .iconsLogin:hover{
     transform: scale(1.05);
 }
 
+.yaTienesCuenta{
+    text-align: center;
+    text-decoration: none;
+    color: var(--colorBlanco);
+    font-family: var(--textoRegular);
+    margin: 10px;
+    font-size: 18px;
+}
+
+.yaTienesCuenta a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--colorBlanco);
+    font-family: var(--textoMedium);
+    padding: 5px 2px;
+    position: relative;
+}
+.yaTienesCuenta a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: var(--colorBlanco);
+    height: 3px;
+    transition: right 0.3s ease-in-out;
+}
+.yaTienesCuenta a:hover::before {
+    right: 0;
+}
+#errorName,
+#errorEmail,
+#errorNumber,
+#errorPassword,
+#correctName,
+#correctEmail,
+#correctNumber,
+#correctPassword {
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+}
+#errorName,
+#errorEmail,
+#errorNumber,
+#errorPassword{
+    color: red;
+}
+
+#passwordRequirements {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--colorGrisClaro);
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 45%;
+  }
+  
+  #passwordRequirements::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:var(--colorGrisClaro) transparent transparent transparent;
+  }
+  #passwordRequirements ul{
+    list-style: none;
+  }
+
 /* --------------FOOTER--------------- */
-footer{
+
+.logosDiv{
+    display: grid;
+    margin: 25px;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40%;
+    grid-template-columns: 1fr 1fr;
+    color: var(--colorBlanco);
+    width: 45%;
     position: absolute;
     bottom: 0;
-    left: 5%;
+    left: 0;
 }
-.logosDiv{
-    display: flex;
+
+.logosDiv p {
+    display: grid;
+    margin: 25px;
     align-items: center;
-    justify-content: center;
     color: var(--colorBlanco);
-    gap: 150px;
+    width: 100%;
+    font-size: 20px;
 }
+
 /* --------------RESPONSIVE--------------- */
+
+/* medidas tablet */
+@media screen and (min-width: 678px) and (max-width: 1023px){
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .containerForm {
+        height: 18vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .casilla input{
+        width: 30vw;
+    }
+
+    .logosDiv {
+        position: absolute;
+        place-items: center;
+        bottom: 0;
+        left: 0px;
+        width: 80vw;
+    }
+    .logosDiv p {
+        font-size: 15px;
+    }
+
+    .containerInformation {
+        display: inline-block;
+    }
+
+    .formulario {
+        height:65%;
+    }
+
+    .formularioInformation {
+        align-items: center;
+        justify-items: center;
+    }
+
+    .formularioInformation i {
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+    }
+
+    .iconsLogin {
+        margin: 0px 0px;
+        place-items: center;
+    }
+
+    .containerTituloForm{
+        font-size: 25px;
+    }
+
+    .tituloInicioSesion {
+        margin: 0;
+        font-size: 35px;
+    }
+    .register {
+        padding: 10px 25px;
+    }
+    .yaTienesCuenta{
+        height: 40px;
+    }
+}
+
+/* medidas movil */
+@media screen and (max-width: 677px){
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .containerForm {
+        height: 20vh;
+        padding: 20px;
+    }
+    .casilla {
+        height: 10px;
+        width: 90%;
+        padding: 20px;
+        margin: 10px 0;
+    }
+    .casilla input{
+        width: 40vw;
+    }
+    .casilla i {
+        font-size: 20px;
+    }
+    .logosDiv {
+        position: absolute;
+        place-items: center;
+        bottom: 0;
+        left: 0px;
+        width: 80vw;
+        height: 70px;
+    }
+    .logosDiv img {
+        width: 50px;
+    }
+    .logosDiv p {
+        font-size: 15px;
+    }
+
+    .containerInformation {
+        display: inline-block;
+
+    }
+
+    .formulario {
+        height: 60%;
+    }
+
+    .formularioInformation {
+        align-items: center;
+        justify-items: center;
+        width: 80%;
+        margin: 0;
+        gap: 0;
+    }
+
+    .formularioInformation i {
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+    }
+
+    .registerDiv{
+        margin: 0;
+    }
+
+    .iconsLogin {
+        margin: 0px 0px;
+        place-items: center;
+        font-size: 15px;
+        padding: 2px;
+    }
+    .containerTituloForm{
+        margin: 10px;
+        font-size: 18px;
+        height: 30px;
+    }
+    .tituloInicioSesion {
+        margin: 0;
+        font-size: 25px;
+        align-items: center;
+    }
+    .parrafoInicioSesion {
+        font-size: 20px;
+    }
+
+    .tituloInicioSesionDiv{
+        height: 150px;
+        margin: 10px;
+    }
+    .register {
+        padding: 7px 20px;
+        margin: 5px;
+    }
+    
+    .yaTienesCuenta{
+        height: 40px;
+        font-size: 15px;
+    }
+    .copySinergia {
+        font-size: 15px;
+    }
+}

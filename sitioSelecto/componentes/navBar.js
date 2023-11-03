@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mostrarNavbar();
 });
 
+
 function mostrarNavbar() {
     navBar.innerHTML = `
         <article class="menu-navegacion" id="navBar">
@@ -17,13 +18,15 @@ function mostrarNavbar() {
                     <div class="logoNav">
                         <a href="../index.html"><img src="/1_pagInicio/logo/selecto-Logo-white.svg" alt="logo" /></a>
                     </div>
-                    <ul class="nav-links">
+                    <div class="container-2navlink">
+                    <ul class="nav-links" id="logged">
                         <li class="active"><a href="../8_pagIngreso/ingreso.html">Iniciar sesión</a></li>
                         <li><a class="btnAgenda" href="../6_pagReservas/reservas.html">AGENDA AHORA</a></li>
                     </ul>
                     <div class="shoppingBag" id="shoppingBag">
                         <img src="/1_pagInicio/icons/shoppingBag-white.svg" alt="shoppingBag" />
                         <span id="prodAdded">0</span>
+                    </div>
                     </div>
                     <section class="carrito_compras activeCart">
                         <div class="carro_comprar">
@@ -53,7 +56,7 @@ function mostrarNavbar() {
                                 <li class="active"><a href="../2_pagNosotros/nosotros.html">Nosotros</a></li>
                                 <li class="active"><a href="../3_pagContactanos/contactanos.html">Contáctanos</a></li>
                                 <li class="active"><a href="../4_pagServicios/servicios.html">Servicios</a></li>
-                                <li class="active"><a href="../8_pagIngreso/ingreso.html">Regístrate</a></li>
+                                <li class="active" id="change"><a href="../8_pagIngreso/ingreso.html">Regístrate</a></li>
                                 <li><a class="btnAgenda" href="../6_pagReservas/reservas.html">AGENDA AHORA</a></li>
                             </ul>
                         </nav>
@@ -77,6 +80,41 @@ function closeNav() {
     document.querySelector('.close').style.visibility = "hidden";
 }
 
-//Función para cambiar el color del menú
+window.addEventListener('load', traerLocalStorage);
 
-//Actualizar
+//Traer local Storage y cambiar navbar
+function traerLocalStorage(){
+    let isLogged = localStorage.getItem('logged');
+    let userLogged = localStorage.getItem('userLogged').replace(/"/g,'').split(' ');
+    let user = userLogged[0];
+
+    if(isLogged){
+        console.log('entré')
+        const navLink = document.getElementById('logged');
+        const changeRes = document.getElementById('change');
+        navLink.innerHTML = `
+            <li><a class="btnAgenda" href="../6_pagReservas/reservas.html">AGENDA AHORA</a></li>
+            <li class="userLogged">Hola ${user}</li>
+            <i class='bx bx-log-out cerrarSesion' onclick="cerrarSesion()"></i>
+        `;
+        changeRes.innerHTML = `
+            <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+        `;
+    }
+    console.log(isLogged, userLogged, user);
+}
+
+//Función cerrar sesión
+function cerrarSesion(){
+    localStorage.removeItem('logged');
+    localStorage.removeItem('userLogged');
+    const navLink = document.getElementById('logged');
+    const changeRes = document.getElementById('change');
+        navLink.innerHTML = `
+            <li class="active"><a href="../8_pagIngreso/ingreso.html">Iniciar sesión</a></li>
+            <li><a class="btnAgenda" href="../6_pagReservas/reservas.html">AGENDA AHORA</a></li>
+        `;
+        changeRes.innerHTML = `
+            <a href="../8_pagIngreso/ingreso.html">Regístrate</a></li>
+        `;
+}

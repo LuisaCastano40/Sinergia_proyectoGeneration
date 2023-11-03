@@ -274,5 +274,15 @@ body{
         width: 100%;
         height: auto;
     }
-
+    .contenedor-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-info .datos{
+        width: 100%;
+    }
+    .submit {
+        display: flex;
+        flex-direction: column;
+    }
 }

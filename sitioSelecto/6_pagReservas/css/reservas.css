@@ -1,0 +1,51 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Bold';
+    src: url('/1_pagInicio/fonts/AvenirLTStd-Bold.otf' );
+}
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('/1_pagInicio/fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Regular';
+    src: url('/1_pagInicio/fonts/AvenirLTStd-Regular.otf');
+}
+
+/* Variables de css */
+:root{
+    --textoBold: 'AvenirLTStd-Bold', sans-serif;
+    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
+    --colorNegro:#121212;
+    --colorNegroTransparencia:#00000080;
+    --colorGrisOscuro:#232323;
+    --colorGrisClaro:#A4A5A6;
+    --colorBlanco:#FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--textoMedium);
+}
+
+body {
+    width: 100%;
+    background-color: var(--colorGrisOscuro);
+    overflow-x: hidden;
+    font-family: var(--textoBold);
+    color: var(--colorBlanco);
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+}

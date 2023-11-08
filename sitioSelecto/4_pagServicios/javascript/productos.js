@@ -22,11 +22,11 @@ function cargarCarritoDesdeLocalStorage() {
 if(document.readyState == 'loading'){
     document.addEventListener('DOMContentLoaded', function(){
         renderProducts();
-        eventosCarrito();
+        // eventosCarrito();
     });
 }else{
     renderProducts();
-    eventosCarrito();
+    // eventosCarrito();
 }
 
 window.addEventListener('load', function(){
@@ -36,15 +36,17 @@ window.addEventListener('load', function(){
     btnVaciar.addEventListener('click', vaciarCarrito);
     totalCarrito();
     cargarCarritoDesdeLocalStorage();
+    eventosCarrito();
 });
 
 //Función para mostrar productos en la página
 function renderProducts(){
+    productsContainer.innerHTML = '';
     productos.forEach((producto) => {
         productsContainer.innerHTML += `
             <div class="card" id=${producto.id}>
                 <div class="card-img-producto">
-                    <img src="/4_pagServicios/assetsServicios/img/producto.svg" alt="Imagen producto 1">
+                    <img src="${producto.imagen}" alt="Imagen producto 1">
                     <!-- Hover -->
                     <div class="hover-text">
                         <h4 class="product-name-hover">${producto.nombre}</h4>
@@ -59,7 +61,6 @@ function renderProducts(){
                     <div class="shopping-bag container-btnAdd" id="btn-Add">
                         
                             <img class="btn-agregar" id=${producto.id} src="/4_pagServicios/assetsServicios/icons/shoppingBag-white.svg" alt="shoppingBag" />
-                        
                     </div>
                 </div>
             </div>
@@ -103,9 +104,8 @@ function eventosCarrito(){
 
 
 function addCarrito(e){
-    console.log('holi, agregaste algo');
-    let idButton = e.target.id;
 
+    let idButton = e.target.id;
     // Busca el objeto correspondiente en la lista de productos
     const productoSeleccionado = productos.find((producto) => producto.id === parseInt(idButton));
 
@@ -225,6 +225,8 @@ function restarCantidad(e){
 }
 
 function vaciarCarrito(){
+
+    
     let seguro = confirm('¿Está seguro de eliminar su carrito?');
     if(seguro){
         carritoProducts =[];
@@ -233,7 +235,7 @@ function vaciarCarrito(){
         totalCarrito();
         actualizarContador();
     }
-    eventosCarrito()
+    eventosCarrito();
 }
 
 //me muestra la cantidad seleccionada por el cliente

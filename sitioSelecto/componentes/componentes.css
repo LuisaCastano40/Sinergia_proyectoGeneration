@@ -247,7 +247,6 @@
     font-size: 30px;
     color: var(--colorGrisClaro);
     cursor: pointer;
-    
 }
 .titulo_carrito{
     font-size: 22px;
@@ -433,7 +432,7 @@
 /* --------------RESPONSIVE--------------- */
 
 /* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1045px) {
     /* navbar */
     .nav-links{
         display: none;

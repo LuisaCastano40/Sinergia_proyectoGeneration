@@ -11,3 +11,13 @@ window.addEventListener('load', function(){
         }
     });
 });
+
+
+//Girar cards
+
+
+
+
+
+
+

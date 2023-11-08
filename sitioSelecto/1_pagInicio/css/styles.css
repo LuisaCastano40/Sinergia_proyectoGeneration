@@ -170,9 +170,19 @@ body{
     flex-wrap: wrap;
     gap: 30px;
 }
-.cardServicio{
+.cardServicio {
+    position: relative;
+    cursor: pointer;
+}
+.face {
+    position: relative;
     width: 350px;
     min-height: 500px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.cardFront {
     text-align: center;
     padding: 20px;
     border: solid 2px var(--colorBlanco);
@@ -184,22 +194,52 @@ body{
     justify-content: center;
     background-color: var(--colorNegroTransparencia);
     font-size: 20px;
+    transform: perspective(600px) rotateY(0deg);
 }
-.cardServicio img{
+
+.cardFront img {
     width: 150px;
     height: 150px;
 }
-.cardServicio h3{
+
+.cardFront h3 {
     width: 80%;
     font-family: var(--textoMedium);
     text-transform: uppercase;
     text-align: center;
     font-size: 20px;
 }
-.cardServicio p{
+
+.cardFront p {
     font-family: var(--textoRegular);
     font-weight: 100;
     width: 80%;
+}
+
+.cardBack {
+    text-align: center;
+    border: solid 2px var(--colorBlanco);
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: perspective(600px) rotateY(-180deg);
+    background-color: #000000;
+}
+
+.cardBack img {
+    height: 500px;
+    object-fit: fill;
+    transform: perspective(600px) rotateY(0deg);
+    opacity: 0.5;
+}
+
+.cardServicio:hover .cardFront {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.cardServicio:hover .cardBack {
+    transform: perspective(600px) rotateY(0deg);
 }
 .btn{
     padding: 10px 20px;

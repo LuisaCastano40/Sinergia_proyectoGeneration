@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +14,25 @@
     <!-- Link de los estilos de los componentes -->
     <link rel="stylesheet" href="/componentes/componentes.css">
     <link rel="stylesheet" href="/componentes/shoppingBag.css">
-
+    <!-- CSS de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Link Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- link GoogleFonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <!-- Link del script de javascript -->
     <script defer src="javascript/reservas.js"></script>
     <!-- Link scripts de los componentes -->
     <script defer src="/componentes/navBar.js"></script>
     <script defer src="/componentes/shoppingBag.js"></script>
     <script defer src="/componentes/footer.js"></script>
+
+
 </head>
+
 <body>
-    
+
     <!-- Inicio cabecera de la página -->
     <header>
         <!-- Sección menú de navegación -->
@@ -32,8 +42,151 @@
 
     <!-- Inicio contenido de la página -->
     <main>
-        <p>Soy la página de Reservas</p>
-        <img src="assetsReservas/enConstrucion.png" alt="reservas">
+
+        <!-- Sección carrusel -->
+        <section class="carrusel">
+            <div class="btnSwiper-Servicios">
+                <button type="button" class="Siguiente Siguiente-Servicios">
+                    <i class='bx bxs-chevron-up'></i>
+                </button>
+            </div>
+            <!-- Clases de swiper para carrusel -->
+            <div class="swiper swiper-Servicios">
+                <div class="swiper-wrapper swiper-wrapper-Servicios">
+                    <div class="swiper-slide swiper-slide-Servicios">
+                        <div class="swiperInformation swiperInformation-Servicios">
+                            <p class="swiperTitle swiperTitle-Servicios">Barba</p>
+                            <h2 class="swiperText swiperText-Servicios">$30.000</h2>
+                            <h2 class="swiperText swiperText-Servicios">Tiempo: 20 min</h2>
+                            <p class="swiperIcon swiperIcon-Servicios"><i class='bx bx-plus-circle'></i></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-Servicios">
+                        <div class="swiperInformation swiperInformation-Servicios">
+                            <p class="swiperTitle swiperTitle-Servicios">Corte</p>
+                            <h2 class="swiperText swiperText-Servicios">$25.000</h2>
+                            <h2 class="swiperText swiperText-Servicios">Tiempo: 20 min</h2>
+                            <p class="swiperIcon swiperIcon-Servicios"><i class='bx bx-plus-circle'></i></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-Servicios">
+                        <div class="swiperInformation swiperInformation-Servicios">
+                            <p class="swiperTitle swiperTitle-Servicios">Barba + Corte</p>
+                            <h2 class="swiperText swiperText-Servicios">$55.000</h2>
+                            <h2 class="swiperText swiperText-Servicios">Tiempo: 40 min</h2>
+                            <p class="swiperIcon swiperIcon-Servicios"><i class='bx bx-plus-circle'></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnSwiper-Servicios ">
+                <button type="button" class="Anterior Anterior-Servicios">
+                    <i class='bx bxs-chevron-down'></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Contenido de las reservas -->
+        <section class="contenido">
+
+            <!-- sección calendario y especialistas -->
+            <section class="leftInformation">
+                <div class="dropdown">
+                    <div class="dropdownBtnContainer">
+                        <button class="dropbtn">Especialista</button>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#">Barbero disponible</a>
+                        <a href="#">Walas</a>
+                        <a href="#">Valeria</a>
+                        <a href="#">Kevin</a>
+                        <a href="#">Miguel</a>
+                        <a href="#">Cristian</a>
+                    </div>
+                </div>
+                <div class="calendario">
+                    <div class="wrapper">
+                        <div class="header">
+                            <p class="current-date"></p>
+                            <!-- Párrafo para mostrar la fecha actual con la clase "current-date". -->
+                            <div class="icons">
+                                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                <!-- Icono de flecha izquierda con un ID "prev". -->
+                                <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                <!-- Icono de flecha derecha con un ID "next". -->
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <ul class="weeks">
+                                <!-- Lista de días de la semana, abreviados en español. -->
+                                <li>Do</li> 
+                                <li>Lu</li>
+                                <li>Ma</li>
+                                <li>Mi</li>
+                                <li>Ju</li>
+                                <li>Vi</li>
+                                <li>Sa</li>
+                            </ul>
+                            <ul class="days"></ul> <!-- Lista de días del mes se mostrará aquí con la clase "days". -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- reservas por redes -->
+                <div class="contactanos">
+                    <div class="textoContactanos">
+                        <p>O contacta a un asesor a través de: </p>
+                    </div>
+                    <div class="iconsContactanos">
+                        <i class='bx bxl-whatsapp'></i>
+                        <i class='bx bxl-instagram'></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección cards de reservas -->
+            <section class="rightInformation">
+                <div class="card-container">
+                    <h4 class="tittles tlt">Disponibilidad</h4>
+                    <!-- selección horarios disponibles -->
+                    <div class="subcard-container">
+                        <div class="franja">
+                            <button class="Anterior-Franja">
+                                <i class='bx bxs-chevron-up'></i>
+                            </button>
+                            <div class="swiper swiper-Franja">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide-Franja">
+                                        <p class="btnFranja">Mañana</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-Franja">
+                                        <p class="btnFranja">Tarde</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-Franja">
+                                        <p class="btnFranja">Noche</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="Siguiente-Franja">
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Agregar servicios -->
+                    <!-- <div class="btn-service">
+                        <button class="btn-otro-servicio">Agregar otro servicio</button>
+                    </div>
+                    <div class="txt-box">
+                        <input type="text" placeholder="Agrega notas de reservas" class="txt-box-style"/>
+                    </div>
+                    <div class="btn-service-continuar">
+                        <button class="btn-continuar">Continuar</button>
+                    </div> -->
+                </div>
+            </section>
+        </section>
     </main>
     <!-- Fin contenido de la página -->
 
@@ -42,5 +195,8 @@
     </footer>
     <!-- Fin del pie de página -->
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./javascript/swiper.js"></script>
 </body>
+
 </html>

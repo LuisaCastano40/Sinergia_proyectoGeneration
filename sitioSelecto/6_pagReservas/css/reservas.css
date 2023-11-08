@@ -1,51 +1,486 @@
 /* Importamos las fuentes a utilizar */
 @font-face {
-    font-family: 'AvenirLTStd-Bold';
-    src: url('/1_pagInicio/fonts/AvenirLTStd-Bold.otf' );
+  font-family: 'AvenirLTStd-Bold';
+  src: url('/1_pagInicio/fonts/AvenirLTStd-Bold.otf');
 }
+
 @font-face {
-    font-family: 'AvenirLTStd-Medium';
-    src: url('/1_pagInicio/fonts/AvenirLTStd-Medium.otf');
+  font-family: 'AvenirLTStd-Medium';
+  src: url('/1_pagInicio/fonts/AvenirLTStd-Medium.otf');
 }
+
 @font-face {
-    font-family: 'AvenirLTStd-Regular';
-    src: url('/1_pagInicio/fonts/AvenirLTStd-Regular.otf');
+  font-family: 'AvenirLTStd-Regular';
+  src: url('/1_pagInicio/fonts/AvenirLTStd-Regular.otf');
 }
 
 /* Variables de css */
-:root{
-    --textoBold: 'AvenirLTStd-Bold', sans-serif;
-    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
-    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
-    --colorNegro:#121212;
-    --colorNegroTransparencia:#00000080;
-    --colorGrisOscuro:#232323;
-    --colorGrisClaro:#A4A5A6;
-    --colorBlanco:#FFFFFF;
+:root {
+  --textoBold: 'AvenirLTStd-Bold', sans-serif;
+  --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+  --textoRegular: 'AvenirLTStd-Regular', sans-serif;
+  --colorNegro: #121212;
+  --colorNegroTransparencia: #00000080;
+  --colorGrisOscuro: #232323;
+  --colorGrisClaro: #A4A5A6;
+  --colorBlanco: #FFFFFF;
 }
 
 /* Estilos generales */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var(--textoMedium);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--textoMedium);
 }
 
 body {
-    width: 100%;
-    background-color: var(--colorGrisOscuro);
-    overflow-x: hidden;
-    font-family: var(--textoBold);
-    color: var(--colorBlanco);
+  width: 100%;
+  background-color: var(--colorGrisOscuro);
+  overflow-x: hidden;
+  font-family: var(--textoBold);
+  color: var(--colorBlanco);
 }
 
-main{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 50px;
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  background-image: url(../assetsReservas/Background.svg);
+  background-size: cover;
+}
+
+.carrusel {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contenido {
+  border: solid pink;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.463);
+  backdrop-filter: blur(0.3rem);
+  border-radius: 25px;
+}
+
+.leftInformation {
+  border: solid purple;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/*Carrusel*/
+
+.swiper-Servicios {
+  width: 80%;
+  height: 40%;
+}
+
+.swiper-slide-Servicios {
+  background-image: url(../assetsReservas/Servicio1.svg);
+  background-size: cover;
+  border-radius: 5%;
+}
+
+.swiperInformation-Servicios {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiperTitle-Servicios {
+  font-family: var(--textoBold);
+  font-size: 25px;
+}
+
+.swiperText-Servicios {
+  font-size: var(--textoRegular);
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.swiperIcon-Servicios {
+  font-size: 30px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.swiperIcon-Servicios:hover {
+  transform: scale(1.5);
+}
+
+.Siguiente-Servicios {
+  border: none;
+  background: none;
+  font-size: 85px;
+  font-style: var(--textoRegular);
+  color: var(--colorBlanco);
+}
+
+.Anterior-Servicios {
+  border: none;
+  background: none;
+  font-size: 85px;
+  font-style: var(--textoRegular);
+  color: var(--colorBlanco);
+}
+
+.btnSwiper-Servicios {
+  display: flex;
+  place-content: center;
+  transition: .3s;
+}
+
+.btnSwiper-Servicios:hover {
+  transform: scale(1.2);
+}
+
+.btnSwiper-Servicios i {
+  cursor: pointer;
+}
+
+/* downDrop */
+
+/* Estilos para el botón del menú desplegable */
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+/* Estilos para el contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  z-index: 2;
+}
+
+.dropdownBtnContainer {
+  align-items: start;
+}
+
+/* Estilos para el contenido del menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Estilos para los elementos del menú desplegable (enlaces) */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  font-size: 20px;
+}
+
+/* Cambia el color del elemento seleccionado en el menú desplegable */
+.dropdown-content a:hover {
+  background-color: var(--colorNegroTransparencia);
+  z-index: 2;
+}
+
+/* Muestra el menú desplegable cuando se coloca el cursor sobre el botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Calendario */
+
+.calendario {
+  z-index: 1;
+  width: 60%;
+
+}
+
+.wrapper {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+
+.wrapper .header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .icons {
+  display: flex;
+}
+
+.header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+.header .icons span:hover {
+  background: #f2f2f2;
+}
+
+.header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #000000;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+/* Contactanos */
+
+.contactanos {
+  width: 60%;
+}
+
+.textoContactanos {
+  font-size: 25px;
+}
+
+.iconsContactanos {
+  font-size: 35px;
+  color: var(--colorNegro);
+}
+
+.iconsContactanos i {
+  background-color: var(--colorBlanco);
+  border-radius: 50%;
+  padding: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.iconsContactanos i:hover {
+  transform: scale(1.1);
+}
+
+/*right Container*/
+
+.rightInformation {
+  border: solid salmon;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 80%;
+  height: 80%;
+  border: 1px solid rgb(0, 0, 0);
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 0.1fr 1fr 0.3fr 1fr 0.1fr;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.subcard-container {
+  width: 100%;
+  height: 150px;
+  border: 5px solid purple;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.tlt {
+  justify-self: center;
+}
+
+/*Carrusel Franja*/
+.franja {
+  border: solid green;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.swiper-Franja {
+  border: solid salmon;
+  height: 50px;
+}
+
+.swiper-slide-Franja p {
+  color: #000;
+  border: solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 15px;
+}
+
+/* .btnSwiper-Container-Franja {
+  height: 30px;
+} */
+
+.btn-service {
+  justify-self: center;
+  margin-top: -5px;
+}
+
+.btn-otro-servicio {
+  color: white;
+  background-color: #000;
+  border-radius: 30px;
+  padding: 3px 15px;
+  font-weight: bold;
+}
+
+.txt-box {
+  justify-self: center;
+  margin-top: -5px;
+  height: 80%;
+}
+
+.txt-box-style {
+  height: 100px;
+  width: 280px;
+  background-color: #d9d9d9;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-service-continuar {
+  justify-self: center;
+  margin-bottom: 30px;
+}
+
+.btn-continuar {
+  color: white;
+  background-color: #000;
+  border-radius: 30px;
+  padding: 3px 50px;
+  font-weight: bold;
+}
+
+.btn-time {
+  background: none;
+  border: none;
+  margin: 10px;
+}
+
+.tittles {
+  font-weight: bolder;
+  color: #000;
+  margin-bottom: 4px;
 }

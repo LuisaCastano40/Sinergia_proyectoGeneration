@@ -42,15 +42,20 @@
 
     <!-- Inicio contenido de la página -->
     <main>
-        <section class="carrusel">
-            <div class="btnSwiper-Servicios"><button type="button" class="Siguiente Siguiente-Servicios"><i
-                        class='bx bxs-chevron-up'></i></button></div>
-            <div class="swiper swiper-Servicios">
 
+        <!-- Sección carrusel -->
+        <section class="carrusel">
+            <div class="btnSwiper-Servicios">
+                <button type="button" class="Siguiente Siguiente-Servicios">
+                    <i class='bx bxs-chevron-up'></i>
+                </button>
+            </div>
+            <!-- Clases de swiper para carrusel -->
+            <div class="swiper swiper-Servicios">
                 <div class="swiper-wrapper swiper-wrapper-Servicios">
                     <div class="swiper-slide swiper-slide-Servicios">
                         <div class="swiperInformation swiperInformation-Servicios">
-                            <h1 class="swiperTitle swiperTitle-Servicios">Barba</h1>
+                            <p class="swiperTitle swiperTitle-Servicios">Barba</p>
                             <h2 class="swiperText swiperText-Servicios">$30.000</h2>
                             <h2 class="swiperText swiperText-Servicios">Tiempo: 20 min</h2>
                             <p class="swiperIcon swiperIcon-Servicios"><i class='bx bx-plus-circle'></i></p>
@@ -58,7 +63,7 @@
                     </div>
                     <div class="swiper-slide swiper-slide-Servicios">
                         <div class="swiperInformation swiperInformation-Servicios">
-                            <h1 class="swiperTitle swiperTitle-Servicios">Corte</h1>
+                            <p class="swiperTitle swiperTitle-Servicios">Corte</p>
                             <h2 class="swiperText swiperText-Servicios">$25.000</h2>
                             <h2 class="swiperText swiperText-Servicios">Tiempo: 20 min</h2>
                             <p class="swiperIcon swiperIcon-Servicios"><i class='bx bx-plus-circle'></i></p>
@@ -66,7 +71,7 @@
                     </div>
                     <div class="swiper-slide swiper-slide-Servicios">
                         <div class="swiperInformation swiperInformation-Servicios">
-                            <h1 class="swiperTitle swiperTitle-Servicios">Barba + Corte</h1>
+                            <p class="swiperTitle swiperTitle-Servicios">Barba + Corte</p>
                             <h2 class="swiperText swiperText-Servicios">$55.000</h2>
                             <h2 class="swiperText swiperText-Servicios">Tiempo: 40 min</h2>
                             <p class="swiperIcon swiperIcon-Servicios"><i class='bx bx-plus-circle'></i></p>
@@ -74,11 +79,17 @@
                     </div>
                 </div>
             </div>
-            <div class="btnSwiper-Servicios "><button type="button" class="Anterior Anterior-Servicios"><i
-                        class='bx bxs-chevron-down'></i></button>
+            <div class="btnSwiper-Servicios ">
+                <button type="button" class="Anterior Anterior-Servicios">
+                    <i class='bx bxs-chevron-down'></i>
+                </button>
             </div>
         </section>
+
+        <!-- Contenido de las reservas -->
         <section class="contenido">
+
+            <!-- sección calendario y especialistas -->
             <section class="leftInformation">
                 <div class="dropdown">
                     <div class="dropdownBtnContainer">
@@ -107,7 +118,8 @@
                         </div>
                         <div class="calendar">
                             <ul class="weeks">
-                                <li>Do</li> <!-- Lista de días de la semana, abreviados en español. -->
+                                <!-- Lista de días de la semana, abreviados en español. -->
+                                <li>Do</li> 
                                 <li>Lu</li>
                                 <li>Ma</li>
                                 <li>Mi</li>
@@ -119,9 +131,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- reservas por redes -->
                 <div class="contactanos">
                     <div class="textoContactanos">
-                        <p>Ó contacta a un asesor a través de</p>
+                        <p>O contacta a un asesor a través de: </p>
                     </div>
                     <div class="iconsContactanos">
                         <i class='bx bxl-whatsapp'></i>
@@ -129,39 +143,48 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Sección cards de reservas -->
             <section class="rightInformation">
                 <div class="card-container">
                     <h4 class="tittles tlt">Disponibilidad</h4>
+                    <!-- selección horarios disponibles -->
                     <div class="subcard-container">
                         <div class="franja">
-                            <div class="btnSwiper-Container-Franja"><b type="button" ><i class='bx bxs-chevron-up'></i></div>
+                            <button class="Anterior-Franja">
+                                <i class='bx bxs-chevron-up'></i>
+                            </button>
                             <div class="swiper swiper-Franja">
-                                <div class="swiper-wrapper swiper-wrapper-Franja">
+                                <div class="swiper-wrapper">
                                     <div class="swiper-slide swiper-slide-Franja">
-                                        <h1 class="btnFranja">Mañana</h1>
+                                        <p class="btnFranja">Mañana</p>
                                     </div>
                                     <div class="swiper-slide swiper-slide-Franja">
-                                        <h1 class="btnFranja">Tarde</h1>
+                                        <p class="btnFranja">Tarde</p>
                                     </div>
                                     <div class="swiper-slide swiper-slide-Franja">
-                                        <h1 class="btnFranja">Noche</h1>
+                                        <p class="btnFranja">Noche</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="btnSwiper-Container-Franja"><button type="button" class="Siguiente-Franja"><i class='bx bxs-chevron-down'></i></button></div>
+
+                            <button class="Siguiente-Franja">
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="btn-service">
+
+                    <!-- Agregar servicios -->
+                    <!-- <div class="btn-service">
                         <button class="btn-otro-servicio">Agregar otro servicio</button>
                     </div>
                     <div class="txt-box">
-                        <input type="text" placeholder="           Agrega notas de reservas" class="txt-box-style" />
+                        <input type="text" placeholder="Agrega notas de reservas" class="txt-box-style"/>
                     </div>
                     <div class="btn-service-continuar">
                         <button class="btn-continuar">Continuar</button>
-                    </div>
+                    </div> -->
                 </div>
-
             </section>
         </section>
     </main>

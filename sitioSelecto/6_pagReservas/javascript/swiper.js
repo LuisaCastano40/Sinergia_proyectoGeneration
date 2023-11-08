@@ -10,7 +10,7 @@ const swiper1 = new Swiper('.swiper-Servicios', {
         },
       });
 
-      const swiper2 = new Swiper('.swiper-Franja', {
+const swiper2 = new Swiper('.swiper-Franja', {
         // Optional parameters
         direction: 'vertical',
         loop: true,
@@ -20,4 +20,4 @@ const swiper1 = new Swiper('.swiper-Servicios', {
           nextEl: '.Siguiente-Franja',
           prevEl: '.Anterior-Franja',
         },
-      });
+});

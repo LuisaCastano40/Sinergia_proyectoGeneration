@@ -1,11 +1,8 @@
-import { productosSelecto } from "./Productos.js";
-import { serviciosSelecto } from "./dbServicios.js";
+import { productosSelecto } from "./dbProductos.js";
 
 //Traemos los elementos necesarios del HTML
 const productsContainer = document.getElementById('products');
-const containerServicios = document.getElementById('servicios');
 let productos = productosSelecto;
-let servicios = serviciosSelecto;
 let carritoProducts = [];
 
 // Función para cargar el carrito desde el localStorage
@@ -25,12 +22,10 @@ function cargarCarritoDesdeLocalStorage() {
 if(document.readyState == 'loading'){
     document.addEventListener('DOMContentLoaded', function(){
         renderProducts();
-        renderServicios();
         eventosCarrito();
     });
 }else{
     renderProducts();
-    renderServicios();
     eventosCarrito();
 }
 
@@ -53,7 +48,7 @@ function renderProducts(){
                     <!-- Hover -->
                     <div class="hover-text">
                         <h4 class="product-name-hover">${producto.nombre}</h4>
-                        <img class="logoSelectoWhite" src="/4_pagServicios/assetsServicios/icons/selecto-LogoWhite.svg" alt="Logo Selecto blanco" />
+                        <img class="logoSelectoWhite" src="/4_pagServicios/assetsServicios/icons/selecto-LogoWhite.svg" alt="Logo Selecto blanco"/>
                     </div>
                 </div>
                 <div class="product-info-container">
@@ -69,30 +64,6 @@ function renderProducts(){
                 </div>
             </div>
             `
-    });
-}
-
-// Función para mostrar servicios en la página
-function renderServicios(){
-    servicios.forEach((servicio)=>{
-        containerServicios.innerHTML += `
-        <div class="card" id="${servicio.id}">
-            <div class="card-img-producto">
-                <img src="/4_pagServicios/assetsServicios/img/Servicios.svg" alt="Imagen servicio 2">
-                <!-- Hover -->
-                <div class="hover-text">
-                    <h4 class="product-name">${servicio.nombre}</h4>
-                    <img class="logoSelectoWhite" src="/4_pagServicios/assetsServicios/icons/selecto-LogoWhite.svg" alt="Logo Selecto blanco" />
-                </div>
-            </div>
-            <div class="product-info-container">
-                <div class="product-info">
-                    <h4 class="product-name-visible">${servicio.nombre}</h4>
-                    <p class="price">$${servicio.precio}</p>
-                </div>
-            </div>
-        </div>
-        `
     });
 }
 

@@ -38,7 +38,7 @@ function mostrarFooter(){
         </article>
         </section>
         <section class="copyright">
-        <p>© POWERED BY SINERGIA</p>
+        <a href="../Agradecimiento/gracias.html"><p>© POWERED BY SINERGIA</p></a>
         </section>
     `
 }

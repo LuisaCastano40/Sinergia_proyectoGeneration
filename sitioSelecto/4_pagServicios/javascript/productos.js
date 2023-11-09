@@ -48,9 +48,9 @@ function renderProducts(){
                 <div class="card-img-producto">
                     <img src="${producto.imagen}" alt="Imagen producto 1">
                     <!-- Hover -->
-                    <div class="hover-text">
-                        <h4 class="product-name-hover">${producto.nombre}</h4>
-                        <img class="logoSelectoWhite" src="/4_pagServicios/assetsServicios/icons/selecto-LogoWhite.svg" alt="Logo Selecto blanco"/>
+                    <div class="hover-text" id=${producto.id}>
+                        <h4 class="product-name-hover" id=${producto.id}>${producto.nombre}</h4>
+                        <img class="logoSelectoWhite" id=${producto.id} src="/4_pagServicios/assetsServicios/icons/selecto-LogoWhite.svg" alt="Logo Selecto blanco"/>
                     </div>
                 </div>
                 <div class="product-info-container">

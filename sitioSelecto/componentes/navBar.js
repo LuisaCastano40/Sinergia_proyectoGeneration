@@ -40,6 +40,7 @@ function mostrarNavbar() {
                             <div class='seccion-total'>
                             <p class="total" id="total-carrito">TOTAL: <span id="total-valor">$0.00</span></p>
                             <button class="boton_carro" id="btn-vaciar">Vaciar carrito</button>
+                            <a href="https://mpago.li/15YE6UN" class="boton_carro" id="btn-vaciar">Ir a pagar</a>
                             </div>  
                         </div>
                     </section>

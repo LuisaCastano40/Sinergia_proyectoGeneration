@@ -97,18 +97,19 @@ main{
     box-shadow: 0 0 5px #ffffffc4;
     text-align: center;
     overflow: hidden;
-}
-
-/* Estilos para la imagen en la tarjeta */
-.card img {
-    max-width: 100%;
-    transition: opacity 0.3s;
+    
 }
 
 /* Estilos para el texto en hover */
 .card-img-producto{
     position: relative;
 }
+/* Estilos para la imagen en la tarjeta */
+.card img {
+    max-width: 100%;
+    transition: opacity 0.3s;
+}
+
 .hover-text {
     position: absolute;
     top: 0;
@@ -136,6 +137,7 @@ main{
 .card:hover .hover-text {
     opacity: 1;
     z-index: 2;
+    cursor: pointer;
 }
 
 /* Estilos para el logo Selecto en hover */
@@ -145,6 +147,7 @@ main{
 
 /* Estilos contenedor de información del producto */
 .product-info-container {
+    /* border: solid saddlebrown; */
     background-color: var(--colorTarjetas);
     display: flex;
     justify-content: space-between;
@@ -230,4 +233,14 @@ main{
     text-align: center;
     color: var(--colorBlanco);
     font-family: var(--textoMedium);
+}
+
+/* popUp */
+.popUpProductos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* position: fixed; */
+    display: none;
 }

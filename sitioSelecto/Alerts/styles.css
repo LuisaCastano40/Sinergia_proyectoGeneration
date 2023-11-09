@@ -1,0 +1,98 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+  font-family: "AvenirLTStd-Bold";
+  src: url("/fonts/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url("/fonts/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Regular";
+  src: url("/fonts/AvenirLTStd-Regular.otf");
+}
+
+/*Variables*/
+:root {
+  --text: "AvenirLTStd-Medium";
+  --colorFondo: #dad8d8;
+  --colorCafe: #521705;
+  --colorTextoBlanco: #dad8d8;
+  --colorNegro: #020101;
+  --colorFondoNav: #000000b3;
+}
+
+.modal-header {
+  background-color: #d4d4d4;
+  color: var(--colorTextoBlanco);
+  font-family: "AvenirLTStd-Bold";
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-content {
+  border-radius: 80px;
+}
+
+.modal-header img {
+  margin: 0 auto;
+  display: block;
+
+}
+
+.modal-body {
+  background-color: #fdfdfd;
+  color: var(--colorNegro);
+  font-family: "AvenirLTStd-Bold";
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.modal-logo {
+  width: 43px;
+  align-content: center;
+}
+
+.modal-header img {
+  max-width: 70px;
+  margin: 0 auto;
+}
+
+.modal-body p {
+  margin-right: 40px; 
+}
+
+.modal-body p {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: black;
+}
+
+.modal-logo {
+  width: 40px;
+  align-items: center;
+}
+
+.modal-header img {
+  margin: 0 auto; 
+  display: block; 
+  max-width: 50px;
+}
+
+.modal-body p {
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}

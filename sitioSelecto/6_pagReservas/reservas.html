@@ -22,6 +22,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <!-- Link del script de javascript -->
+    <script defer type="module" src="javascript/renderServicios.js"></script>
     <script type="module" defer src="javascript/reservas.js"></script>
     <!-- Link scripts de los componentes -->
     <script defer src="/componentes/navBar.js"></script>
@@ -52,8 +53,9 @@
             </div>
             <!-- Clases de swiper para carrusel -->
             <div class="swiper swiper-Servicios">
-                <div class="swiper-wrapper swiper-wrapper-Servicios">
+                <div class="swiper-wrapper swiper-wrapper-Servicios" id="containerServicios">
                     <div class="swiper-slide swiper-slide-Servicios">
+                        <img src="assetsReservas/Servicio1.svg" alt="reserva">
                         <div class="swiperInformation swiperInformation-Servicios">
                             <p class="swiperTitle swiperTitle-Servicios">Barba</p>
                             <h2 class="swiperText swiperText-Servicios">$30.000</h2>
@@ -199,7 +201,7 @@
                         <input type="text" placeholder="Agrega notas de reservas" class="txt-box-style" />
                     </div>
                     <div class="btn-service-continuar">
-                        <button class="btn-continuar">CONTINUAR</button>
+                        <button class="btn-continuar" id="continuar">CONTINUAR</button>
                     </div>
                 </div>
             </section>

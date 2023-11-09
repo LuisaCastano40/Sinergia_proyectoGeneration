@@ -1,23 +1,25 @@
-const swiper1 = new Swiper('.swiper-Servicios', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.Siguiente-Servicios',
-          prevEl: '.Anterior-Servicios',
-        },
-      });
+window.addEventListener('load', function () {
+  const swiper1 = new Swiper('.swiper-Servicios', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
 
-const swiper2 = new Swiper('.swiper-Franja', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.Siguiente-Franja',
-          prevEl: '.Anterior-Franja',
-        },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.Siguiente-Servicios',
+      prevEl: '.Anterior-Servicios',
+    },
+  });
+
+  const swiper2 = new Swiper('.swiper-Franja', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.Siguiente-Franja',
+      prevEl: '.Anterior-Franja',
+    },
+  });
 });

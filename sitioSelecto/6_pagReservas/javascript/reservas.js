@@ -2,6 +2,12 @@
 window.addEventListener('load', function () {
     const navBar = document.getElementById('navBar');
     navBar.style.backgroundColor = '#121212';
+    const continuar = document.getElementById('continuar');
+    continuar.addEventListener('click', mostrarAlert);
+
+    function mostrarAlert(){
+        alert('Se ha registrado tu reserva, te esperamos!')
+    }
 });
 
 // dropdown

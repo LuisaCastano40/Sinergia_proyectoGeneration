@@ -1,7 +1,3 @@
-import { selectOptionEspecialista } from "./reservas";
-
-// calendario
-
 const daysTag = document.querySelector(".days"),  // Selecciona el elemento HTML con la clase "days".
 currentDate = document.querySelector(".current-date"),  // Selecciona el elemento HTML con la clase "current-date".
 prevNextIcon = document.querySelectorAll(".icons span");  // Selecciona todos los elementos HTML con la etiqueta "span" dentro de elementos con la clase "icons".
@@ -57,23 +53,3 @@ prevNextIcon.forEach(icon => {  // Obteniendo los iconos de anterior y siguiente
         renderCalendar();  // Llamar a la función "renderCalendar".
     });
 });
-
-/*------basefk------*/
-
-const disponibilidadWalas = {
-    diasDisponibles: [1,3,10,15,25,29],
-    mesDisponible: ["Noviembre", "Diciembre"],
-    franjaDisponible: ["Mañana", "Noche"],
-    horaDisponible: ["9:30", "10:00", "12:00", "6:30", "7:00"]
-};
-
-const diasNoDisponibles = [];
-
-diasDisponibles.forEach((element, i) => {
-    if(element !== daysTag[i]){
-        diasNoDisponibles.push(element);
-    }
-});
-
-selectOptionEspecialista()
-

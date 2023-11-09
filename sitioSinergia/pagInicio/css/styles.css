@@ -21,8 +21,7 @@ body{
 header {
   width: 100vw;
   height: 100vh;
-  border: solid white;
-  background-image: url("../assets/background.png");
+  background-image: url("../assets/img/slide-1.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -34,6 +33,8 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%; 
   padding: 15px 50px;
+  position: fixed;
+  z-index: 1000;
 }
 
 .navBar-list{
@@ -49,7 +50,6 @@ header {
 /* contenido baner */
 .title-sinergia {
   font-size: 150px;
-  border: solid salmon;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -58,7 +58,6 @@ header {
   -webkit-background-clip: text; 
   color: transparent; 
   text-transform: uppercase;
-  
 }
 .middle{
   width: 100%;
@@ -66,8 +65,7 @@ header {
 }
 .text-list {
   width: 100%;
-  height: 100%;
-  border: solid salmon;
+  height: 85%;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -85,7 +83,7 @@ header {
 
 .creativity {
   position: absolute;
-  top: 0;
+  top: 8%;
   left: -1%;
 }
 
@@ -93,7 +91,6 @@ header {
   font-size: 25px; 
   color: #f3f3f3; 
   font-family: "Poppins", sans-serif;
-  border: solid red;  
   position: absolute;
   bottom: 48%;
 }
@@ -120,6 +117,58 @@ header {
 }
 
 /* ---------------------- MAIN ---------------------- */
+
+/* Nuestros servicios */
+.servicios{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+.row{
+  height: 100%;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.title {
+  font-size: 65px;
+  margin-bottom: 30px;
+  background-image: linear-gradient(to right, #1ff1f8, #9b59b6 );
+  -webkit-background-clip: text; 
+  color: transparent; 
+  font-weight: bold;
+}
+.par {
+  width: 75%;
+  font-size: 20px;
+  padding: 20px;
+  color: #121212;
+  text-align: justify;
+  margin: 0 auto;
+}
+.slideService{
+  margin-right: 100px;
+  background-image: url("../assets/imgServicios/slide-bg.png");
+  border-radius: 20px;
+}
+.carousel-item .estilosIma {
+  object-fit: cover;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+}
+
+
+/* Sección sobre nosotros */
+.home{
+  background-image: url("../assets/img/slide-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .home .carousel-item{
 	min-height: 100vh;
 	background-position: center;
@@ -140,7 +189,7 @@ header {
 .home .carousel-item .container{
 	position: absolute;
 	left: 50%;
-	top:50%;
+	top:40%;
 	transform: translate(-50%,-50%);
 	text-align: center;
 }
@@ -157,10 +206,10 @@ header {
 	opacity:0;
 }
 .home .carousel-item.active h2{
-	animation: fadeInLeft 0.5s ease forwards;
+	animation: fadeInLeft 0.25s ease forwards;
 }
 .home .carousel-item.active p{
-	animation: fadeInRight 0.5s ease forwards;
+	animation: fadeInRight 0.25s ease forwards;
 }
 
 @keyframes fadeInLeft{
@@ -190,16 +239,18 @@ header {
 	bottom: 40px;
 	z-index: 10;
 	transform: translateX(-50%);
+  margin-bottom: 100px;
 }
 
 .home .carousel-indicators{
 	position: relative;
 	margin:0;
+  
 }
 
 .home .carousel-indicators li{
-	height: 90px;
-	width: 90px;
+	height: 120px;
+	width: 120px;
 	margin:0 5px;
 	border-radius: 50%;
 	background-position: center;
@@ -209,7 +260,7 @@ header {
 }
 .home .carousel-indicators li.active{
 	border-color: #ffffff;
-	transform: scale(1.2);
+	transform: scale(1.3);
 }
 
 .home .carousel-control-next, 
@@ -238,6 +289,13 @@ header {
 	left: -90px;
 }
 
+
+
+
+/* ---------------------- FOOTER -------------------- */
+
+
+
 /*responsive*/
 @media(max-width: 767px){
   .home .carousel-control-next, 
@@ -255,6 +313,3 @@ header {
   	font-size: 22px;
   }
 }
-
-
-/* ---------------------- FOOTER -------------------- */

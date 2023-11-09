@@ -19,61 +19,74 @@ btnDropDown.addEventListener("click", () => {
 });
 
 // Función para manejar la selección de opciones
-function selectOption(option) {
-    document.getElementById("selected-option").textContent = "Opción seleccionada: " + option;
+export function selectOptionEspecialista(optionEspecialista) {
+    document.getElementById("dropbtnEspecialista").textContent = optionEspecialista;
 }
 
 // Event listeners para cada opción en el menú desplegable
 document.querySelector(".dropdown-content a:nth-child(1)").addEventListener("click", function () {
-    selectOption("Barbero disponible");
+    selectOptionEspecialista("Barbero disponible");
 });
 
 document.querySelector(".dropdown-content a:nth-child(2)").addEventListener("click", function () {
-    selectOption("Walas");
+    selectOptionEspecialista("Walas");
 });
 
 document.querySelector(".dropdown-content a:nth-child(3)").addEventListener("click", function () {
-    selectOption("Valeria");
+    selectOptionEspecialista("Valeria");
 });
 document.querySelector(".dropdown-content a:nth-child(4)").addEventListener("click", function () {
-    selectOption("Kevin");
+    selectOptionEspecialista("Kevin");
 });
 
 document.querySelector(".dropdown-content a:nth-child(5)").addEventListener("click", function () {
-    selectOption("Miguel");
+    selectOptionEspecialista("Miguel");
 });
 
 document.querySelector(".dropdown-content a:nth-child(6)").addEventListener("click", function () {
-    selectOption("Cristian");
+    selectOptionEspecialista("Cristian");
 });
 
 /* Dropdown Hora */
 
-const dropdownHora = document.querySelectorAll('dropdownHora');
 
-dropdownHora.forEach(dropdownHora => {
-    const select = dropdownHora.querySelector('.select');
-    const caret = dropdownHora.querySelector('.caret');
-    const menu = dropdownHora.querySelector('.menu');
-    const options = dropdownHora.querySelector('.menu li');
+const dropdownContentHora = document.querySelector(".dropdownContentHora");
+const dropBtnHora = document.querySelector(".dropBtnHora");
 
+dropBtnHora.addEventListener("click", () => {
 
-    select.addEventListener('click', () => {
-        select.classList.toggle('select-clicked');
-        caret.classList.toggle('caret.rotate');
-        menu.classList.toggle('menu.open');
-    });
+    if (dropdownContentHora.style.display === "none") {
+        dropdownContentHora.style.display = "block";
+    } else {
+        dropdownContentHora.style.display = "none";
+    }
+});
 
-    options.forEach(option => {
-        option.addEventListener('click', () => {
-            selected.innerText = option.innerText;
-            select.classList.remove('select-clicked');
-            caret.classList.remove('carpet-rotate');
-            menu.classList.remove('menu-open');
-            options.forEach(option => {
-                option.classList.remove('active');
-            });
-            option.classList.add('active');
-        });
-    });
+// Función para manejar la selección de opciones
+function selectOption(optionHora) {
+    document.getElementById("dropBtnHora").textContent = optionHora;
+}
+
+// Event listeners para cada opción en el menú desplegable
+document.querySelector(".dropdownContentHora a:nth-child(1)").addEventListener("click", function () {
+    selectOption("9:00");
+});
+
+document.querySelector(".dropdownContentHora a:nth-child(2)").addEventListener("click", function () {
+    selectOption("9:30");
+});
+
+document.querySelector(".dropdownContentHora a:nth-child(3)").addEventListener("click", function () {
+    selectOption("10:00");
+});
+document.querySelector(".dropdownContentHora a:nth-child(4)").addEventListener("click", function () {
+    selectOption("10:30");
+});
+
+document.querySelector(".dropdown-content a:nth-child(5)").addEventListener("click", function () {
+    selectOption("11:00");
+});
+
+document.querySelector(".dropdown-content a:nth-child(6)").addEventListener("click", function () {
+    selectOption("11:30");
 });

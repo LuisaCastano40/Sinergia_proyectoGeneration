@@ -37,7 +37,6 @@
 body {
   width: 100%;
   background-color: var(--colorGrisOscuro);
-  overflow-x: hidden;
   font-family: var(--textoBold);
   color: var(--colorBlanco);
 }
@@ -66,7 +65,7 @@ main {
 
 
 .contenido {
-  width: 70%;
+  width: 60%;
   height: 80%;
   display: flex;
   background-color: rgba(255, 255, 255, 0.463);
@@ -75,7 +74,7 @@ main {
 }
 
 .leftInformation {
-  width: 60%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -293,7 +292,7 @@ main {
 }
 
 .calendar li {
-  color: var(--colorGrisClaro);
+  color: var(--colorNegro);
   width: calc(100% / 7);
   font-size: 1.07rem;
 }
@@ -335,7 +334,7 @@ main {
 }
 
 .days li:not(.active):hover::before {
-  background: var(--colorBlanco);
+  background: var(--colorGrisOscuro);
 }
 
 /* Contactanos */
@@ -368,7 +367,7 @@ main {
 /*right Container*/
 
 .rightInformation {
-  width: 40%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -443,88 +442,63 @@ main {
   font-size: 25px;
 }
 
-.dropdownHora{
-  min-width: 15em;
-  position:relative;
-  margin: 2em;
-}
+/* Estilos DropDown Hora*/
 
-.dropdownHora * {
-  box-sizing: border-box;
-}
-
-.select {
-  background: var(--colorGrisOscuro);
-  color: var(--colorBlanco);
+.containerHora{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border: 2px var(--colorGrisOscuro) solid;
-  border-radius: 0.5em;
-  padding: 1em;
-  cursor: pointer;
-  transition: background .3s;
-}
-
-.select-clicked{
-  border: 2px var(--colorNegro) solid;
-  box-shadow: 0 0 0.8em var(--colorNegro);
-}
-
-.select:hover{
-  background: var(--colorNegro);
-}
-
-.caret {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid var(--colorBlanco);
-  transition: .3s;
-}
-
-.caret-rotate {
-  transform: rotate(180deg);
-}
-
-.menu {
-  list-style: none;
-  padding: 0.2em 0.5em;
-  background: var(--colorGrisOscuro);
-  border: 1px var(--colorGrisClaro);
-  box-shadow: 0 0.5em 1em rgb(0, 0, 0, 0.2);
-  border-radius: 0.5em;
-  color: var(--colorBlanco);
-  position: absolute;
-  top: 3em;
-  left: 50%;
+  justify-content: center;
   width: 100%;
-  transform: translateX(-50%);
-  opacity: 0;
-  display: none;
-  transition: .2s;
-  z-index: 1;
+  height: 100%;
 }
 
-.menu li {
-  padding: 0.7em 0.5em;
-  margin: 0.3 0;
-  border-radius: 0.5em;
+/* Estilos para el botón del menú desplegable */
+.dropBtnHora {
+  background-color: var(--colorNegro);
+  color: var(--colorBlanco);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
   cursor: pointer;
+  border-radius: 50px;
+  padding: 15px;
 }
 
-.menu li:hover{
-  background: var(--colorNegro);
-}
-
-.active{
-  background: var(--colorGrisOscuro);
-}
-
-.menu-open {
+/* Estilos para el contenedor del menú desplegable */
+.dropDownHora {
+  position: relative;
   display: block;
-  opacity: 1;
+  z-index: 2;
+
+}
+
+.dropdownBtnContainerHora {
+  align-items: start;
+}
+
+/* Estilos para el contenido del menú desplegable */
+.dropdownContentHora {
+  display: none;
+  position: absolute;
+  background-color: var(--colorBlanco);
+  min-width: 160px;
+  box-shadow: var(--colorNegroTransparencia);
+  z-index: 2;
+}
+
+/* Estilos para los elementos del menú desplegable (enlaces) */
+.dropdownContentHora a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: var(--colorNegro);
+  font-size: 20px;
+}
+
+/* Cambia el color del elemento seleccionado en el menú desplegable */
+.dropdownContentHora a:hover {
+  background-color: var(--colorNegroTransparencia);
+  z-index: 2;
 }
 
 /* Estilos boton otro servicio */
@@ -572,4 +546,17 @@ main {
   background-color: var(--colorNegro);
   border-radius: 30px;
   padding: 5px 50px;
+}
+
+/* -----------------------Responsive-------------------------------- */
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+
+
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+
 }

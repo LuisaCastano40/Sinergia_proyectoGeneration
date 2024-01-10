@@ -20,8 +20,12 @@ btnDropDown.addEventListener("click", () => {
 
 // Función para manejar la selección de opciones
 export function selectOptionEspecialista(optionEspecialista) {
+    console.log(optionEspecialista);
     document.getElementById("dropbtnEspecialista").textContent = optionEspecialista;
+    
 }
+
+
 
 // Event listeners para cada opción en el menú desplegable
 document.querySelector(".dropdown-content a:nth-child(1)").addEventListener("click", function () {

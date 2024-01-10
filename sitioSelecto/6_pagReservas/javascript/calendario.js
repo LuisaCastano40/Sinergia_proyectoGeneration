@@ -1,4 +1,3 @@
-import { selectOptionEspecialista } from "./reservas";
 
 // calendario
 
@@ -60,20 +59,18 @@ prevNextIcon.forEach(icon => {  // Obteniendo los iconos de anterior y siguiente
 
 /*------basefk------*/
 
-const disponibilidadWalas = {
-    diasDisponibles: [1,3,10,15,25,29],
-    mesDisponible: ["Noviembre", "Diciembre"],
-    franjaDisponible: ["Mañana", "Noche"],
-    horaDisponible: ["9:30", "10:00", "12:00", "6:30", "7:00"]
-};
+// const disponibilidadWalas = {
+//     diasDisponibles: [1,3,10,15,25,29],
+//     mesDisponible: ["Noviembre", "Diciembre"],
+//     franjaDisponible: ["Mañana", "Noche"],
+//     horaDisponible: ["9:30", "10:00", "12:00", "6:30", "7:00"]
+// };
 
-const diasNoDisponibles = [];
+// const diasNoDisponibles = [];
 
-diasDisponibles.forEach((element, i) => {
-    if(element !== daysTag[i]){
-        diasNoDisponibles.push(element);
-    }
-});
-
-selectOptionEspecialista()
+// diasDisponibles.forEach((element, i) => {
+//     if(element !== daysTag[i]){
+//         diasNoDisponibles.push(element);
+//     }
+// });
 

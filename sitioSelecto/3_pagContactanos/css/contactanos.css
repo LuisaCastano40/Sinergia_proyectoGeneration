@@ -45,12 +45,10 @@ body{
     border-radius: 5px; 
 }
 
-/* --------------HEADER--------------- */
-
 /* ---------------MAIN---------------- */
 .container-forms{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-image: url('../assetsContactenos/images/selecto-barber-bg.svg');
     background-repeat: no-repeat;
     background-position: right top;
@@ -68,7 +66,7 @@ body{
     justify-content: end;
     align-items: center;
     flex-direction: column;
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     padding: 40px;
 }
@@ -87,7 +85,7 @@ body{
     gap: 15px;
 }
 .forms-content h1{
-    font-size: 35px;
+    font-size: 50px;
     text-transform: uppercase;
     text-align: center;
     font-family: var(--textoBold);
@@ -98,7 +96,7 @@ body{
     text-transform: initial;
 }
 .forms-content h2{
-    font-size: 30px;
+    font-size: 40px;
 }
 .contact-form{
     width: 80%;
@@ -151,7 +149,7 @@ body{
     border-radius: 20px;
     color: var(--colorNegro);
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 25px;
     font-family: var(--textoBold);
     display: flex;
     align-items: center;
@@ -163,7 +161,7 @@ body{
     margin-top: 15px;
 }
 .inputCV i{
-    font-size: 25px;
+    font-size: 20px;
 }
 .inputCV label:hover{
     background-color: transparent;
@@ -250,6 +248,8 @@ body{
 
     /* main */
     .container-forms{
+        height: auto;
+        padding: 50px 0;
         flex-direction: column-reverse;
         gap: 50px;
     }
@@ -257,8 +257,7 @@ body{
     .forms-content{
         width: 100%;
         height: auto;
-    }
-
+    }   
 }
 
 /* Estilos para dispositivos móviles */
@@ -266,6 +265,8 @@ body{
 
      /* main */
      .container-forms{
+        height: auto;
+        padding: 50px 0;
         flex-direction: column-reverse;
         gap: 50px;
     }

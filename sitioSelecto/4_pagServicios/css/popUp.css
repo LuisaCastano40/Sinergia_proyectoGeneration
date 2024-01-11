@@ -1,0 +1,238 @@
+/* Importamos las fuentes a utilizar */
+@font-face {
+    font-family: 'AvenirLTStd-Bold';
+    src: url('../../fonts/AvenirLTStd-Bold.otf' );
+}
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('../../fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Regular';
+    src: url('../../fonts/AvenirLTStd-Regular.otf');
+}
+
+/* Variables de css */
+:root{
+    --textoBold: 'AvenirLTStd-Bold', sans-serif;
+    --textoMedium: 'AvenirLTStd-Medium', sans-serif;
+    --textoRegular: 'AvenirLTStd-Regular', sans-serif;
+    --colorNegro:#000000;
+    --colorNegroTransparencia:#000000a6;
+    --colorGrisOscuro:#232323;
+    --colorGrisClaro:#A4A5A6;
+    --colorBlanco:#FFFFFF;
+}
+
+/* Condiciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--textoRegular);
+}
+
+.containerpopUp{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--colorNegroTransparencia);
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popUp {
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    transition: .5s ease-out;
+    overflow: hidden;
+    background-image: url("/4_pagServicios/assetsServicios/img/popUp-bg.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.popUpClose {
+    visibility: visible;
+    opacity: 1;
+}
+.containerImg {
+    display: flex;
+    place-content: center;
+    width: 40%;
+    z-index: 2;
+    position: relative;
+}
+.containerImg img{
+    width: 100%;
+    object-fit: contain;
+}
+.etiqueta{
+    position: absolute;
+    background-color: var(--colorBlanco);
+    font-size: 18px;
+    padding: 5px 10px;
+    font-family: var(--textoBold);
+    text-transform: uppercase;
+    top: 5%;
+    left: 5%;
+}
+
+/* Contenedor info del producto */
+.containerInformation {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2;
+    gap: 15px;
+    box-sizing: border-box;
+}
+.close{
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    font-size: 50px;
+    color: var(--colorBlanco);
+    cursor: pointer;
+}
+
+/* contenedor título */
+.containerTitulo{
+    width: 100%;
+}
+
+.tituloProducto {
+    font-family: var(--textoBold);
+    font-size: 50px;
+    color: var(--colorBlanco);
+}
+.subtituloProducto{
+    font-family: var(--textoMedium);
+    font-size: 25px;
+    color: var(--colorBlanco);
+    margin-top: 0;
+}
+.descuento {
+    font-family: var(--textoMedium);
+    font-size: 20px;
+    color: var(--colorBlanco);
+}
+.descuento span {
+    font-family: var(--textoMedium);
+    font-size: 20px;
+    color: var(--colorBlanco);
+    text-decoration: line-through;
+}
+.precio {
+    font-family: var(--textoBold);
+    font-size: 25px;
+    color: var(--colorBlanco);
+}
+
+/* contenedor categoría */
+.containerCategoria{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.categoria {
+    font-family: var(--textoRegular);
+    font-size: 25px;
+    color: var(--colorBlanco);
+}
+.rating {
+    display: flex;
+}
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc;
+}
+.star.checked {
+    color: #f1c40f;
+}
+
+.descripcion {
+    width: 100%;
+    font-family: var(--textoRegular);
+    font-size: 22px;
+    color: var(--colorBlanco);
+}
+
+.stock {
+    font-family: var(--textoRegular);
+    font-size: 20px;
+    color: var(--colorBlanco);
+}
+
+/* Botón añadir al carrito */
+.containerBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.añadirAlCarrito{
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: 3px solid var(--colorNegro);
+    color: var(--colorBlanco);
+    background-color: var(--colorNegro);
+    margin: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--textoMedium);
+    
+}
+.añadirAlCarrito:hover{
+    background-color: transparent;
+    border: solid 3px var(--colorBlanco);
+}
+
+@media screen and (max-width: 1023px){
+    
+    .containerpopUp{
+        padding: 100px 0;
+        width: 100%;
+        height: auto;
+        /* overflow-y: scroll; */
+    }
+    .popUp{
+        width: 80%;
+        height: 80%;
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 0;
+    }
+    .containerImg{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 677px){
+    .containerImg{
+        width: 80%;
+        margin-top: 55px;
+    }
+    .containerInformation{
+        width: 80%;
+    }
+    .containerCategoria{
+        flex-direction: column;
+        align-items: start;
+    }
+}

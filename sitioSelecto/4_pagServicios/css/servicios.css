@@ -77,19 +77,16 @@ main{
     color: var(--colorTextoBlanco);
     margin-bottom: 20px; 
 }
-.titulo-product span{
-    border-bottom: 1px solid var(--colorTextoBlanco);
-}
 
 /* Contenedor principal para las tarjetas de productos y servicios */
 .container-productos {
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
     margin: 0 auto; 
-    gap: 20px;
+    gap: 30px;
 }
 
 /* Tarjeta de producto y servicio */
@@ -100,18 +97,19 @@ main{
     box-shadow: 0 0 5px #ffffffc4;
     text-align: center;
     overflow: hidden;
-}
-
-/* Estilos para la imagen en la tarjeta */
-.card img {
-    max-width: 100%;
-    transition: opacity 0.3s;
+    
 }
 
 /* Estilos para el texto en hover */
 .card-img-producto{
     position: relative;
 }
+/* Estilos para la imagen en la tarjeta */
+.card img {
+    max-width: 100%;
+    transition: opacity 0.3s;
+}
+
 .hover-text {
     position: absolute;
     top: 0;
@@ -131,19 +129,15 @@ main{
 
 /* estilo del nombre del producto y servicio */
 .card .product-name {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-}
-
-/* Establece el estilo de la descripción del producto y servicio */
-.card .product-description {
-    font-size: 14px;
 }
 
 /* Efecto hover para mostrar el texto y ajustar la opacidad de la imagen */
 .card:hover .hover-text {
     opacity: 1;
     z-index: 2;
+    cursor: pointer;
 }
 
 /* Estilos para el logo Selecto en hover */
@@ -153,6 +147,7 @@ main{
 
 /* Estilos contenedor de información del producto */
 .product-info-container {
+    /* border: solid saddlebrown; */
     background-color: var(--colorTarjetas);
     display: flex;
     justify-content: space-between;
@@ -165,7 +160,7 @@ main{
 /* Parte inferior de la tarjeta */
 .product-name-visible {
     color: var(--colorBlanco);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     text-align: left;
     margin-left: 9px;
@@ -173,16 +168,9 @@ main{
 }
 .price {
     padding: 10px;
-    font-size: 12px;
+    font-size: 18px;
     color: var(--colorBlanco);
 }
-/* .btn-agregar{
-    background-color: transparent;
-    border: none;
-}
-.btn-agregar:hover{
-    transform: scale(1.05);
-} */
 .shopping-bag img{
     width: 40px;
     height: 40px;
@@ -191,6 +179,42 @@ main{
 .shopping-bag img:hover{
     transform: scale(1.05);
 } 
+
+/* Paginación */
+.container-pagination{
+    width: 100%;
+    margin: 50px 0;
+}
+.listPage{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.listPage li{
+    width: 35px;
+    height: 35px;
+    color: var(--colorBlanco);
+    font-family: var(--textoBold);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listPage li:hover{
+    background-color: var(--colorGrisClaro);
+    color: var(--colorBlanco);
+    cursor: pointer;
+}
+.listPage .active {
+    background-color: var(--colorGrisClaro);
+    color: var(--colorBlanco);
+}
+.listPage i{
+    font-size: 25px;
+}
 
 /* Estilos para la sección de publicidad */
 .publicidad-container {
@@ -211,53 +235,12 @@ main{
     font-family: var(--textoMedium);
 }
 
-/* Sección servicios */
-.container-servicios{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    margin: 0 auto; 
-    gap: 20px;
-    margin-bottom: 50px;
-}
-.titulo-servicios {
-    text-align: center;
-    margin-top: 20px;
-    padding-bottom: 10px;
-    font-size: 40px;
-    color: var(--colorTextoBlanco);
-    margin-bottom: 20px;
-}
-.titulo-servicios span{
-    border-bottom: 1px solid var(--colorTextoBlanco);
-}
-.button-agenda {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 10px; 
-}
-
-/* Estilos para el botón agenda */
-.button-agenda button {
-    background-color: var(--colorBlanco);
-    color:var(--colorNegro);
-    font-size: 20px;
-    border: 2px solid var(--colorBlanco);
-    padding: 15px 50px;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.3s, color 0.3s;
-    font-weight: bold;
-}
-
-.button-agenda a {
-    color: var(--colorNegro);
-}
-
-.button-agenda button:hover {
-    background-color: var(--colorNegro);
-    color: var(--colorTextoBlanco);
+/* popUp */
+.popUpProductos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* position: fixed; */
+    display: none;
 }

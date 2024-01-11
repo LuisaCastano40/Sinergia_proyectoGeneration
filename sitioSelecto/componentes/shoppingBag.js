@@ -13,6 +13,8 @@ window.addEventListener('load', function(){
 function abrirCarrito(){
     const visible = document.querySelector('.activeCart');
     const carrito = document.querySelector('.carro_comprar');
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden';
 
     if (window.innerWidth <= 768) {
             visible.style.visibility = 'visible'
@@ -26,7 +28,9 @@ function abrirCarrito(){
 function cerrarCarrito(){
     const visible = document.querySelector('.activeCart');
     const carrito = document.querySelector('.carro_comprar');
+    const body = document.querySelector('body');
     visible.style.visibility = 'hidden'
     carrito.style.width = '0%';
+    body.style.overflowY = 'scroll';
 }
 

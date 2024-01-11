@@ -13,7 +13,7 @@ function mostrarNavbar() {
                         <li class="active"><a href="../index.html">Inicio</a></li>
                         <li class="active"><a href="../2_pagNosotros/nosotros.html">Nosotros</a></li>
                         <li class="active"><a href="../3_pagContactanos/contactanos.html">Contáctanos</a></li>
-                        <li class="active"><a href="../4_pagServicios/servicios.html">Servicios</a></li>
+                        <li class="active"><a href="../4_pagServicios/servicios.html">Productos</a></li>
                     </ul>
                     <div class="logoNav">
                         <a href="../index.html"><img src="/1_pagInicio/logo/selecto-Logo-white.svg" alt="logo" /></a>
@@ -40,6 +40,7 @@ function mostrarNavbar() {
                             <div class='seccion-total'>
                             <p class="total" id="total-carrito">TOTAL: <span id="total-valor">$0.00</span></p>
                             <button class="boton_carro" id="btn-vaciar">Vaciar carrito</button>
+                            <button class="boton_carro" id="btn-pagar"><a href="https://mpago.li/15YE6UN" target="_blank">Ir a pagar</a></butoon>
                             </div>  
                         </div>
                     </section>
@@ -55,7 +56,7 @@ function mostrarNavbar() {
                                 <li class="active"><a href="../index.html">Inicio</a></li>
                                 <li class="active"><a href="../2_pagNosotros/nosotros.html">Nosotros</a></li>
                                 <li class="active"><a href="../3_pagContactanos/contactanos.html">Contáctanos</a></li>
-                                <li class="active"><a href="../4_pagServicios/servicios.html">Servicios</a></li>
+                                <li class="active"><a href="../4_pagServicios/servicios.html">Productos</a></li>
                                 <li class="active" id="change"><a href="../8_pagIngreso/ingreso.html">Regístrate</a></li>
                                 <li><a class="btnAgenda" href="../6_pagReservas/reservas.html">AGENDA AHORA</a></li>
                             </ul>

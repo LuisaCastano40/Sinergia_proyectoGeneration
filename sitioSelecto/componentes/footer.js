@@ -32,13 +32,13 @@ function mostrarFooter(){
             <li><a href="index.html">Inicio</a></li>
             <li><a href="../2_pagNosotros/nosotros.html">Nosotros</a></li>
             <li><a href="../3_pagContactanos/contactanos.html">Contáctanos</a></li>
-            <li><a href="../4_pagServicios/servicios.html">Servicios</a></li>
+            <li><a href="../4_pagServicios/servicios.html">Productos</a></li>
             <li><a href="../8_pagIngreso/ingreso.html">Iniciar sesión</a></li>
             </ul>
         </article>
         </section>
         <section class="copyright">
-        <p>© POWERED BY SINERGIA</p>
+        <a href="../Agradecimiento/gracias.html"><p>© POWERED BY SINERGIA</p></a>
         </section>
     `
 }
